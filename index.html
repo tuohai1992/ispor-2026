@@ -345,6 +345,17 @@ function apply(r) {
   votes.ready = true;
   render();
 }
+/* tidy model replies: unwrap JSON that came back as text, drop raw session ids */
+function clean(r) {
+  let answer = String(r.answer || ''), sessions = Array.isArray(r.sessions) ? r.sessions : [];
+  if (/^\s*(```|\{)/.test(answer)) {
+    const raw = answer.replace(/```(json)?/g, '');
+    try { const j = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1)); answer = String(j.answer || ''); if (!sessions.length && Array.isArray(j.sessions)) sessions = j.sessions; }
+    catch (e) { const m = raw.match(/"answer"\s*:\s*"((?:[^"\\]|\\.)*)"/); answer = m ? m[1].replace(/\\"/g, '"').replace(/\\n/g, '\n') : ''; if (!sessions.length) sessions = [...raw.matchAll(/"id"\s*:\s*"?(\d{7})"?\s*,\s*"why"\s*:\s*"((?:[^"\\]|\\.)*)"/g)].map(x => ({ id: x[1], why: x[2].replace(/\\"/g, '"') })); }
+  }
+  const strip = s => String(s || '').replace(/\s*\((?:\s*(?:and|or|,)?\s*\d{7})+\s*\)/g, '').replace(/\b\d{7}\b/g, m => BY.has(m) ? `“${BY.get(m).title.split(/[:?]/)[0]}”` : m);
+  return { answer: strip(answer), sessions: sessions.filter(s => s && BY.has(String(s.id))).map(s => ({ id: String(s.id), why: strip(s.why) })) };
+}
 async function ask(q) {
   q = (q || '').trim();
   if (!q) return;
@@ -355,7 +366,7 @@ async function ask(q) {
   if (!backend || !backend.ask) { t.pending = false; t.error = 'Recommendations are not connected yet. Use the search below in the meantime.'; renderThread(); $('#send').disabled = false; return; }
   try {
     const r = await backend.ask(q);
-    t.answer = r.answer; t.sessions = r.sessions || [];
+    const c = clean(r); t.answer = c.answer; t.sessions = c.sessions;
   } catch (e) {
     t.error = e.code === 'rate_limited' ? 'Too many questions in a minute. Wait a moment and ask again.' : 'Couldn’t get recommendations. Try again.';
   }
