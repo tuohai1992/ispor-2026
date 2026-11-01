@@ -16,7 +16,7 @@ async function data(env) {
     .filter(s => s.format !== 'General Meeting')
     .map(s => `${s.id} | ${day(s)} ${s.start}-${s.end} | ${s.format} | ${s.tracks.join(', ')} | ${s.title} | ${s.speakers} | ${s.summary}`)
     .join('\n');
-  const ctx = `You help a pharmaceutical Pricing & Market Access (PMA) team, working on ophthalmology medicines across Europe and Asia, choose sessions at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
+  const ctx = `You help a pharmaceutical international Pricing & Market Access (iPMA) team, working on ophthalmology medicines across Europe and Asia, choose sessions at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
 Rules:
 - Use ONLY the catalogue below. Never invent sessions, rooms, speakers or ids.
 - Prefer sessions that fit the question. If two strong picks run at the same time, say so in their reasons.
@@ -54,6 +54,18 @@ export class VoteStore extends DurableObject {
     }
     return this.state(voter);
   }
+  clearVoter(voter) {
+    this.sql.exec('DELETE FROM votes WHERE voter = ?', voter);
+    return this.state(voter);
+  }
+  clearSession(session) {
+    this.sql.exec('DELETE FROM votes WHERE session = ?', session);
+    return this.state(null);
+  }
+  reset() {
+    this.sql.exec('DELETE FROM votes');
+    return this.state(null);
+  }
 }
 
 function cors(env, origin) {
@@ -78,6 +90,13 @@ function parseJSON(text) {
   const ans = text.match(/"answer"\s*:\s*"((?:[^"\\]|\\.)*)"/);
   const sessions = [...text.matchAll(/"id"\s*:\s*"?(\d{6,8})"?\s*,\s*"why"\s*:\s*"((?:[^"\\]|\\.)*)"/g)].map(m => ({ id: m[1], why: unq(m[2]) }));
   return { answer: ans ? unq(ans[1]) : (sessions.length ? '' : text.replace(/```(json)?/g, '').trim()), sessions };
+}
+
+function sameKey(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string' || a.length !== b.length) return false;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return d === 0;
 }
 
 const validVoter = v => typeof v === 'string' && /^[A-Za-z0-9-]{8,64}$/.test(v);
@@ -135,6 +154,26 @@ export default {
       const { ids } = await data(env);
       if (!validVoter(b.voter) || !ids.has(String(b.session))) return json({ error: 'Bad request' }, 400, h);
       return json(await store.vote(b.voter, String(b.session), !!b.on), 200, h);
+    }
+
+    if (url.pathname === '/vote/clear' && req.method === 'POST') {
+      let b;
+      try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
+      if (!validVoter(b.voter)) return json({ error: 'Bad request' }, 400, h);
+      return json(await store.clearVoter(b.voter), 200, h);
+    }
+
+    // admin: clear one session or reset all votes, guarded by the ADMIN_KEY secret
+    if (url.pathname === '/admin' && req.method === 'POST') {
+      if (env.ASK_LIMITER && !(await env.ASK_LIMITER.limit({ key: 'admin:' + ip })).success) return json({ error: 'rate_limited' }, 429, h);
+      if (!env.ADMIN_KEY) return json({ error: 'admin_not_configured' }, 503, h);
+      let b;
+      try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
+      if (!sameKey(String(b.key || ''), env.ADMIN_KEY)) return json({ error: 'wrong_key' }, 403, h);
+      if (b.action === 'check') return json({ ok: true }, 200, h);
+      if (b.action === 'reset') return json(await store.reset(), 200, h);
+      if (b.action === 'clear' && /^\d{6,8}$/.test(String(b.session))) return json(await store.clearSession(String(b.session)), 200, h);
+      return json({ error: 'Bad request' }, 400, h);
     }
 
     if (url.pathname === '/ask' && req.method === 'POST') return ask(req, env, h, ip);

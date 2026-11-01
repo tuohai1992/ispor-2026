@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style><title>ISPOR Europe 2026 · PMA</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style><title>ISPOR Europe 2026 · iPMA</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +115,14 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .rank .rk{font-family:var(--f-mono);color:var(--muted);font-size:.85rem}
 .rank .t{font-weight:500;line-height:1.35}
 .rank .n{text-align:right;font-size:1.8rem;font-weight:600;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;line-height:1}
+.adm{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:#B4472E;margin-top:6px;display:inline-block}
+.adm:focus-visible{outline:2px solid var(--accent)}
+.bfoot{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:22px;font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
+.bfoot button.lk{all:unset;cursor:pointer;color:var(--accent);border-bottom:1px solid currentColor}
+.bfoot button.lk:focus-visible{outline:2px solid var(--accent)}
+.bfoot button.danger{color:#B4472E}
+.keyf{display:flex;gap:8px;align-items:center}
+.keyf input{font:inherit;font-family:var(--f-mono);padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);width:180px}
 .rank .n small{display:block;font-family:var(--f-mono);font-size:.62rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px}
 .live{display:inline-flex;gap:8px;align-items:center}
 .live i{width:7px;height:7px;border-radius:50%;background:#1F9A78;display:inline-block}
@@ -133,7 +141,7 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
 </style>
 
 </head><body><header class="top gut"><div class="inner">
-  <a class="logo" href="#home">ISPOR–EUROPE 2026 · PMA</a>
+  <a class="logo" href="#home">ISPOR–EUROPE 2026 · iPMA</a>
   <nav class="navl" aria-label="Main">
     <a href="#home" data-view="home">Programme</a>
     <a href="#vote" data-view="vote">Vote</a>
@@ -176,10 +184,11 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
     <h2>Most voted sessions</h2>
     <p class="sub" id="board-sub"></p>
     <ol class="rank" id="rank"></ol>
+    <div class="bfoot" id="bfoot"></div>
   </div></section>
 </main>
 
-<footer class="gut"><div class="inner"><span>ISPOR–EUROPE 2026 · PMA team planner</span><span>Programme snapshot 2026-10-30 · <a href="https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program" target="_blank" rel="noopener">official programme</a></span></div></footer>
+<footer class="gut"><div class="inner"><span>ISPOR–EUROPE 2026 · iPMA team planner</span><span>Programme snapshot 2026-10-30 · <a href="https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program" target="_blank" rel="noopener">official programme</a></span></div></footer>
 <div class="toast" id="toast" hidden></div>
 
 <script>
@@ -222,7 +231,9 @@ function apiBackend() {
       document.addEventListener('visibilitychange', pull);
     },
     vote: (id, on) => call('/vote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter, session: id, on }) }),
-    ask: q => call('/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q }) })
+    ask: q => call('/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q }) }),
+    clearMine: () => call('/vote/clear', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter }) }),
+    admin: (key, action, session) => call('/admin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, action, session }) })
   };
 }
 
@@ -244,6 +255,7 @@ async function artifactBackend() {
       const s = new Set(votes.mine); on ? s.add(id) : s.delete(id);
       await db.doc('votes/' + uid).set({ sessions: [...s], updatedAt: new Date().toISOString() });
     },
+    clearMine: () => db.doc('votes/' + uid).set({ sessions: [], updatedAt: new Date().toISOString() }),
     ask: sample ? q => askSample(sample, q) : null
   };
 }
@@ -252,7 +264,7 @@ function catalogue() {
   return S.filter(s => s.format !== 'General Meeting').map(s => `${s.id} | ${DAYS[s.d][0]} Nov ${s.start}-${s.end} | ${s.format} | ${s.tracks.join(', ')} | ${s.title} | ${s.speakers} | ${s.summary}`).join('\n');
 }
 async function askSample(sample, q) {
-  const r = await sample.json(`You help a pharmaceutical Pricing & Market Access (PMA) team, working on ophthalmology medicines across Europe and Asia, choose sessions at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
+  const r = await sample.json(`You help a pharmaceutical international Pricing & Market Access (iPMA) team, working on ophthalmology medicines across Europe and Asia, choose sessions at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
 Use ONLY the catalogue below; never invent sessions or ids. If two strong picks run at the same time, say so in their reasons. Never write session ids in the answer or reasons. If the question is not about the programme, say so in one sentence and return no sessions.
 Reply with only JSON: {"answer": "2-5 sentences in the language of the question", "sessions": [{"id": "3699043", "why": "one short reason"}]}, at most 8 sessions, most relevant first.
 
@@ -315,13 +327,60 @@ function renderThread() {
       ${t.sessions.length ? `<div class="recs">${t.sessions.map(r => row(BY.get(r.id), r.why)).join('')}</div>` : ''}`}
   </div>`).join('');
 }
+const adm = { key: null, open: false, armed: null, err: '' };
+try { adm.key = sessionStorage.getItem('ispor26-admin'); } catch (e) {}
+function arm(what) { adm.armed = what; clearTimeout(arm.t); arm.t = setTimeout(() => { adm.armed = null; renderBoard(); }, 4000); renderBoard(); }
 function renderBoard() {
   const xs = S.filter(s => votes.counts[s.id]).sort((a, b) => votes.counts[b.id] - votes.counts[a.id] || a.d - b.d || a.start.localeCompare(b.start));
   const total = Object.values(votes.counts).reduce((a, b) => a + b, 0);
+  const isAdmin = !!(adm.key && backend && backend.admin);
   $('#board-sub').textContent = !backend || !backend.start ? 'Voting is not connected yet.' : total ? `${total} vote${total === 1 ? '' : 's'} across ${xs.length} session${xs.length === 1 ? '' : 's'}. Updates automatically.` : 'No votes yet. Vote from the programme with ▲.';
   $('#rank').innerHTML = xs.map((s, i) => `<li><span class="rk">${String(i + 1).padStart(2, '0')}</span>
-    <div style="min-width:0"><div class="meta"><span class="f">${esc(s.format)}</span><span>${DAYS[s.d][0]} Nov · ${s.start}–${s.end}</span>${s.room ? `<span>${esc(s.room)}</span>` : ''}</div><div class="t">${esc(s.title)}</div></div>
+    <div style="min-width:0"><div class="meta"><span class="f">${esc(s.format)}</span><span>${DAYS[s.d][0]} Nov · ${s.start}–${s.end}</span>${s.room ? `<span>${esc(s.room)}</span>` : ''}</div><div class="t">${esc(s.title)}</div>
+    ${isAdmin ? `<button class="adm" data-clear="${s.id}">${adm.armed === s.id ? 'Click again to clear these votes' : 'Clear votes'}</button>` : ''}</div>
     <div class="n">${votes.counts[s.id]}<small>vote${votes.counts[s.id] === 1 ? '' : 's'}</small></div></li>`).join('');
+  const n = votes.mine.size;
+  const left = n && backend && backend.clearMine ? `<span>You voted for ${n} session${n === 1 ? '' : 's'} · <button class="lk" data-act="mine">${adm.armed === 'mine' ? 'Click again to clear your votes' : 'Clear my votes'}</button></span>` : '<span></span>';
+  let right = '';
+  if (backend && backend.admin) {
+    if (isAdmin) right = `<span><button class="lk danger" data-act="all">${adm.armed === 'all' ? `Click again to delete all ${total} votes` : 'Reset all votes'}</button> · <button class="lk" data-act="lock">Lock</button></span>`;
+    else if (adm.open) right = `<form class="keyf" id="keyf"><input type="password" id="akey" placeholder="Admin key" aria-label="Admin key" autocomplete="off" value="${esc(adm.typed || '')}"><button class="lk">Unlock</button>${adm.err ? `<span>${esc(adm.err)}</span>` : ''}</form>`;
+    else right = '<button class="lk" data-act="admin">Admin</button>';
+  }
+  $('#bfoot').innerHTML = left + right;
+  if (adm.open && !isAdmin) { const k = $('#akey'); if (k) { k.focus(); k.setSelectionRange(k.value.length, k.value.length); } }
+}
+async function boardAction(act, id) {
+  try {
+    if (act === 'mine') {
+      if (adm.armed !== 'mine') return arm('mine');
+      adm.armed = null;
+      const r = await backend.clearMine();
+      if (r && r.counts) apply(r); else { votes.mine.forEach(i => votes.counts[i] = Math.max(0, (votes.counts[i] || 1) - 1)); votes.mine.clear(); render(); }
+      toast('Your votes are cleared');
+    } else if (act === 'admin') { adm.open = true; adm.err = ''; renderBoard(); }
+    else if (act === 'lock') { adm.key = null; adm.open = false; try { sessionStorage.removeItem('ispor26-admin'); } catch (e) {} renderBoard(); }
+    else if (act === 'all') {
+      if (adm.armed !== 'all') return arm('all');
+      adm.armed = null;
+      const r = await backend.admin(adm.key, 'reset');
+      votes.counts = r.counts || {}; votes.mine.clear(); render(); toast('All votes deleted');
+    } else if (act === 'clear') {
+      if (adm.armed !== id) return arm(id);
+      adm.armed = null;
+      const r = await backend.admin(adm.key, 'clear', id);
+      votes.counts = r.counts || {}; votes.mine.delete(id); render(); toast('Votes cleared for this session');
+    }
+  } catch (e) {
+    if (e.code === 'wrong_key') { adm.key = null; adm.open = true; adm.err = 'Wrong key'; renderBoard(); return; }
+    toast(e.code === 'admin_not_configured' ? 'Admin key is not set up on the server yet' : 'That didn’t work. Try again in a moment.');
+  }
+}
+async function unlock(key) {
+  if (!key) return;
+  try { await backend.admin(key, 'check'); adm.key = key; adm.open = false; adm.err = ''; adm.typed = ''; try { sessionStorage.setItem('ispor26-admin', key); } catch (e) {} }
+  catch (e) { adm.err = e.code === 'wrong_key' ? 'Wrong key' : e.code === 'admin_not_configured' ? 'Admin key is not set up on the server yet' : 'Couldn’t check the key'; }
+  renderBoard();
 }
 function render() {
   if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
@@ -415,6 +474,10 @@ function init() {
     const o = e.target.closest('[data-open]'); if (o) { const id = o.dataset.open; st.open.has(id) ? st.open.delete(id) : st.open.add(id); render(); return; }
     const v = e.target.closest('[data-vote]'); if (v) toggleVote(v.dataset.vote);
   });
+  $('#bfoot').addEventListener('click', e => { const b = e.target.closest('[data-act]'); if (b) boardAction(b.dataset.act); });
+  $('#bfoot').addEventListener('input', e => { if (e.target.id === 'akey') adm.typed = e.target.value; });
+  $('#bfoot').addEventListener('submit', e => { e.preventDefault(); unlock($('#akey').value.trim()); });
+  $('#rank').addEventListener('click', e => { const b = e.target.closest('[data-clear]'); if (b) boardAction('clear', b.dataset.clear); });
   window.addEventListener('hashchange', go);
   renderControls();
   go();
