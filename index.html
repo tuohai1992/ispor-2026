@@ -34,22 +34,22 @@ button{font:inherit;color:inherit}
 .navl a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--accent)}
 
 /* ask */
-.ask .inner{max-width:780px;padding-block:56px 40px;display:flex;flex-direction:column;gap:18px}
+.ask .inner{max-width:780px;padding-block:26px 22px;display:flex;flex-direction:column;gap:12px}
 .ask .eyebrow{text-align:center}
-.mast{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding-bottom:26px;margin-bottom:10px;border-bottom:1px solid var(--line)}
-.mast-name{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-0.045em;line-height:.95;color:var(--accent)}
+.mast{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding-bottom:16px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.mast-name{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;letter-spacing:-0.045em;line-height:.95;color:var(--accent)}
 .mast-name span{color:var(--ink);font-weight:500}
-.mast-meta{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:6px 14px;flex-wrap:wrap;justify-content:center}
+.mast-meta{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:6px 14px;flex-wrap:wrap;justify-content:center}
 .mast-meta a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
-.ask h1{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-0.02em}
+.ask h1{font-size:clamp(1.25rem,2.4vw,1.6rem);letter-spacing:-0.02em}
 h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-0.03em;font-weight:600;margin:0;text-align:center;text-wrap:balance}
-.lead{color:var(--muted);text-align:center;margin:0 auto;max-width:52ch}
-.askbar{display:flex;gap:8px;align-items:flex-end;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 10px 10px 14px}
-.askbar textarea{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;resize:none;min-height:46px;max-height:180px;outline:none}
-.send{flex:none;width:38px;height:38px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:1.1rem}
+.lead{color:var(--muted);text-align:center;margin:-4px auto 0;max-width:60ch;font-size:.92rem}
+.askbar{display:flex;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 6px 6px 14px}
+.askbar textarea{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;resize:none;min-height:24px;max-height:180px;outline:none;padding:4px 0}
+.send{flex:none;width:34px;height:34px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:1.1rem}
 .send:disabled{opacity:.4;cursor:default}
-.sugg{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.pill{font-size:.85rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.sugg{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.pill{font-size:.8rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:3px 11px;cursor:pointer}
 .pill:hover{border-color:var(--accent)}
 .pill[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
 .turn{display:flex;flex-direction:column;gap:10px}
@@ -62,9 +62,10 @@ h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-0.03em;fo
 
 /* programme */
 .prog{border-top:1px solid var(--line)}
-.prog .inner{padding-block:40px 72px}
-.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.prog .inner{padding-block:20px 72px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:12px}
 h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;font-weight:600;margin:8px 0 0}
+.h2s{font-size:1.35rem!important;margin:0!important}
 .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
 .seg{display:inline-flex;gap:2px;padding:3px;background:var(--surface);border:1px solid var(--line);border-radius:999px}
 .seg button{border:0;background:transparent;border-radius:999px;padding:6px 14px;font-size:.88rem;cursor:pointer;color:var(--muted)}
@@ -72,14 +73,14 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .search{flex:1 1 240px;min-width:0}
 .search input{width:100%;font:inherit;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);outline:none}
 .search input:focus{border-color:var(--accent)}
-.filters{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:10px 0 4px}
+.filters{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:8px 0 0}
 .filters button{all:unset;cursor:pointer;display:inline-flex;gap:6px;align-items:center;padding:3px 0;border-bottom:1px solid transparent}
 .filters button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
 .filters button:focus-visible{outline:2px solid var(--accent)}
 .filters label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
 .sw{display:inline-block;width:8px;height:8px;border-radius:50%}
 .count{font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
-.day{font-size:1.25rem;font-weight:600;letter-spacing:-0.01em;margin:36px 0 4px;padding-bottom:10px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline}
+.day{font-size:1.15rem;font-weight:600;letter-spacing:-0.01em;margin:22px 0 2px;padding-bottom:10px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline}
 .day span{font-family:var(--f-mono);font-size:.72rem;font-weight:400;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
 .srow{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
 .recs .srow{grid-template-columns:minmax(0,1fr) auto}
@@ -154,7 +155,7 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
 
     <section class="prog gut" id="programme"><div class="inner">
       <div class="head">
-        <div><div class="eyebrow">Programme</div><h2>All sessions</h2></div>
+        <h2 class="h2s">All sessions</h2>
         <span class="count" id="count"></span>
       </div>
       <div class="tools">
