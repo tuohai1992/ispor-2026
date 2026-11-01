@@ -23,6 +23,8 @@ Rules:
 - If the question is not about choosing or understanding sessions, say so in one sentence and return no sessions.
 - "answer": 2-5 sentences, in the same language as the question, no headings.
 - "sessions": at most 8, most relevant first, each with one short reason.
+- Never write session ids in "answer" or "why"; refer to other sessions by short title or day and time.
+- Keep every string on one line and escape double quotes inside strings.
 Reply with only JSON: {"answer": string, "sessions": [{"id": "3699043", "why": string}]}
 
 CATALOGUE (id | day time | format | tracks | title | speakers | summary)
@@ -67,10 +69,15 @@ function cors(env, origin) {
 const json = (body, status, h) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...h } });
 
 function parseJSON(text) {
+  text = text.replace(/^\s*```(?:json)?\s*|\s*```\s*$/g, '');
   try { return JSON.parse(text); } catch (e) {}
   const a = text.indexOf('{'), b = text.lastIndexOf('}');
   if (a >= 0 && b > a) { try { return JSON.parse(text.slice(a, b + 1)); } catch (e) {} }
-  return { answer: text, sessions: [] };
+  // last resort: pull fields out of malformed JSON
+  const unq = s => { try { return JSON.parse('"' + s.replace(/\n/g, '\\n') + '"'); } catch (e) { return s; } };
+  const ans = text.match(/"answer"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+  const sessions = [...text.matchAll(/"id"\s*:\s*"?(\d{6,8})"?\s*,\s*"why"\s*:\s*"((?:[^"\\]|\\.)*)"/g)].map(m => ({ id: m[1], why: unq(m[2]) }));
+  return { answer: ans ? unq(ans[1]) : (sessions.length ? '' : text.replace(/```(json)?/g, '').trim()), sessions };
 }
 
 const validVoter = v => typeof v === 'string' && /^[A-Za-z0-9-]{8,64}$/.test(v);

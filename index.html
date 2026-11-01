@@ -248,7 +248,7 @@ function catalogue() {
 }
 async function askSample(sample, q) {
   const r = await sample.json(`You help a pharmaceutical Pricing & Market Access (PMA) team, working on ophthalmology medicines across Europe and Asia, choose sessions at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
-Use ONLY the catalogue below; never invent sessions or ids. If two strong picks run at the same time, say so in their reasons. If the question is not about the programme, say so in one sentence and return no sessions.
+Use ONLY the catalogue below; never invent sessions or ids. If two strong picks run at the same time, say so in their reasons. Never write session ids in the answer or reasons. If the question is not about the programme, say so in one sentence and return no sessions.
 Reply with only JSON: {"answer": "2-5 sentences in the language of the question", "sessions": [{"id": "3699043", "why": "one short reason"}]}, at most 8 sessions, most relevant first.
 
 CATALOGUE (id | day time | format | tracks | title | speakers | summary)
