@@ -1,0 +1,34 @@
+name = "ispor-2026-api"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://tuohai1992.github.io"
+MODEL = "claude-haiku-5-5"
+
+# All votes live in one SQLite-backed Durable Object (free plan)
+[[durable_objects.bindings]]
+name = "VOTES"
+class_name = "VoteStore"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VoteStore"]
+
+# 6 Ask questions per minute per visitor IP
+[[ratelimits]]
+name = "ASK_LIMITER"
+namespace_id = "2001"
+
+  [ratelimits.simple]
+  limit = 6
+  period = 60
+
+# 120 vote clicks per minute per visitor IP
+[[ratelimits]]
+name = "VOTE_LIMITER"
+namespace_id = "2002"
+
+  [ratelimits.simple]
+  limit = 120
+  period = 60

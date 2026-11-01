@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+preview.html
+build.py
+template.html

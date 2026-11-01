@@ -1,0 +1,3096 @@
+{
+ "conference": "ISPOR Europe 2026",
+ "city": "Vienna",
+ "timezone": "CET (UTC+01:00)",
+ "snapshot": "2026-10-30",
+ "source": "Official conference app via ispor2026.abundanceds.com",
+ "sessions": [
+  {
+   "id": "3699091",
+   "date": "2026-11-09",
+   "start": "08:30",
+   "end": "10:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Plenary Session 1: Opening Remarks and Special Address",
+   "speakers": "Rob Abbott; Olivér Varhelyi",
+   "summary": "Join us as we kick off ISPOR Europe 2026 with opening remarks from Rob Abbott, ISPOR’s Chief Executive Officer, and a special address from Olivér Várhelyi, Commissioner for Health and Animal Welfare, European Commission. Under…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-1-opening-remarks-nbsp-and-special-address"
+  },
+  {
+   "id": "3699092",
+   "date": "2026-11-09",
+   "start": "08:30",
+   "end": "10:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Plenary Session 1: The Science of What Matters: Rethinking Value in Healthcare",
+   "speakers": "Sandra Nestler-Parr; Sally Lewis; Harald H. H. W. Schmidt",
+   "summary": "Scientific innovation is reshaping our understanding of disease and creating new possibilities for improving health. This session will examine whether current approaches to disease classification, healthcare system design, and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-1-the-science-of-what-matters-rethinking-value-in-healthcare"
+  },
+  {
+   "id": "3699067",
+   "date": "2026-11-09",
+   "start": "10:15",
+   "end": "11:15",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Central and Eastern Europe (CEE) Consortium Meeting",
+   "speakers": "Iga Lipska; Maciej Niewada",
+   "summary": "The meeting will feature three presentations on “Geopolitical Pressure, Fiscal Constraints, and the Future of Patient Access to Innovative Medicines in Central and Eastern Europe: A Strategic Market Access Analysis.” Dr. Tomasz…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-central-and-eastern-europe-cee-consortium-meeting"
+  },
+  {
+   "id": "3699068",
+   "date": "2026-11-09",
+   "start": "10:15",
+   "end": "11:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Real-World Evidence Special Interest Group Meeting",
+   "speakers": "",
+   "summary": "Join leaders and fellow members of the Real-World Evidence Special Interest Group for an interactive open meeting! Attendees will learn about the SIG Mission and Goals and ongoing projects and meet current leadership before…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-real-world-evidence-special-interest-group-meeting"
+  },
+  {
+   "id": "3699034",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care",
+    "Medical Technologies"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond the Index Event: Aligning Hospital Decision-Making with Expanded Value Measures for Medical Devices and Diagnostics",
+   "speakers": "Belinda Mohr; Abeer Al Rabayah; Marjan Hummel; Sally Lewis",
+   "summary": "ISSUE: As health technology assessment and value assessment frameworks increasingly incorporate expanded value measures, gaps remain in how these elements influence real-world decision making. Hospital technology adoption…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-the-index-event-aligning-hospital-decision-making-with-expanded-value-measures-for-medical-devices-and-diagnostics"
+  },
+  {
+   "id": "3699102",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Capturing Patient and Caregiver Experiences in Psychological and Cognitive Conditions",
+   "speakers": "Irina Kinchin",
+   "summary": "Patient-centered assessment requires measures that reflect the full impact of disease on patients and caregivers. This session focuses on cognitive symptoms, caregiver burden, quality of life, and meaningful change in outcomes…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/capturing-patient-and-caregiver-experiences-in-psychological-and-cognitive-conditions"
+  },
+  {
+   "id": "3699104",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Converting Vaccine Evidence to Policy",
+   "speakers": "Tiberius Certejan",
+   "summary": "This session explores the broader societal, economic, and equity benefits of vaccines, highlighting how vaccination can improve population wellbeing and healthcare system sustainability.",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/converting-vaccine-evidence-to-policy"
+  },
+  {
+   "id": "3699144",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall F2",
+   "format": "Workshop",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Early Value Assessment When There Are Multiple External Comparators: Introducing Value-Based Decision Boundary Analysis (VB-DBA)",
+   "speakers": "Ronan Mahon; Kokuvi ATSOU; Subhajit Gupta; Jonathan Salcedo",
+   "summary": "PURPOSE: Health technology developers (HTDs) currently use early cost-effectiveness models to determine economically justifiable prices (EJPs) based on target product profiles (TPPs). These are then used to evaluate future…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/early-value-assessment-when-there-are-multiple-external-comparators-introducing-value-based-decision-boundary-analysis-vb-dba"
+  },
+  {
+   "id": "3699137",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall D",
+   "format": "Spotlight",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Humans at the Helm: Navigating Increasing AI Autonomy in HEOR and HTA",
+   "speakers": "Bill Malcolm; J. Jaime Caro; Dalia Dawoud; Siguroli Teitsson",
+   "summary": "ISSUE Artificial intelligence (AI) is rapidly transforming HEOR and HTA workflows, with increasing interest in moving from simple prompting and workflow automation toward more autonomous agentic AI systems. While AI offers…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/humans-at-the-helm-navigating-increasing-ai-autonomy-in-heor-and-hta"
+  },
+  {
+   "id": "3699043",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Navigating Europe’s New Era of Health Policy Reform: How Will the EU HTA Regulation, Pharmaceutical Legislation Revision, Critical Medicines Act, and Biotech Act Shape Medicines Development and Patient Access?",
+   "speakers": "Suzette Matthijsse; Neil Grubert; Maya Matthews; Rui SANTOS IVO; Anne Willemsen",
+   "summary": "ISSUE: The European health policy environment is experiencing its most significant transformation in decades. In January 2025, the EU HTA Regulation began to apply. Simultaneously, revisions to the Pharmaceutical Legislation and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/navigating-europe-s-new-era-of-health-policy-reform-how-will-the-eu-hta-regulation-pharmaceutical-legislation-revision-critical-medicines-act-and-biotech-act-shape-medicines-development-and-patient-access"
+  },
+  {
+   "id": "3699054",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall E2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Patient-Centered Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Patient-Reported Outcomes in Federated Real-World Data: Infrastructure Ready, Evidence Fit for HTA?",
+   "speakers": "Uwe Siebert; Mario Lawes; Angela Rylands; Katia Verhamme",
+   "summary": "ISSUE Health Technology Assessment (HTA) bodies, regulators, and healthcare decision-makers increasingly require high-quality longitudinal patient-reported outcome (PRO) evidence to evaluate real-world treatment effectiveness and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/patient-reported-outcomes-in-federated-real-world-data-infrastructure-ready-evidence-fit-for-hta"
+  },
+  {
+   "id": "3699113",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "13:30",
+   "room": "",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Poster Session 1",
+   "speakers": "",
+   "summary": "Poster Tours 11:45–12:30 / Presenters will be with their posters from 12:30–13:30",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/posters/poster-detail/ispor-europe-2026/poster-session-1-5"
+  },
+  {
+   "id": "3699062",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [],
+   "topics": [
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "The Historical Linear Life Science Model is Dead and Requires Rethinking to Adapt to a Rapidly Changing Ecosystem",
+   "speakers": "Carole Longson; Eric Low; Keith Tolley; Sean Tunis",
+   "summary": "Issue: The life sciences ecosystem is often described as a linear pathway from discovery through clinical development, regulatory approval, health technology assessment (HTA), adoption, and patient care. This model has shaped the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-historical-linear-life-science-model-is-dead-and-requires-rethinking-to-adapt-to-a-rapidly-changing-ecosystem"
+  },
+  {
+   "id": "3699052",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall L",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "When Global Policy Agendas Collide – Evidence, Value, and Pricing Tensions at the Intersection of EU and US Reform",
+   "speakers": "Oliver Staples; Niklas Hedberg; Duane Schulthess; Aodan Tynan",
+   "summary": "Issue: Market access strategy is being reshaped by evolution of EU and US policy reforms that place competing emphasis on evidence generation and pricing. EU Joint Clinical Assessment (JCA) increases the need for robust,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/when-global-policy-agendas-collide--evidence-value-and-pricing-tensions-at-the-intersection-of-eu-and-us-reform"
+  },
+  {
+   "id": "3699035",
+   "date": "2026-11-09",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "Who Decides Which Covariates Matter? Aligning Regulatory and HTA Perspectives in Indirect Treatment Comparisons",
+   "speakers": "Mikkel Oestergaard; Dominik Karres; Kate Ren; Anja Schiel",
+   "summary": "ISSUE: Indirect treatment comparisons (ITCs) are essential for health technology assessment (HTA) when head-to-head evidence is unavailable. Advances in methods, including population-adjusted indirect comparison, multilevel…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/who-decides-which-covariates-matter-aligning-regulatory-and-hta-perspectives-in-indirect-treatment-comparisons"
+  },
+  {
+   "id": "3699022",
+   "date": "2026-11-09",
+   "start": "11:30",
+   "end": "12:15",
+   "room": "Poster Tour Area B, Hall X1-X4",
+   "format": "HEOR Impact Cases",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "HEOR Impact Cases Poster Tour",
+   "speakers": "Chris Skedgel",
+   "summary": "This tour will take place during Poster Session 1, Posters will be hung from 10:30-13:30.",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/heor-impact-cases-poster-tour-4"
+  },
+  {
+   "id": "3699121",
+   "date": "2026-11-09",
+   "start": "11:30",
+   "end": "12:15",
+   "room": "Poster Tour Area A, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Oncology Poster Tour",
+   "speakers": "Koen Degeling",
+   "summary": "This tour will take place during Poster Session 1, Posters will be hung from 10:30-13:30. Posters featured in this tour: PT1: HOW SHOULD PICOS EVOLVE WHEN TREATMENT SEQUENCING CHANGES? A LIVING EVIDENCE CASE STUDY IN TRIPLE-CLASS…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/oncology-poster-tour-4"
+  },
+  {
+   "id": "3699069",
+   "date": "2026-11-09",
+   "start": "11:45",
+   "end": "12:45",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Ukraine, Poland, and Hungary Joint Meeting: Strengthening Regional Collaboration in HTA and Evidence-Informed Healthcare Decision-Making",
+   "speakers": "",
+   "summary": "(All interested ISPOR Europe 2026 attendees are welcome to join this session) The joint meeting of the ISPOR Chapters of Ukraine, Poland, and Hungary will bring together health economics and outcomes research professionals to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-ukraine-poland-and-hungary-joint-meeting-nbsp-strengthening-regional-collaboration-in-hta-and-evidence-informed-healthcare-decision-making"
+  },
+  {
+   "id": "3698979",
+   "date": "2026-11-09",
+   "start": "11:45",
+   "end": "12:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Fast Facts",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "The Accidental FX Trader: How United States MFN Pricing Reshapes Global Launch Strategy and Access",
+   "speakers": "Ramiro Gilardino; Neal Masia; Diane Munch",
+   "summary": "ISSUE: The evolving U.S. Most Favored Nation (MFN) drug pricing framework benchmarks Medicare reimbursement against lower-priced developed nations. While domestic debates focus on affordability, the critical global risk is the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-accidental-fx-trader-how-united-states-mfn-pricing-reshapes-global-launch-strategy-and-access"
+  },
+  {
+   "id": "3711737",
+   "date": "2026-11-09",
+   "start": "12:00",
+   "end": "12:30",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Let’s Get REAL: Real-World Evidence in Action",
+   "speakers": "Denise Juliano; Alexander de Groot; Didier Morel; Lasair OCallaghan; Caroline Ryan",
+   "summary": "This interactive session will bring together a small panel of life sciences leaders to discuss how organizations are using integrated real-world data to answer complex HEOR questions and generate evidence that informs…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/let-s-get-real-real-world-evidence-in-action"
+  },
+  {
+   "id": "3723815",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall E2",
+   "format": "Educational Symposium",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Advancing Evidence-Based Medicine with Generative AI",
+   "speakers": "Maxime Leroux; Jimmy Royer; Eric Wu",
+   "summary": "Generative AI (GenAI) is increasingly being explored as a tool for analyzing multi-source and multi-modal data to derive comprehensive insights into the progression of complex diseases, evaluate interventions, and support…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/advancing-evidence-based-medicine-with-generative-ai"
+  },
+  {
+   "id": "3698983",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall L",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory"
+   ],
+   "level": "Intermediate",
+   "title": "AI in HEOR: Advancing Evidence Generation for Joint Clinical Assessment",
+   "speakers": "Dalia Dawoud; Manuel Cossio; William Rawlinson; James Ryan",
+   "summary": "Artificial intelligence (AI) is rapidly transforming how health economics and outcomes research (HEOR) is conducted across the pharmaceutical industry. As the Joint Clinical Assessment (JCA) takes place across Europe under the EU…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ai-in-heor-advancing-evidence-generation-for-joint-clinical-assessment"
+  },
+  {
+   "id": "3699150",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall G1",
+   "format": "Workshop",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "How Can HTA and Regulatory Guidelines and Reviews Strengthen the Case for More Patient Centered Evidence Creation?",
+   "speakers": "Katja Rudell; Dan Ollendorf; Joe Vandigo",
+   "summary": "Purpose: The purpose of the workshop is to have an interactive session with input from participants on expanding the use of patient evidence to support reimbursement, and explore whether the use of regulatory and HTA guidelines…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/how-can-hta-and-regulatory-guidelines-and-reviews-strengthen-the-case-for-more-patient-centered-evidence-creation"
+  },
+  {
+   "id": "3698996",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall K2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "ISPOR Strategic Dialogues: Integrated Evidence Generation Across the Product Lifecycle",
+   "speakers": "Finn Børlum Kristensen; Michael Berntgen; Antonella Cardone; Maya Matthews; Carlos Martin Saborido; Beate Wieseler",
+   "summary": "Even when regulators, HTA bodies, and payers seek answers to many of the same scientific questions, evidence generation remains largely sequential, siloed, and awfully inefficient. This fragmentation creates avoidable translation…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-strategic-dialogues-integrated-evidence-generation-across-the-product-lifecycle"
+  },
+  {
+   "id": "3711734",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall F1",
+   "format": "Educational Symposium",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "One JCA, Many Decisions: Building an Evidence Strategy for Portability Across Europe",
+   "speakers": "Martin Parkinson; Carla Dias Barbosa; Victoria Paly; Caoimhe Rice",
+   "summary": "Europe's Joint Clinical Assessment (JCA) framework is creating a more coordinated approach to clinical assessment, while access, reimbursement, and value decisions remain national. This symposium will examine evidence planning to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/one-jca-many-decisions-building-an-evidence-strategy-for-portability-across-europe"
+  },
+  {
+   "id": "3698992",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall E1",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Methodological & Statistical Research"
+   ],
+   "level": "Advanced",
+   "title": "SMDM-ISPOR Joint Initiative in Health Decision Modelling Agentic AI for Transparent, Reproducible, and Trustworthy Decision Models",
+   "speakers": "Beth Devine; Jag Chhatwal; Beate Jahn; Uwe Siebert",
+   "summary": "ISPOR and the Society for Medical Decision Making (SMDM) jointly present a scientific methods session exploring how agentic AI may reshape the architecture of decision modelling. Moving beyond individual AI tools or skills, the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/smdm-ispor-joint-initiative-in-health-decision-modelling-agentic-ai-for-transparent-reproducible-and-trustworthy-decision-models"
+  },
+  {
+   "id": "3698997",
+   "date": "2026-11-09",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall F2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "The Non-3G (GENEROUS, GLOBE, GUARD) Pricing Paradox: Navigating the \"MFN Trap\" Opportunities and Risk in Latin America, the Middle East, and Asia",
+   "speakers": "Manuel Espinoza; Nadia Al Mazrouei; Diego Guarin; Mahendra Rai",
+   "summary": "MFN is reshaping how companies prioritize launch markets, with 19 markets currently included across the GENEROUS, GLOBE, and GUARD programs. While these “non-3G” markets may represent opportunities for earlier launches following…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-non-3g-generous-globe-guard-pricing-paradox-navigating-the-mfn-trap-opportunities-and-risk-in-latin-america-the-middle-east-and-asia"
+  },
+  {
+   "id": "3698978",
+   "date": "2026-11-09",
+   "start": "12:45",
+   "end": "13:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Fast Facts",
+   "tracks": [],
+   "topics": [
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "From Subject-Matter Brilliance to Real Impact",
+   "speakers": "Natalia Scherff; Karina Hansen; Reg Waldeck",
+   "summary": "Join us for an interactive session dedicated to people leadership and career development. Communication and influence are increasingly recognized as core capabilities for professionals working across the broader Market Access…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-subject-matter-brilliance-to-real-impact"
+  },
+  {
+   "id": "3711738",
+   "date": "2026-11-09",
+   "start": "12:45",
+   "end": "13:15",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "How Early Is Early Enough? Rethinking Evidence Planning for Today's Global Access Challenges",
+   "speakers": "Priti Jhingran",
+   "summary": "How do organizations determine what evidence will be needed years before regulatory, reimbursement and pricing decisions occur? How can cross-functional teams reach consensus on the evidence gaps that matter most, and how should…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/how-early-is-early-enough-rethinking-evidence-planning-for-today-s-global-access-challenges"
+  },
+  {
+   "id": "3711739",
+   "date": "2026-11-09",
+   "start": "12:45",
+   "end": "13:15",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Patient-Centered Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Spotlight on Joint Clinical Assessments: Learnings to Date, Looking Ahead at Rare Indications, and AI Applications to Enhance Evidence Generation",
+   "speakers": "Jackie Vanderpuye-Orgle",
+   "summary": "The European Union Joint Clinical Assessment (JCA) will become mandatory for orphan-designated medicinal products in 2028, introducing new expectations for comparative, patient-relevant evidence. Orphan drug developers face…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/spotlight-on-joint-clinical-assessments-learnings-to-date-looking-ahead-at-rare-indications-and-ai-applications-to-enhance-evidence-generation"
+  },
+  {
+   "id": "3699071",
+   "date": "2026-11-09",
+   "start": "13:15",
+   "end": "14:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Exploring SUSTAIN-HTA: Resources, Learning and Fellowship Opportunities",
+   "speakers": "",
+   "summary": "The meeting will introduce SUSTAIN-HTA resources and capacity-building initiatives designed to strengthen knowledge sharing in health technology assessment. The session will showcase SUSTAIN-OBS, a searchable methods observatory…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/exploring-sustain-hta-resources-learning-and-fellowship-opportunities"
+  },
+  {
+   "id": "3699070",
+   "date": "2026-11-09",
+   "start": "13:15",
+   "end": "14:15",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Medical Devices and Diagnostics Special Interest Group Meeting",
+   "speakers": "",
+   "summary": "Join leaders and members of the Medical Devices and Diagnostics Special Interest Group for an engaging open meeting. Attendees will learn about the group's Mission and Goals, ongoing projects, and current initiatives. The…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-medical-devices-and-diagnostics-special-interest-group-meeting-3"
+  },
+  {
+   "id": "3699066",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall L",
+   "format": "Issue Panel",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Are Patient Values Genuinely Shaping Value Assessment, or Do They Remain Acknowledged but Underutilized?",
+   "speakers": "Ramiro Gilardino; Antonella Cardone; Dan Ollendorf; Chris Skedgel",
+   "summary": "ISSUE: Across global HTA systems, broader value elements—caregiver burden, disease severity, financial toxicity, and whole-health impacts on families—are increasingly recognized conceptually. Collaborative initiatives like BRAVER…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/are-patient-values-genuinely-shaping-value-assessment-or-do-they-remain-acknowledged-but-underutilized"
+  },
+  {
+   "id": "3699051",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall E2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "Beware (Non-Proportional) Hazard! Alternative Routes for Dealing with Time-Varying Treatment Effects in Evidence Synthesis for Health Technology Assessment (HTA) Decision Making",
+   "speakers": "Keith Abrams; Shannon Cope; Rhiannon Owen; David Phillippo",
+   "summary": "ISSUE: Often when conducting meta-analyses (MA) of time-to-event (TTE) results, especially in Health Technology Assessment (HTA), a hazard ratio (HR) scale is used due to the ease with which a treatment effect can be incorporated…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beware-non-proportional-hazard-alternative-routes-for-dealing-with-time-varying-treatment-effects-in-evidence-synthesis-for-health-technology-assessment-hta-decision-making"
+  },
+  {
+   "id": "3699065",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Policy & Regulatory",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "COAlescing the Oncology COA Strategy: A Provocative Look at Why Oncology COA Strategies Often Fail - and How to Fix Them",
+   "speakers": "Konstantina Skaltsa; Bryan Bennett; Lindsay Hughes; Flora Mulkey",
+   "summary": "Issue Clinical Outcome Assessments (COAs) are central to patient-centered oncology trials and regulatory decision-making, yet many COA strategies fail to produce interpretable or label-enabling evidence. A key reason is that COAs…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/coalescing-the-oncology-coa-strategy-a-provocative-look-at-why-oncology-coa-strategies-often-fail--and-how-to-fix-them"
+  },
+  {
+   "id": "3699061",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "First Wave, First Lessons: Multi-Stakeholder Insights from the initial Joint Clinical Assessments Under the European Regulation on Health Technology Assessment",
+   "speakers": "Suzette Matthijsse; Niklas Hedberg; James Ryan; Anne Willemsen",
+   "summary": "ISSUE: January 2025 marked the start of the European Regulation on Health Technology Assessment (EU HTAR), initiating Joint Clinical Assessments (JCAs) for the first eligible technologies. Health technology developers (HTDs), HTA…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/first-wave-first-lessons-multi-stakeholder-insights-from-the-initial-joint-clinical-assessments-under-the-european-regulation-on-health-technology-assessment"
+  },
+  {
+   "id": "3699107",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Health Utility Measurement: EQ-5D Innovations and Broader Perspectives",
+   "speakers": "Janine van Til",
+   "summary": "Health utility measures play a central role in health economics, outcomes research, and HTA. This session explores advances in EQ-5D measurement alongside broader challenges in preference-weighted outcomes research, including…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/health-utility-measurement-eq-5d-innovations-and-broader-perspectives"
+  },
+  {
+   "id": "3699149",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall E1",
+   "format": "Workshop",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "How Will the Most Favored Nation (MFN) Policy Influence Medicines Pricing and Access in Europe and How Should Policy Makers Respond?",
+   "speakers": "Sean Sullivan; IRIA ALVAREZ NOVOA IGLESIAS; Beth Woods",
+   "summary": "Purpose: The Most Favoured Nation (MFN) policy being pursued by the US administration has the potential to influence prices and access for new pharmaceuticals across high income countries. This workshop will identify how MFN is…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/how-will-the-most-favored-nation-mfn-policy-influence-medicines-pricing-and-access-in-europe-and-how-should-policy-makers-respond"
+  },
+  {
+   "id": "3699151",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall F2",
+   "format": "Workshop",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "Reading Between the Endpoints: Translating Trials from Regulatory Estimands to HTA/JCA Decision Making",
+   "speakers": "Miranda Cooper; Dominik Karres; Antonia Morga; Uwe Siebert",
+   "summary": "Purpose Estimands are now firmly embedded in regulatory guidance and are gaining prominence in HTA, with formal relevance under the EU JCA. Despite this shared framework, challenges remain in translating trials across…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/reading-between-the-endpoints-translating-trials-from-regulatory-estimands-to-hta-jca-decision-making"
+  },
+  {
+   "id": "3699040",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Should Real-World Evidence Play a Role in Reimbursement Decisions on Decommissioning Health Technologies?",
+   "speakers": "Tammy Wynne; Maria-Magdalena Balp; Isabelle Durand-Zaleski; Linus Jönsson",
+   "summary": "Issue: As healthcare systems face growing pressure to allocate scarce resources to innovative health technologies, real-world evidence (RWE) is increasingly considered to support access decisions. However, the use of RWE to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/should-real-world-evidence-play-a-role-in-reimbursement-decisions-on-decommissioning-health-technologies"
+  },
+  {
+   "id": "3699112",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Tackling Societal Challenges Facing Public Health",
+   "speakers": "Manuela Deidda",
+   "summary": "This session explores how inequalities in healthcare access, social determinants of health, and economic factors shape population health outcomes across different settings.",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/tackling-societal-challenges-facing-public-health"
+  },
+  {
+   "id": "3699057",
+   "date": "2026-11-09",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "The Future of Causal Inference: How Large (or Small) Role Will AI Play?",
+   "speakers": "Radek Wasiak; Gorana Capkun; Michael Haft; Miguel Hernan",
+   "summary": "Issue: As real-world evidence takes an increasingly important role in regulatory and health technology assessment decision making, causal inference implemented via a target trial framework is becoming more widely adopted to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-future-of-causal-inference-how-large-or-small-role-will-ai-play"
+  },
+  {
+   "id": "3739541",
+   "date": "2026-11-09",
+   "start": "14:45",
+   "end": "15:15",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Get Involved—Make the Most of Your ISPOR Membership",
+   "speakers": "",
+   "summary": "Are you an ISPOR member or considering becoming an ISPOR member? Stop by the ISPOR Booth (#411) to discover how you can make the most of your member experience! Meet with ISPOR staff to explore exciting opportunities to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/get-involved-make-the-most-of-your-ispor-membership-5"
+  },
+  {
+   "id": "3699072",
+   "date": "2026-11-09",
+   "start": "14:45",
+   "end": "16:15",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Spain Chapter Meeting",
+   "speakers": "",
+   "summary": "",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-spain-chapter-meeting-2"
+  },
+  {
+   "id": "3711732",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall F1",
+   "format": "Educational Symposium",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Epidemiology & Public Health",
+    "Health Policy & Regulatory"
+   ],
+   "level": "Intermediate",
+   "title": "From HTA to Public Health: Rethinking Value in Obesity",
+   "speakers": "Erin Johansson; Lieven Annemans; Michal Pochopien; Olivia Wu",
+   "summary": "Obesity is a chronic, progressive disease and a leading public-health challenge of our time: it affects more than a billion people worldwide and impacts every aspect of society. This symposium outlines the broader questions…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-hta-to-public-health-rethinking-value-in-obesity"
+  },
+  {
+   "id": "3698987",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall G1",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Policy to Practice: The Evolution of HEOR and Healthcare Decision-Making in China — Experiences, Insights, and Lessons Learned",
+   "speakers": "Jing Wu; Wen Chen; Tao Guo; Yue Yang",
+   "summary": "Sponsored by the ISPOR Partnership Group China’s healthcare system has undergone profound transformation in recent years, with Health Economics and Outcomes Research (HEOR) emerging as a critical discipline supporting…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-policy-to-practice-the-evolution-of-heor-and-healthcare-decision-making-in-china--experiences-insights-and-lessons-learned"
+  },
+  {
+   "id": "3698984",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall E1",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care"
+   ],
+   "level": "Intermediate",
+   "title": "From Value Assessment to Delivery Reality: Integrating HEOR and Health Systems Perspectives in Coverage Decisions for GLP-1 Therapies",
+   "speakers": "Kelly Saldana; Rania Abdelaziz; Sara Al Dallal; Sabry Hamza",
+   "summary": "Hosted by the ISPOR Institute for Healthcare Transformation, this forum explores how evidence of value can be translated into sustainable implementation within real-world health systems. A moderated panel will bring together…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-value-assessment-to-delivery-reality-integrating-heor-and-health-systems-perspectives-in-coverage-decisions-for-glp-1-therapies"
+  },
+  {
+   "id": "3711742",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall L",
+   "format": "Forums",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Informing Healthcare Investment Through a Patient-Centered Lens",
+   "speakers": "Alan Balch; Gunnar Esiason; Hayley Chapman; Brian O'Rourke; Julia Persson",
+   "summary": "Building on insights from the recent ISPOR Healthcare Investment Summit 2026 and the strategic priorities of the ISPOR Patient Council, this Forum will explore how patient-centered evidence can help evaluate healthcare…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/informing-nbsp-healthcare-investment-nbsp-through-a-patient-centered-lens"
+  },
+  {
+   "id": "3711731",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall E2",
+   "format": "Educational Symposium",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory"
+   ],
+   "level": "Advanced",
+   "title": "One Assessment, Many Decisions: The Future of Country-Level HTA After JCA",
+   "speakers": "Ruairi O'Donnell; Antonella Cardone; Neil Grubert; Anna Shopova; Anne Willemsen",
+   "summary": "The launch of the Joint Clinical Assessment (JCA) under the EU Health Technology Assessment (HTA) Regulation marks a significant moment in health technology assessment in Europe. For the first time, a single, centralized clinical…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/one-assessment-many-decisions-the-future-of-country-level-hta-after-jca"
+  },
+  {
+   "id": "3724196",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "15:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Preparing Orphan Medicinal Products for JCA: Strengthening the Evidence Package",
+   "speakers": "Suzette Matthijsse; Miranda Cooper; Triona Zelesnik",
+   "summary": "The introduction of Joint Clinical Assessments (JCAs) is reshaping European HTA by establishing a common framework for clinical evidence assessment, while appraisal and national pricing and reimbursement decisions remain the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/preparing-orphan-medicinal-products-for-jca-strengthening-the-evidence-package"
+  },
+  {
+   "id": "3711736",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "15:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Policy & Regulatory",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Real-Time Intelligence: AI-Enabled Insights to Drive Evidence Strategy",
+   "speakers": "Ryan Ahern",
+   "summary": "Modern healthcare generates a continuous stream of real-world data, yet evidence strategy is often guided by insights that arrive months after care patterns have already changed. For HEOR teams, this can create uncertainty when…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/real-time-intelligence-ai-enabled-insights-to-drive-evidence-strategy"
+  },
+  {
+   "id": "3698994",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Shaping the Future of HEOR: A Special Preview of ISPOR's Updated Science Strategy",
+   "speakers": "Laura Pizzi; Deborah Marshall; Peter Neumann; Zsombor Zrubka",
+   "summary": "Healthcare decision makers have never faced greater expectations for rigorous, timely, and actionable evidence. As artificial intelligence accelerates evidence generation, real-world evidence becomes increasingly central to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/shaping-the-future-of-heor-a-special-preview-of-ispor-s-updated-science-strategy"
+  },
+  {
+   "id": "3739542",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:00",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Special Onsite Join / Renewal Event for ISPOR Membership",
+   "speakers": "",
+   "summary": "Special Onsite Promo! Come by the ISPOR Booth (#411) to join or renew your ISPOR membership! We might just have a surprise for you…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/special-onsite-join--renewal-event-for-ispor-membership-5"
+  },
+  {
+   "id": "3698995",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall F2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "The HEMA Debate: The Value Judgements Involved in Deciding How “Value” Is Measured: A Value in Health Forum",
+   "speakers": "alistair mcguire; Nancy Devlin; Darius Lakdawalla; Mark Sculpher",
+   "summary": "This Value in Health Forum features a live debate between Mark Sculpher and Darius Lakdawalla on a key issue arising from the 2026 Health Economics Methods Advisory (HEMA) report: how should the benefits of healthcare be measured…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-hema-debate-the-value-judgements-involved-in-deciding-how-value-is-measured-a-value-in-health-forum"
+  },
+  {
+   "id": "3699055",
+   "date": "2026-11-09",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Updating HTA Methods in Central and Eastern Europe: Can National Guidelines Converge While Remaining Locally Relevant?",
+   "speakers": "Maciej Niewada; Tomáš Doležal; Oresta Piniazhko; Magdalena Rdzanek",
+   "summary": "ISSUE: HTA guidelines in Central and Eastern Europe are increasingly expected to address rapid methodological and policy change, including real-world evidence, disease severity, digital health technologies, artificial…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/updating-hta-methods-in-central-and-eastern-europe-can-national-guidelines-converge-while-remaining-locally-relevant"
+  },
+  {
+   "id": "3699123",
+   "date": "2026-11-09",
+   "start": "16:00",
+   "end": "16:45",
+   "room": "Poster Tour Area A, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Artificial Intelligence Poster Tour",
+   "speakers": "Bill Malcolm",
+   "summary": "This tour will take place during Poster Session 2, Posters will be hung from 16:00-19:00. Posters featured in this tour: PT7: NICE'S APPROACH TO TRIAGING AI USE CASES TO EXPLORE POTENTIAL USE FOR GUIDANCE PRODUCTION TASKS PT8:…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/artificial-intelligence-poster-tour"
+  },
+  {
+   "id": "3699120",
+   "date": "2026-11-09",
+   "start": "16:00",
+   "end": "16:45",
+   "room": "Poster Tour Area B, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Patient-Centered Evidence Poster Tour",
+   "speakers": "Bryan Bennett",
+   "summary": "This tour will take place during Poster Session 2, Posters will be hung from 16:00-19:00. Posters featured in this tour: PT13: CONTENT VALIDITY EVALUATION OF SELECTED PATIENT REPORTED OUTCOME MEASURES FOR PAIN, FATIGUE, AND…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/patient-centered-evidence-poster-tour"
+  },
+  {
+   "id": "3699114",
+   "date": "2026-11-09",
+   "start": "16:00",
+   "end": "19:00",
+   "room": "",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Poster Session 2",
+   "speakers": "",
+   "summary": "Poster Tours 16:00–16:45 / Presenters will be with their posters from 18:00–19:00",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/posters/poster-detail/ispor-europe-2026/poster-session-2-5"
+  },
+  {
+   "id": "3739543",
+   "date": "2026-11-09",
+   "start": "16:15",
+   "end": "17:00",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Accelerate Your Career Growth With ISPOR Education",
+   "speakers": "",
+   "summary": "ISPOR Education courses empower you to confidently share evidence, stand out, and propel your career. Come by the ISPOR Booth (#411) and learn how our programming can help you build a complete communication skill set, from…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/accelerate-your-career-growth-with-ispor-education-2"
+  },
+  {
+   "id": "3699074",
+   "date": "2026-11-09",
+   "start": "16:15",
+   "end": "17:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Introducing ISPOR Italy: A New Chapter for the Future",
+   "speakers": "",
+   "summary": "Join the leaders of the Rome and Milan Chapters as they come together to launch ISPOR Italy. The session will reflect on the work of both chapters and the ISPOR Rome for Future Youth Group (GIRF), introduce the new national…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/introducing-ispor-italy-a-new-chapter-for-the-future"
+  },
+  {
+   "id": "3699047",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Organizational Practices",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Agentic AI Governance: How to Balance Innovation and Guidance",
+   "speakers": "Amanda Hansson Hedblom; Michael Merchant; Thomas Paulsson; Amir Saeidmehr",
+   "summary": "Issue: Agentic AI governance in evidence synthesis usually focuses on what could go wrong if teams adopt agentic AI too quickly. That caution is necessary, but incomplete. HEOR, medical information, and market-access teams also…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/agentic-ai-governance-how-to-balance-innovation-and-guidance"
+  },
+  {
+   "id": "3699100",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Artificial Intelligence for Evidence Generation and Synthesis",
+   "speakers": "Beate Jahn",
+   "summary": "Artificial intelligence is rapidly transforming the way evidence is identified, synthesized, and interpreted in health economics and outcomes research. This session showcases innovative applications of AI to systematic literature…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/artificial-intelligence-for-evidence-generation-and-synthesis"
+  },
+  {
+   "id": "3699141",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall E2",
+   "format": "Workshop",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond “Using RWE”: What It Takes to Make Real-World Evidence Decision-Grade for HTA?",
+   "speakers": "Mark Sculpher; Xiaoning He; Huajie Jin; Tina Wang",
+   "summary": "Purpose: Real-world evidence (RWE) is increasingly discussed in health technology assessment (HTA), economic evaluation, managed access, and reassessment. However, the presence of real-world data (RWD) in an evidence package does…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-using-rwe--what-it-takes-to-make-real-world-evidence-decision-grade-for-hta"
+  },
+  {
+   "id": "3699103",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Case Studies in Med Tech Evaluation",
+   "speakers": "Abeer Al Rabayah",
+   "summary": "This session explores economic evaluation case studies from countries with diverse income levels, healthcare system structures, and stages of health technology assessment (HTA) development. It brings together examples of both…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/case-studies-in-med-tech-evaluation"
+  },
+  {
+   "id": "3699042",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "EU HTA System Readiness for Orphan Medicinal Products ahead of 13 January 2028",
+   "speakers": "Alexander Natz; Antonella Cardone; Niklas Hedberg; Pierrick Rollet; Matteo Scarabelli",
+   "summary": "The panel will explore different stakeholders’ perspectives on the readiness of the EU HTA system for OMPs that will become subject to JCA from 13 January 2028. Niklas Hedberg will provide the HTA body perspective and will speak…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/eu-hta-system-readiness-for-orphan-medicinal-products-ahead-of-13-january-2028"
+  },
+  {
+   "id": "3699024",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "ICH E22 – General Considerations for Patient Preference Studies: Are We Ready to Move from Guidance to Practice?",
+   "speakers": "Brett Hauber; Conny Berlin; Juan Gonzalez; Francesco Pignatti",
+   "summary": "ICH issued a draft guideline on General Considerations for Patient Preference Studies (E22) for public consultation in November 2025 with the final guideline expected in 2027. The purpose of the guideline is to “outline[s]…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ich-e22--general-considerations-for-patient-preference-studies-are-we-ready-to-move-from-guidance-to-practice"
+  },
+  {
+   "id": "3699142",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall K2",
+   "format": "Workshop",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Integrating Environmental Sustainability into HTA: Global Policy Archetypes and Future Directions for Access Decision-Making",
+   "speakers": "Anke-Peggy Holtorf; Fiona Adshead; Sandro Gsteiger; Stuart Mealing",
+   "summary": "Purpose: This workshop will examine emerging international approaches for incorporating environmental sustainability (ES) into health technology assessment (HTA) and explore how these approaches may influence future healthcare…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/integrating-environmental-sustainability-into-hta-global-policy-archetypes-and-future-directions-for-access-decision-making"
+  },
+  {
+   "id": "3699075",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Digital Health Special Interest Group Meeting",
+   "speakers": "",
+   "summary": "Join leaders and fellow members of the Digital Health Special Interest Group for an interactive open meeting. Attendees will learn about the group's Mission and Goals, ongoing projects, and meet current leadership. Attendees will…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-digital-health-special-interest-group-meeting-2"
+  },
+  {
+   "id": "3699146",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall F2",
+   "format": "Workshop",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Joint Clinical Assessment (JCA) and Pan-European Solidarity-Based Reimbursement Model (PANSOL) - Is Collaborative Assessment Meeting the Needs of EU Member States?",
+   "speakers": "Lieven Annemans; Krzysztof Landa; Tanja Novakovic; Mark Parker",
+   "summary": "PURPOSE: This workshop will examine how a pan-European solidarity-based reimbursement model (PANSOL) could complement EU HTA processes by translating evidence into joint access decisions for high-cost and orphan medicines. Using…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/joint-clinical-assessment-jca-and-pan-european-solidarity-based-reimbursement-model-pansol--is-collaborative-assessment-meeting-the-needs-of-eu-member-states"
+  },
+  {
+   "id": "3699139",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall E1",
+   "format": "Workshop",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "Mixture Cure Models: Do They Create More Issues Than They are Trying to Solve?",
+   "speakers": "Seán Conlon; Gianluca Baio; Rhiannon Owen; Irina Proskorovsky",
+   "summary": "PURPOSE: The objectives are to present theoretical and practical issues of applying mixture-cure models (MCMs) in health technology assessment (HTA) settings for interventions with curative potential (IwCP), present a case-study…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/mixture-cure-models-do-they-create-more-issues-than-they-are-trying-to-solve"
+  },
+  {
+   "id": "3699060",
+   "date": "2026-11-09",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall L",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Whole Health at Risk: Does EU Joint Clinical Assessment Conflict with Europe’s Antimicrobial Resistance Ambitions?",
+   "speakers": "Matthias Hofer; Libby Hamson; Patrick Hopkinson; Anja Schiel",
+   "summary": "The Joint Clinical Assessment (JCA), introduced under the EU HTA Regulation, focuses on patient level efficacy and safety of new health technologies. This debate will explore whether this narrow focus is at odds with the concept…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/whole-health-at-risk-does-eu-joint-clinical-assessment-conflict-with-europe-rsquo-s-antimicrobial-resistance-ambitions"
+  },
+  {
+   "id": "3699016",
+   "date": "2026-11-09",
+   "start": "18:00",
+   "end": "19:00",
+   "room": "Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Welcome Reception",
+   "speakers": "",
+   "summary": "Join us for the Welcome Reception, supported by ISPOR Corporate Partners. A perfect kick-off to connect, unwind, and gear up for what's ahead.",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-welcome-reception"
+  },
+  {
+   "id": "3699015",
+   "date": "2026-11-09",
+   "start": "18:00",
+   "end": "19:00",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Women in HEOR Reception",
+   "speakers": "",
+   "summary": "",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/women-in-heor-reception-2"
+  },
+  {
+   "id": "3699093",
+   "date": "2026-11-10",
+   "start": "08:30",
+   "end": "10:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Plenary Session 2: Presidential Address, and Keynote Speaker",
+   "speakers": "Ricardo Baptista Leite; Beth Devine",
+   "summary": "Begin day two of ISPOR Europe 2026 with inspiring insights from ISPOR’s President Beth Devine and our Keynote speaker Ricardo Baptista Leite, CEO of HealthAI. Immediately following the opening presentations, the scientific…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-2-presidential-address-and-keynote-speaker"
+  },
+  {
+   "id": "3699094",
+   "date": "2026-11-10",
+   "start": "08:30",
+   "end": "10:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Plenary Session 2: We Optimize Treatments—But How Do We Optimize the System?",
+   "speakers": "Rasmus Gjesing; Ricardo Baptista Leite; Jakub Dvoracek; Carole Longson",
+   "summary": "Building on the opening plenary’s exploration of what value means, this session shifts the focus to where value is created across healthcare systems. HEOR has developed sophisticated methods for evaluating individual health…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-2-we-optimize-treatments-but-how-do-we-optimize-the-system"
+  },
+  {
+   "id": "3699077",
+   "date": "2026-11-10",
+   "start": "10:15",
+   "end": "11:15",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Arabic Network Meeting",
+   "speakers": "",
+   "summary": "How are countries across the Middle East and North Africa responding to growing budget pressures while ensuring equitable access to innovative medicines? Moderated by Dr. Samir Ahid and Dr. Amal Yassine, this session will bring…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-arabic-network-meeting"
+  },
+  {
+   "id": "3699076",
+   "date": "2026-11-10",
+   "start": "10:15",
+   "end": "11:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Reports in Action: Emerging Methods, Innovation, and Policy",
+   "speakers": "",
+   "summary": "ISPOR Reports bring together the expertise and perspectives of ISPOR members to advance the science and practice of health economics and outcomes research (HEOR). These reports address emerging methodological questions, explore…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-reports-in-action-emerging-methods-innovation-and-policy"
+  },
+  {
+   "id": "3699073",
+   "date": "2026-11-10",
+   "start": "10:15",
+   "end": "11:15",
+   "room": "Room 1.14",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Value in Health (VIH) Office Hours",
+   "speakers": "",
+   "summary": "",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/value-in-health-vih-office-hours-2"
+  },
+  {
+   "id": "3699049",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Medical Technologies",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond the Trial: Real-World Evidence and Lifecycle Evidence Generation in NICE Existing-Use HealthTech Assessments",
+   "speakers": "Dawn Lee; Anastasia Chalkidou; Stacey Chang-Douglass; Michael Kolovetsios",
+   "summary": "ISSUE: As health systems seek to optimise decisions on technologies already embedded in routine care, real-world evidence (RWE) is becoming crucial. NICE's existing-use HealthTech assessments (formerly late-stage assessments,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-the-trial-real-world-evidence-and-lifecycle-evidence-generation-in-nice-existing-use-healthtech-assessments"
+  },
+  {
+   "id": "3699136",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall F1",
+   "format": "Spotlight",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Bridging China and Europe: When Is China-Generated Evidence Fit for European HTA?",
+   "speakers": "Ruslan Horblyuk; Huajie Jin; Ross Selby; Jing Wu",
+   "summary": "ISSUE: As China’s biopharmaceutical ecosystem matures, China-generated clinical trial and real-world evidence are increasingly used to inform global development and access strategies. The key debate is no longer whether such…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/bridging-china-and-europe-when-is-china-generated-evidence-fit-for-european-hta"
+  },
+  {
+   "id": "3699058",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Advanced",
+   "title": "Can Agentic AI Deliver HTA-Ready Health Economic Models? Governance, Validation, and Trust",
+   "speakers": "Andrew Briggs; Jag Chhatwal; Andre Verhoek; Xiaoyan Wang",
+   "summary": "ISSUE: Large language model (LLM) agents can now construct Excel-based health economic models, execute multi-phase quality control protocols, generate HTA-compliant technical reports, and produce structured bibliographies—all…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/can-agentic-ai-deliver-hta-ready-health-economic-models-governance-validation-and-trust"
+  },
+  {
+   "id": "3699064",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory"
+   ],
+   "level": "Intermediate",
+   "title": "Convergence and the Transatlantic Bargain: US Pricing Reform, the EU Pharma Package, and What Either Means for Innovation and Access",
+   "speakers": "Indranil Bagchi; Ferenc Marofka; Lotte Steuten; Sean Sullivan",
+   "summary": "ISSUE: Pharmaceutical pricing on both sides of the Atlantic is being reformed simultaneously — but in ways that may pull against each other. In the US, the IRA's Medicare negotiation programme is forcing prices toward…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/convergence-and-the-transatlantic-bargain-us-pricing-reform-the-eu-pharma-package-and-what-either-means-for-innovation-and-access"
+  },
+  {
+   "id": "3699140",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall E2",
+   "format": "Workshop",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Embracing the Opportunity of AI in Economic Modelling Responsibly Through Agentic Workflows and Guardrails",
+   "speakers": "Beth Devine; Dan Ollendorf; Timothy Reason; Liza Zasukhina",
+   "summary": "PURPOSE: Health economic models must be reproducible, auditable, and clinically credible. As agentic AI tools proliferate, modelers face a practical question: which parts of the modelling workflow benefit from AI assistance, and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/embracing-the-opportunity-of-ai-in-economic-modelling-responsibly-through-agentic-workflows-and-guardrails"
+  },
+  {
+   "id": "3699106",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Generating Decision-Ready Evidence for HTA and JCA",
+   "speakers": "Fatima Salih",
+   "summary": "As HTA and Joint Clinical Assessment (JCA) requirements continue to evolve, decision-makers increasingly rely on evidence beyond direct head-to-head clinical trials. This session showcases the application of matching-adjusted…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/generating-decision-ready-evidence-for-hta-and-jca"
+  },
+  {
+   "id": "3699089",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall G1",
+   "format": "Other Breakout Session",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Patient-Centered Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Patient Engagement in Economic Modelling: Bridging the Gap Between What’s Measured and What Matters",
+   "speakers": "Noemi Muszbek; Ariel Yuhan Ong; Matthew Selby",
+   "summary": "PURPOSE: Patient engagement has been widely recognised as an important component of HEOR, yet its integration into economic model development remains variable. This session will demonstrate how early patient engagement can guide…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/patient-engagement-in-economic-modelling-bridging-the-gap-between-what-rsquo-s-measured-and-what-matters"
+  },
+  {
+   "id": "3699111",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Patient Preferences in Healthcare Decision-Making: Global Insights from Discrete Choice and Preference Studies",
+   "speakers": "Sam Llewellyn",
+   "summary": "Understanding what matters most to patients is essential for patient-centered care and evidence-based decision-making. This session highlights preference studies across diverse healthcare settings, including digital health,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/patient-preferences-in-healthcare-decision-making-global-insights-from-discrete-choice-and-preference-studies"
+  },
+  {
+   "id": "3699115",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "13:30",
+   "room": "",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Poster Session 3",
+   "speakers": "",
+   "summary": "Poster Tours 11:45–12:30 / Presenters will be with their posters from 12:30–13:30",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/posters/poster-detail/ispor-europe-2026/poster-session-3-4"
+  },
+  {
+   "id": "3699087",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall F2",
+   "format": "Other Breakout Session",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Responsible AI in HTA - Introducing the NICE AI Methods Framework",
+   "speakers": "Mitch Higashi; James Fotheringham; Yan Teck Ho; Sven Klijn; Raphael Sonabend-Friend",
+   "summary": "PURPOSE: The objectives of this session are to introduce the NICE AI Methods Framework, to discuss what would make AI acceptable and trustworthy in HTA decision-making, and to gather stakeholder perspectives to inform public…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/responsible-ai-in-hta--introducing-the-nice-ai-methods-framework"
+  },
+  {
+   "id": "3699027",
+   "date": "2026-11-10",
+   "start": "10:30",
+   "end": "11:30",
+   "room": "Hall L",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Service Delivery & Process of Care",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "VBHC x HEOR: From Shared Principles to Better Decisions - Are We There Yet?",
+   "speakers": "William Padula; Borja Garcia-Lorenzo; Jens Grueger; Mariska Hackert",
+   "summary": "Issue: VBHC was designed as a framework for patient-centred care, condition-specific outcomes, and the use of PROs to support benchmarking and inform value-based payment (VBP). Despite this conceptual clarity, VBHC has struggled…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/vbhc-x-heor-from-shared-principles-to-better-decisions--are-we-there-yet"
+  },
+  {
+   "id": "3699122",
+   "date": "2026-11-10",
+   "start": "11:30",
+   "end": "12:15",
+   "room": "Poster Tour Area A, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Expanded Value Measures Poster Tour",
+   "speakers": "Zsombor Zrubka",
+   "summary": "This tour will take place during Poster Session 3, Posters will be hung from 10:30-13:30. Posters featured in this tour: PT19: VACTS-PSO: A PAYER-ORIENTED VALUE FRAMEWORK INTEGRATING CLINICAL OUTCOMES, QUALITY OF LIFE, AND…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/expanded-value-measures-poster-tour"
+  },
+  {
+   "id": "3699119",
+   "date": "2026-11-10",
+   "start": "11:30",
+   "end": "12:15",
+   "room": "Poster Tour Area B, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Real-World Evidence Poster Tour",
+   "speakers": "Sandrine Bourguignon",
+   "summary": "This tour will take place during Poster Session 3, Posters will be hung from 10:30-13:30. Posters featured in this tour: PT25: INTEGRATING PATIENT-CENTRICITY INTO REAL-WORLD EVIDENCE GENERATION: INSIGHTS FROM SOCIAL MEDIA…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/real-world-evidence-poster-tour-3"
+  },
+  {
+   "id": "3699078",
+   "date": "2026-11-10",
+   "start": "11:45",
+   "end": "12:45",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Greece Chapter Meeting",
+   "speakers": "",
+   "summary": "",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-greece-chapter-meeting-2"
+  },
+  {
+   "id": "3699079",
+   "date": "2026-11-10",
+   "start": "11:45",
+   "end": "12:45",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Institute for Healthcare Transformation Open Meeting",
+   "speakers": "Kelly Saldana",
+   "summary": "This open meeting will introduce the ISPOR Institute for Healthcare Transformation, provide an overview of its vision and strategic priorities, and facilitate discussion with attendees to gather feedback, identify emerging areas…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-institute-for-healthcare-transformation-open-meeting"
+  },
+  {
+   "id": "3698980",
+   "date": "2026-11-10",
+   "start": "11:45",
+   "end": "12:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Fast Facts",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "The Next Generation of HEOR: Career Pathways in an AI-Augmented Field",
+   "speakers": "Ghayath Janoudi; Vandana Ayyar Gupta; Erika Wissinger; Anggie Wiyani",
+   "summary": "AI is quickly automating many tasks that used to be how HEOR professionals learned their judgment, such as evidence screening, extraction and drafting. That creates a paradox: people get faster outputs, but fewer chances to build…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-next-generation-of-heor-career-pathways-in-an-ai-augmented-field"
+  },
+  {
+   "id": "3711741",
+   "date": "2026-11-10",
+   "start": "12:00",
+   "end": "12:30",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Narrative to Evidence: How NLP-Extracted Clinical Facts Strengthen Real-World Research",
+   "speakers": "Jeffrey Brown",
+   "summary": "As demand grows for more robust real-world evidence (RWE) to support research, healthcare decision-making, and market access activities, important data gaps remain. While structured electronic health record (EHR) and claims data…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-narrative-to-evidence-how-nlp-extracted-clinical-facts-strengthen-real-world-research"
+  },
+  {
+   "id": "3711740",
+   "date": "2026-11-10",
+   "start": "12:00",
+   "end": "12:30",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Patient-Centered Research",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Patient Experience Data in Health Economics and Outcomes Research – Challenges, Solutions and Strategic Value",
+   "speakers": "Helena Bradley; Danielle Riley; Gavin Taylor-Stokes",
+   "summary": "Patient Experience Data (PED) is playing an increasingly important role in informing regulatory, health technology assessment (HTA), payer, and clinical decision-making. As stakeholders place greater emphasis on patient-centered…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/patient-experience-data-in-health-economics-and-outcomes-research--challenges-solutions-and-strategic-value"
+  },
+  {
+   "id": "3698989",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall F2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Are New EU Policies Really Going to Improve RWD Availability to Inform Access Decisions?",
+   "speakers": "Sandipan Bhattacharjee; Niklas Hedberg; Alexander Natz",
+   "summary": "Several EU policy initiatives aim to strengthen research, innovation and decision-making on access to medicines, including the European Health Data Space (EHDS), the EU HTA Regulation, and broader pharmaceutical, biotech and AI…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/are-new-eu-policies-really-going-to-improve-rwd-availability-to-inform-access-decisions"
+  },
+  {
+   "id": "3711733",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall E2",
+   "format": "Educational Symposium",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond Healthcare Costs: Valuing Obesity Treatment for Patients, Workforces, and Society",
+   "speakers": "Francesca Fiorentino; Johan Fagerudd; Robert King; Hanène Samouda; Aparajita Tyagi",
+   "summary": "Obesity affects individuals, healthcare systems, workforces, and society, yet value assessments of obesity interventions remain centered on clinical outcomes, healthcare resource use, and direct medical costs. Effective obesity…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-healthcare-costs-valuing-obesity-treatment-for-patients-workforces-and-society"
+  },
+  {
+   "id": "3698985",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall E1",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond Pricing: How HTA Informs Health System Decisions Worldwide",
+   "speakers": "Jessica Daw; Fatimah Alyami; Sudha Kutty; Joseph Mfutso-Bengo; Claire Telford",
+   "summary": "Sponsored by the ISPOR Partnership Group, HTA Council, and HTA Roundtable Health technology assessment (HTA) is a multidisciplinary process that uses explicit methods to determine the value of a health technology at different…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-pricing-how-hta-informs-health-system-decisions-worldwide"
+  },
+  {
+   "id": "3698982",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall G1",
+   "format": "Forums",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Patient-Centered Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Experience to Evidence: Building Patients’ Capabilities for Patient Experience Data (PED) in HTA",
+   "speakers": "Maria Dutarte; Alan Balch; Jose Diaz; Anke-Peggy Holtorf; Claas Roehl",
+   "summary": "ISSUE: EU HTAR mandates involvement of patients as key stakeholders in all aspects of HTA. In 2023-2026, EUPATI implemented the EU-funded HTA4Patients project, resulting in an easily accessible, high-quality training program…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-experience-to-evidence-building-patients-capabilities-for-patient-experience-data-ped-in-hta"
+  },
+  {
+   "id": "3698999",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall L",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "From Principles to Practice: Preliminary Good Practice Recommendations from the Joint ISPOR-SMDM Model Validation II Task Force",
+   "speakers": "Salah Ghabri; Isaac Corro Ramos; Beate Jahn; Mafalda Ramos",
+   "summary": "Health economic models are widely used to inform healthcare reimbursement decisions and pricing negotiations, but in practice there is no consistent approach to validating them or reporting how validation has been conducted.…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-principles-to-practice-preliminary-good-practice-recommendations-from-the-joint-ispor-smdm-model-validation-ii-task-force"
+  },
+  {
+   "id": "3698993",
+   "date": "2026-11-10",
+   "start": "12:15",
+   "end": "13:15",
+   "room": "Hall K2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Opportunity Cost, or Opportunity Lost? Sacred Principle, Functional Fiction, or Evolving Concept in HTA?",
+   "speakers": "Laura Pizzi; Dan Ollendorf; Chris Sampson; Lotte Steuten",
+   "summary": "The concept of opportunity cost — the health foregone elsewhere when a new intervention is funded — has been central to HTA methodology for decades, yet agreement on how to measure and apply it remains elusive. Debates over…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/opportunity-cost-or-opportunity-lost-sacred-principle-functional-fiction-or-evolving-concept-in-hta"
+  },
+  {
+   "id": "3739545",
+   "date": "2026-11-10",
+   "start": "12:30",
+   "end": "13:15",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Tackle AI in HEOR With ISPOR Education",
+   "speakers": "",
+   "summary": "Build your 2027 learning plan that culminates in a Certificate of Practice for AI in HEOR competencies. Chat with a member of the ISPOR Education team at the ISPOR Booth (#411) to learn more about the AI and HEOR course…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/tackle-ai-in-heor-with-ispor-education-2"
+  },
+  {
+   "id": "3698981",
+   "date": "2026-11-10",
+   "start": "12:45",
+   "end": "13:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Fast Facts",
+   "tracks": [],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "",
+   "title": "Finding and Exploring HTA Methods: An Interactive Demonstration of the SUSTAIN Methods Observatory",
+   "speakers": "Wim Goettsch; Saif Elayan; Nicole Mittmann",
+   "summary": "The session is structured as a demonstration followed by a facilitated discussion. Saif Elayan will demonstrate how to explore the inventory of HTA methods guidance, search the catalogue using keywords and AI-assisted search,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/finding-and-exploring-hta-methods-an-interactive-demonstration-of-the-sustain-methods-observatory"
+  },
+  {
+   "id": "3711836",
+   "date": "2026-11-10",
+   "start": "12:45",
+   "end": "13:15",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Research Question to Rigorous Evidence: A Subject-Matter Expert Agentic AI Workflow for HCRU Studies",
+   "speakers": "Katie Mues; Ornela Xhelili",
+   "summary": "Katie Mues and Ornela Xhelili will demonstrate Datavant’s Descriptive HCRU RWE Study Agent directed workflow designed to move HCRU studies from question to evidence with an emphasis on efficiency, transparency, and auditability.…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-research-question-to-rigorous-evidence-a-subject-matter-expert-agentic-ai-workflow-for-hcru-studies"
+  },
+  {
+   "id": "3699080",
+   "date": "2026-11-10",
+   "start": "13:15",
+   "end": "14:45",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Nordic Chapter Meeting: AI in Nordic Evidence Generation and Decision-Making: Lessons from Implementation",
+   "speakers": "",
+   "summary": "(All interested ISPOR Europe 2026 attendees are welcome to join this session) The Nordic countries offer a particularly informative setting for exploring AI implementation, with their highly digitalised healthcare systems,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-nordic-chapter-meeting-nbsp-ai-in-nordic-evidence-generation-and-decision-making-lessons-from-implementation-nbsp"
+  },
+  {
+   "id": "3699081",
+   "date": "2026-11-10",
+   "start": "13:15",
+   "end": "14:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Patient-Centered Special Interest Group Meeting",
+   "speakers": "Marjorie Leclerc; Sam Llewellyn; Melissa Maravic",
+   "summary": "Join the leaders of the Patient-Centered Special Interest Group to learn about and engage with ongoing initiatives, including a new key project proposal. Attendees will also have the opportunity to participate in an open dialogue…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-patient-centered-special-interest-group-meeting"
+  },
+  {
+   "id": "3699099",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "AI Applications in Health Technology Assessment",
+   "speakers": "Salah Ghabri",
+   "summary": "This session aims to evaluate the extent to which emerging use of AI applications (e.g. generative AI) can be useful to support health Technology assessment (HTA). This section identifies and discusses specific issues related to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ai-applications-in-health-technology-assessment"
+  },
+  {
+   "id": "3699032",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Epidemiology & Public Health",
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Are HTA and Health Funding Systems Failing to Incentivise Investment in Disease Prevention?",
+   "speakers": "Eleanor Thurtle; Grace Hampson; James Jarrett; Rosanna Tarricone",
+   "summary": "ISSUE: European health systems consistently state that prevention is a priority, yet funding and evaluation arrangements historically prioritise treating disease. Prevention interventions generate benefits over long time horizons…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/are-hta-and-health-funding-systems-failing-to-incentivise-investment-in-disease-prevention"
+  },
+  {
+   "id": "3699023",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Beyond the Chinese Market: How China-Generated Evidence is Reshaping Global HTA, Access, and Reimbursement Decisions",
+   "speakers": "Yu Fang; Le Gao; Minghuan Jiang; Lizheng Shi",
+   "summary": "Issue China’s biopharmaceutical ecosystem has undergone a profound transformation over the past decade, emerging as a significant contributor to global drug discovery, clinical development, and real-world evidence generation.…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-the-chinese-market-how-china-generated-evidence-is-reshaping-global-hta-access-and-reimbursement-decisions"
+  },
+  {
+   "id": "3699063",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Delay or Prepare? Navigating EU HTA in the Era of MFN-Driven Launch Uncertainty",
+   "speakers": "Eric Faulkner; Jon Campbell; Gregory Daniel; Joerg Ruof",
+   "summary": "ISSUE Global pricing pressures, including Most Favored Nation (MFN) and intensified reference pricing (ERP), are reshaping pharmaceutical launch strategies. Companies are delaying or deprioritizing European launches to protect…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/delay-or-prepare-navigating-eu-hta-in-the-era-of-mfn-driven-launch-uncertainty"
+  },
+  {
+   "id": "3699147",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall G1",
+   "format": "Workshop",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Methodological & Statistical Research",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Developing Qualitative Vignettes to Explore Patient Perspectives of Meaningful Change in Clinical Outcomes Assessment: AI-based and Manual Methodological Applications",
+   "speakers": "Helen Kitchen; Natalie Aldhouse; Catherine Bottomley; Piper Fromy",
+   "summary": "PURPOSE: It is critical to establish meaningful change thresholds for clinical outcomes assessments (COA) used to evaluate key efficacy endpoints in clinical trials for new therapies. Qualitative methods are a complementary…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/developing-qualitative-vignettes-to-explore-patient-perspectives-of-meaningful-change-in-clinical-outcomes-assessment-ai-based-and-manual-methodological-applications"
+  },
+  {
+   "id": "3699086",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall E2",
+   "format": "Other Breakout Session",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Methods for Health State Utility Estimation: Task Framing, Current Practice, and Future Directions in HTA",
+   "speakers": "Matthijs Versteegh; Tianhao Chen; Matthew Franklin; Dawn Lee; Andrew Lloyd",
+   "summary": "Health state utility (HSU) estimation underpins cost utility analysis, yet methodological choices are often poorly aligned with the underlying analytic objective. This workshop brings together academic and industry perspectives…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/methods-for-health-state-utility-estimation-task-framing-current-practice-and-future-directions-in-hta"
+  },
+  {
+   "id": "3699148",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall L",
+   "format": "Workshop",
+   "tracks": [],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Modern Synthesis Methods for Estimating Subgroup-Specific Treatment Effects",
+   "speakers": "Antonio Remiro-Azócar; Harlan Campbell; Jeroen Jansen; Renato Panaro",
+   "summary": "PURPOSE: Individual clinical trials are rarely powered to detect treatment effect modifiers, leaving subgroup analyses underpowered and prone to spurious findings. Combining information across trials makes identifying such…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/modern-synthesis-methods-for-estimating-subgroup-specific-treatment-effects"
+  },
+  {
+   "id": "3699109",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "New Forces Shaping Global Pricing",
+   "speakers": "Hussain Al-Omar",
+   "summary": "This session explores how US Most Favored Nation pricing, the EU Joint Clinical Assessment, and China’s 2026 drug pricing reforms are reshaping global launch strategies, evidence requirements, and access pathways. It will also…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/new-forces-shaping-global-pricing"
+  },
+  {
+   "id": "3699056",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Parallel Joint Scientific Consultations Under the EU HTA Regulation: What Have We Learned from the First Procedures?",
+   "speakers": "Michael Berntgen; DIMITRIOS ATHANASIOU; Karina Hansen; Stephanie Said",
+   "summary": "Issue Joint Scientific Consultations (JSCs) are designed to facilitate early dialogue between health technology developers (HTDs), HTA bodies, regulators, patients and healthcare professionals. By enabling discussion on evidence…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/parallel-joint-scientific-consultations-under-the-eu-hta-regulation-what-have-we-learned-from-the-first-procedures"
+  },
+  {
+   "id": "3699059",
+   "date": "2026-11-10",
+   "start": "13:45",
+   "end": "14:45",
+   "room": "Hall F2",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Organizational Practices",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Train the Economist or Hire the Engineer? The Future of Expertise in AI-Native HEOR",
+   "speakers": "Ramiro Gilardino; J. Jaime Caro; Manuel Cossio; Mitch Higashi",
+   "summary": "ISSUE: Artificial intelligence (AI) is moving from experimental use to routine application across HEOR, including evidence synthesis, economic modeling, real-world evidence, comparative effectiveness research, and value…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/train-the-economist-or-hire-the-engineer-the-future-of-expertise-in-ai-native-heor"
+  },
+  {
+   "id": "3739546",
+   "date": "2026-11-10",
+   "start": "14:15",
+   "end": "14:45",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Get Involved—Make the Most of Your ISPOR Membership",
+   "speakers": "",
+   "summary": "Are you an ISPOR member or considering becoming an ISPOR member? Stop by the ISPOR Booth (#411) to discover how you can make the most of your member experience! Meet with ISPOR staff to explore exciting opportunities to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/get-involved-make-the-most-of-your-ispor-membership-6"
+  },
+  {
+   "id": "3699083",
+   "date": "2026-11-10",
+   "start": "14:45",
+   "end": "15:45",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Emerging and Orphan Therapies Special Interest Group Meeting",
+   "speakers": "",
+   "summary": "The ISPOR Emerging and Orphan Therapies Special Interest Group invites you to join its Open Meeting to meet the new leadership team, connect with colleagues, and explore the Group’s mission and areas of focus. This interactive…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-emerging-and-orphan-therapies-special-interest-group-meeting-2"
+  },
+  {
+   "id": "3739547",
+   "date": "2026-11-10",
+   "start": "14:45",
+   "end": "15:30",
+   "room": "ISPOR Booth (#411), Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Special Onsite Join / Renewal Event for ISPOR Membership",
+   "speakers": "",
+   "summary": "Special Onsite Promo! Come by the ISPOR Booth (#411) to join or renew your ISPOR membership! We might just have a surprise for you…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/special-onsite-join--renewal-event-for-ispor-membership-6"
+  },
+  {
+   "id": "3699082",
+   "date": "2026-11-10",
+   "start": "15:00",
+   "end": "16:00",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Turkey Chapter Meeting: From Evidence to Value: Integrating Patient Voice, Real-World Evidence and Sustainable Decision-Making",
+   "speakers": "",
+   "summary": "(All interested ISPOR Europe 2026 attendees are welcome to join this session) This meeting will explore how Türkiye can use limited healthcare resources to support technologies that deliver the greatest value to patients and the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-turkey-chapter-meeting-nbsp-from-evidence-to-value-integrating-patient-voice-real-world-evidence-and-sustainable-decision-making"
+  },
+  {
+   "id": "3698986",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall K2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "From Evidence to Enterprise Value: Communicating HEOR's Value to Executive Leadership",
+   "speakers": "Jan Hansen; Russ Montgomery; Clark Paramore; Craig Roberts",
+   "summary": "Sponsored by the ISPOR Partnership Group Purpose: To explore how HEOR leaders can effectively position evidence as a strategic business asset and communicate its value to executive decision-makers. Through practical examples and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-evidence-to-enterprise-value-communicating-heor-39-s-value-to-executive-leadership"
+  },
+  {
+   "id": "3711856",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "15:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Patient-Centered Research",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "From Routine Care to Decision-Grade Evidence: Scaling Pragmatic Trials Across Health Systems",
+   "speakers": "Bruce Feinberg; Nicholas Lazarou",
+   "summary": "Pragmatic trials are gaining momentum as regulatory bodies seek comparative effectiveness evidence generated in routine care. This session examines how randomization can be embedded into everyday clinical practice and what it…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-routine-care-to-decision-grade-evidence-scaling-pragmatic-trials-across-health-systems"
+  },
+  {
+   "id": "3698988",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall E1",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Technology Assessment",
+    "Methodological & Statistical Research",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Generative AI for Systematic Literature Reviews: ISPOR Good Practices Task Force Findings",
+   "speakers": "Dalia Dawoud; Jag Chhatwal; Sven Klijn; Raphael Sonabend-Friend",
+   "summary": "PURPOSE: Systematic literature reviews (SLRs) are foundational to evidence-based medicine, health technology assessment (HTA), yet they remain labor-intensive and resource-demanding. Generative AI (GenAI) tools are increasingly…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/generative-ai-for-systematic-literature-reviews-ispor-good-practices-task-force-findings"
+  },
+  {
+   "id": "3698991",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Connection Zone, Hall F Foyer",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory"
+   ],
+   "level": "Intermediate",
+   "title": "Inside the EMA: A Bird's-Eye View of Europe's Medicines Regulator",
+   "speakers": "Laura Pizzi; Michael Berntgen; Dominik Karres; Francesco Pignatti",
+   "summary": "Europe's medicines regulator is operating in an increasingly complex environment. Implementation of the EU Health Technology Assessment Regulation, rapid advances in artificial intelligence, geopolitical uncertainty, evolving…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/inside-the-ema-a-bird-s-eye-view-of-europe-s-medicines-regulator"
+  },
+  {
+   "id": "3711857",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "15:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Exhibit Hall Theaters",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Setting the Global Standard: What It Takes to Scale AI-Curated Oncology Data Across Countries",
+   "speakers": "Arun Sujenthiran; Qianyi Zhang",
+   "summary": "How can you be confident in the data extracted by a large language model (LLM)? Does that confidence translate when that same model is applied to a new country, a new disease area, or a new patient population? These are the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/setting-the-global-standard-what-it-takes-to-scale-ai-curated-oncology-data-across-countries"
+  },
+  {
+   "id": "3698990",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall F2",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Shaping the Global Research and Policy Agenda in HEOR in the Next Decade: A Value in Health Regional Issues Forum",
+   "speakers": "Manuel Espinoza; Rafael Pinedo-Villanueva; Lotte Steuten; Jing Wu",
+   "summary": "Health economics and outcomes research (HEOR) has matured substantially over the past decades, generating robust methodological standards and well-defined research priorities in jurisdictions with long-established health…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/shaping-the-global-research-and-policy-agenda-in-heor-in-the-next-decade-a-value-in-health-regional-issues-forum"
+  },
+  {
+   "id": "3698998",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall L",
+   "format": "Forums",
+   "tracks": [],
+   "topics": [
+    "Clinical Outcomes",
+    "Medical Technologies",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Using Patient Centered Digital Endpoints to Measure Whole Health",
+   "speakers": "Annette Champion; Anita Burrell; Anke-Peggy Holtorf; Ward Servaes",
+   "summary": "Instead of treating a specific disease/symptom, whole health focuses on restoring health, promoting resilience, and preventing disease across the lifespan. ISPOR notes that Whole Health expands the definition of value to ask if…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/using-patient-centered-digital-endpoints-to-measure-whole-health"
+  },
+  {
+   "id": "3699048",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Epidemiology & Public Health",
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care"
+   ],
+   "level": "Intermediate",
+   "title": "Vaccination Coverage an opportunity lost: Are European Health Systems Leaving Health Benefits on the Table?",
+   "speakers": "Cornelis Boersma; Tarik Catic; Aleksandra Grozdanova; Adina Turcu-Stiolica",
+   "summary": "ISSUE: Vaccination remains one of the most cost-effective public health interventions available, yet coverage rates across Europe fall consistently below WHO targets for influenza, COVID-19, and childhood immunisation. Hesitancy,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/vaccination-coverage-an-opportunity-lost-are-european-health-systems-leaving-health-benefits-on-the-table"
+  },
+  {
+   "id": "3711735",
+   "date": "2026-11-10",
+   "start": "15:15",
+   "end": "16:15",
+   "room": "Hall E2",
+   "format": "Educational Symposium",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Whole Health and HTA: Ready and Willing, or Not So Much? Rethinking Measurement in Health Technology Assessment",
+   "speakers": "Lisette Nientker; Malina Müller; Shruti Pandey; James Ryan; Ben van Hout",
+   "summary": "Whole Health, as defined by ISPOR, is a vision of healthcare that extends beyond disease treatment to encompass a broad range of factors that contribute to a person’s well-being. It includes physical, behavioral, socioeconomic,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/whole-health-and-hta-ready-and-willing-or-not-so-much-rethinking-measurement-in-health-technology-assessment"
+  },
+  {
+   "id": "3699124",
+   "date": "2026-11-10",
+   "start": "16:00",
+   "end": "16:45",
+   "room": "Poster Tour Area A, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Access and Pricing Poster Tour",
+   "speakers": "Adam Barak",
+   "summary": "This tour will take place during Poster Session 4, Posters will be hung from 16:00-19:00. Posters featured in this tour: PT31: FORECASTING UK BRANDED MEDICINES SPEND UNDER VPAG: A MACHINE-LEARNING MODEL INTEGRATING NHS…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/access-and-pricing-poster-tour"
+  },
+  {
+   "id": "3699116",
+   "date": "2026-11-10",
+   "start": "16:00",
+   "end": "19:00",
+   "room": "",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Poster Session 4",
+   "speakers": "",
+   "summary": "Poster Tours 16:00–16:45 / Presenters will be with their posters from 18:00–19:00",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/posters/poster-detail/ispor-europe-2026/poster-session-4-4"
+  },
+  {
+   "id": "3699118",
+   "date": "2026-11-10",
+   "start": "16:00",
+   "end": "16:45",
+   "room": "Poster Tour Area B, Hall X1-X4",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Student Research Poster Tour",
+   "speakers": "Zeba Khan; Nga Weng (Ivy) Leong",
+   "summary": "This tour will take place during Poster Session 4, Posters will be hung from 16:00-19:00. Posters featured in this tour: PT37: ESTABLISHING THE VALUE OF HOSPITAL ELECTRONIC MEDICAL RECORD DATA IN THE HEALTH TECHNOLOGY ASSESSMENT…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/student-research-poster-tour-3"
+  },
+  {
+   "id": "3699084",
+   "date": "2026-11-10",
+   "start": "16:15",
+   "end": "17:15",
+   "room": "Hall N2",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Statistical Methods in HEOR Special Interest Group Meeting",
+   "speakers": "",
+   "summary": "Join leaders and fellow members of the ISPOR Statistical Methods in HEOR Special Interest Group for an interactive open meeting! Attendees will learn about the group's mission and goals, ongoing projects and meet current…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-statistical-methods-in-heor-special-interest-group-meeting-2"
+  },
+  {
+   "id": "3699085",
+   "date": "2026-11-10",
+   "start": "16:15",
+   "end": "17:15",
+   "room": "Hall N1",
+   "format": "Member Group Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "ISPOR Switzerland Chapter Meeting",
+   "speakers": "",
+   "summary": "",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ispor-switzerland-chapter-meeting"
+  },
+  {
+   "id": "3699153",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall K2",
+   "format": "Workshop",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Methodological & Statistical Research",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Accounting for Preference Heterogeneity in Stated Choice Data: From Good-Practice Methods to Decision-Relevant Interpretation",
+   "speakers": "Deborah Marshall; Sebastian Heidenreich; Axel Mühlbacher; Francesco Pignatti",
+   "summary": "PURPOSE: This workshop will provide guidance from the ISPOR Good Practice Task Force for accounting for preference heterogeneity in stated choice data to support researchers and decision makers in moving beyond averages in data…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/accounting-for-preference-heterogeneity-in-stated-choice-data-from-good-practice-methods-to-decision-relevant-interpretation"
+  },
+  {
+   "id": "3699097",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Addressing the Challenges in Rare Disease Methods",
+   "speakers": "Matt Griffiths",
+   "summary": "This session highlights multiple areas of challenge in generating robust evidence for value assessment in rare diseases and provides examples of how these challenges play out in varying access contexts (conditional access…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/addressing-the-challenges-in-rare-disease-methods"
+  },
+  {
+   "id": "3699098",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Advances in Decision Analytics and Economic Evaluation",
+   "speakers": "Imre Boncz",
+   "summary": "Advances in decision analytics continue to shape the methodological foundations of health economic evaluation. This session presents innovative approaches to decision modelling, uncertainty analysis, expert elicitation, value of…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/advances-in-decision-analytics-and-economic-evaluation"
+  },
+  {
+   "id": "3699037",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "AI-Assisted Health Economic Modeling: Balancing Human-AI Workflows to Ensure Efficient, Robust, Transparent & Compliant Decision Making for HTAs",
+   "speakers": "Ray Gani; Vandana Ayyar Gupta; Ronan Mahon; Peter Quon",
+   "summary": "ISSUE: Health economic models can now be rapidly developed using artificial intelligence (AI) agents to create complex cost-effectiveness models (CEMs). This approach can substantially reduce development times and increase model…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/ai-assisted-health-economic-modeling-balancing-human-ai-workflows-to-ensure-efficient-robust-transparent--compliant-decision-making-for-htas"
+  },
+  {
+   "id": "3699029",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Bridging the Gap Between Broader Value Frameworks and Research-Ready Decision-Making",
+   "speakers": "Malina Müller; Petra Došenovic Bonca; Wim Goettsch; Valentina Prevolnik Rupel",
+   "summary": "Issue Broader value dimensions are increasingly recognized across healthcare systems, yet HTA frameworks continue to focus primarily on clinical outcomes and healthcare costs. At the same time, policymakers face growing…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/bridging-the-gap-between-broader-value-frameworks-and-research-ready-decision-making"
+  },
+  {
+   "id": "3699044",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Could a Higher Willingness-to-Pay for 'Innovative' Therapies in Cost Effectiveness HTAs Help Enable Europe to Retain R&D and Manufacturing?",
+   "speakers": "Lieven Annemans; Natalie Bennett; Mark Sculpher; Lotte Steuten",
+   "summary": "Issue • It takes increasingly innovative approaches to deliver further health gains for many therapy areas, but such approaches are inherently higher risk for manufacturers. • New pharmacological modalities benefits may go beyond…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/could-a-higher-willingness-to-pay-for--39-innovative-39-therapies-in-cost-effectiveness-htas-help-enable-europe-to-retain-r-amp-d-and-manufacturing"
+  },
+  {
+   "id": "3699145",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall E2",
+   "format": "Workshop",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Evidence to Access in Asia: Lessons on RWE and Lifecycle HTA for Sustainable Reimbursement",
+   "speakers": "Feng Xie; Huang-tz Ou; Hae Sun Suh; Shitong Xie",
+   "summary": "PURPOSE: Asian health systems are rapidly adapting reimbursement, health technology assessment (HTA), and evidence-generation policies to balance timely patient access, affordability, and uncertainty. Recent reforms in China,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-evidence-to-access-in-asia-lessons-on-rwe-and-lifecycle-hta-for-sustainable-reimbursement"
+  },
+  {
+   "id": "3699036",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Medical Technologies",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "How to Unlock the Usage of Real-World Data for Medical Devices in Health Technology Assessments?",
+   "speakers": "Frederique Debroucker; Jana Boleckova; Anastasia Chalkidou; Daniel Prieto-Alhambra",
+   "summary": "ISSUE: Medical devices present specific assessment challenges because of their heterogeneity, frequent product updates, dependence on context of use, and potential to alter care pathways. Demonstrating their clinical and economic…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/how-to-unlock-the-usage-of-real-world-data-for-medical-devices-in-health-technology-assessments"
+  },
+  {
+   "id": "3699090",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall L",
+   "format": "Other Breakout Session",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Organizational Practices",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Impact of Agentic AI on Redefining Productivity in HEOR: From Deliverables to Decision Impact",
+   "speakers": "Uwe Siebert; Turgay Ayer; Jag Chhatwal; Ipek Ozer Stillman",
+   "summary": "Purpose: Generative AI (GenAI), particularly agentic AI systems, is rapidly transforming HEOR. While early applications suggest substantial productivity gains, the extent of these benefits and their implications for scientific…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/impact-of-agentic-ai-on-redefining-productivity-in-heor-from-deliverables-to-decision-impact"
+  },
+  {
+   "id": "3699033",
+   "date": "2026-11-10",
+   "start": "16:45",
+   "end": "17:45",
+   "room": "Hall F2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Most Favored Nation Pricing: Will International Price Alignment Improve Affordability or Restrict Access to Innovation? Insights from Central and Eastern Europe",
+   "speakers": "Roman Casciano; Marcin Czech; Adam Parnaby; Michal Worotynski",
+   "summary": "Issue: Most Favoured Nation (MFN) pricing policies and international price alignment mechanisms are increasingly shaping pharmaceutical pricing and reimbursement discussions worldwide. Governments view these approaches as…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/most-favored-nation-pricing-will-international-price-alignment-improve-affordability-or-restrict-access-to-innovation-insights-from-central-and-eastern-europe"
+  },
+  {
+   "id": "3699019",
+   "date": "2026-11-10",
+   "start": "18:00",
+   "end": "19:00",
+   "room": "Poster & Exhibit Hall, Hall X1-X4",
+   "format": "General Meeting",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Taste of Vienna",
+   "speakers": "",
+   "summary": "Experience the vibrant flavors of Vienna at \"Taste of Vienna,\" a dynamic reception where each participating sponsor booth offers Vienna-inspired food and beverage from locally sourced areas. Sponsored by ISPOR Year-Round…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/taste-of-vienna"
+  },
+  {
+   "id": "3699143",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall E2",
+   "format": "Workshop",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Biases that Generate Immortal Time: A Structural Diagnosis and Practical Solutions for HTA Submissions",
+   "speakers": "Miguel Hernán; Xabier Garcia de Albeniz; Thibaut Sanglier; Julia Vila",
+   "summary": "Purpose Artificial introduction of immortal-time due to study design choices remains one of the most consequential and under-recognized threats to the validity of real-world evidence (RWE) used in market access and health…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/biases-that-generate-immortal-time-a-structural-diagnosis-and-practical-solutions-for-hta-submissions"
+  },
+  {
+   "id": "3699028",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Can We STEDI the Course? Antimicrobial Value Assessment at a Crossroads",
+   "speakers": "Laith Yakob; Edward Broughton; Grace Hampson; Entela Xoxi",
+   "summary": "Issue: Antimicrobial resistance (AMR) represents a critical global health challenge: we urgently need new antibiotics, yet current HTA approaches have become an active barrier to this innovation. The STEDI framework (Spectrum,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/can-we-stedi-the-course-antimicrobial-value-assessment-at-a-crossroads"
+  },
+  {
+   "id": "3699152",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall L",
+   "format": "Workshop",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Methodological & Statistical Research",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Children or Parents - Whose Preferences Matter? That Depends on the Decision Making Context",
+   "speakers": "Kerrie-Anne Ho; Nancy Devlin; Deborah Marshall",
+   "summary": "PURPOSE: Patient preferences are fundamental for health economics and outcomes research. Preferences inform utility estimates for economic evaluation and are important for reflecting patient perspectives for patient-centered…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/children-or-parents--whose-preferences-matter-that-depends-on-the-decision-making-context"
+  },
+  {
+   "id": "3699025",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall D",
+   "format": "Issue Panel",
+   "tracks": [
+    "Real-World Evidence"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "From Static to Dynamic Value: Can Living HTA and AI Reshape the Innovation Cycle?",
+   "speakers": "Esther Nzenza; Nicholas Adlard; Sabine Vogler; Olivia Wu",
+   "summary": "ISSUE: Health Technology Assessment (HTA) has traditionally been conducted as static, one-off value assessments at launch, which can become outdated as evidence evolves. This panel will explore the emergence of living HTA, where…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-static-to-dynamic-value-can-living-hta-and-ai-reshape-the-innovation-cycle"
+  },
+  {
+   "id": "3699026",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Methodological & Statistical Research"
+   ],
+   "level": "Intermediate",
+   "title": "How Should Evidence be Assessed in Rare Diseases?",
+   "speakers": "Karen Facey; J. Jaime Caro; Sean Tunis",
+   "summary": "Issue: Assessing treatments for rare diseases presents fundamental challenges for HTA. Small populations with systemic, evolving, life-limiting diseases with a range of symptoms make it difficult to plan and execute sufficiently…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/how-should-evidence-be-assessed-in-rare-diseases"
+  },
+  {
+   "id": "3699031",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care"
+   ],
+   "level": "Intermediate",
+   "title": "No Longer Inevitable: Avoidable Hospitalizations As a Catalyst for Health System Transformation",
+   "speakers": "Andreas Heddini; Penilla Gunther; Richard Russell; Kelly Saldana",
+   "summary": "Over 3 billion people today are living with chronic disease, rare disease and cancer – this already significant burden is set to increase further as populations age. Robust evidence shows that avoidable hospitalisations represent…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/no-longer-inevitable-avoidable-hospitalizations-as-a-catalyst-for-health-system-transformation"
+  },
+  {
+   "id": "3699046",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall F2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Technology Assessment",
+    "Organizational Practices"
+   ],
+   "level": "Intermediate",
+   "title": "Preparing CEE Countries for JCA: Aligning European HTA Standards with National Access Decisions",
+   "speakers": "Magda Chatzikou; Boryana Ivanova; Tarang Sharma; Jacek Walczak",
+   "summary": "ISSUE The EU HTA Regulation and Joint Clinical Assessments introduce a common European approach to clinical evidence assessment, but countries differ in HTA maturity, resources, procedures, and readiness to use JCA outputs in…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/preparing-cee-countries-for-jca-aligning-european-hta-standards-with-national-access-decisions"
+  },
+  {
+   "id": "3699088",
+   "date": "2026-11-11",
+   "start": "08:00",
+   "end": "09:00",
+   "room": "Hall F1",
+   "format": "Other Breakout Session",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Three Pathways from HTA to Access in China, the UAE, and South Africa: Price Negotiation, Value-Based Decision-Making, and Equity-Driven Priority-Setting",
+   "speakers": "Nuriya Musina; Kefah Ali Alqawasmeh; YINGYAO CHEN; Jani Mueller",
+   "summary": "PURPOSE: The purpose of this session is to compare how emerging and evolving HTA systems in China, the United Arab Emirates, and South Africa are being shaped by different policy contexts and how they are used to support access…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/three-pathways-from-hta-to-access-in-china-the-uae-and-south-africa-price-negotiation-value-based-decision-making-and-equity-driven-priority-setting"
+  },
+  {
+   "id": "3699101",
+   "date": "2026-11-11",
+   "start": "08:45",
+   "end": "09:45",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Beyond the Kaplan–Meier Curve: Advances in Survival Analysis",
+   "speakers": "Martin Scott",
+   "summary": "Survival analysis remains central to HTA, health economic modelling and regulatory decision making. This session presents methodological advances in analyzing, extrapolating and synthesizing time-to-event data, with particular…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/beyond-the-kaplan-meier-curve-advances-in-survival-analysis"
+  },
+  {
+   "id": "3699108",
+   "date": "2026-11-11",
+   "start": "08:45",
+   "end": "09:45",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Navigating PICOs in the Era of JCA",
+   "speakers": "Steffen Wahler",
+   "summary": "This session examines key methodological and evidence-generation challenges emerging from the EU Joint Clinical Assessment, drawing lessons from early assessments, comparator selection, and evolving PICO requirements.",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/navigating-picos-in-the-era-of-jca"
+  },
+  {
+   "id": "3699117",
+   "date": "2026-11-11",
+   "start": "09:00",
+   "end": "11:30",
+   "room": "",
+   "format": "Research Posters",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Poster Session 5",
+   "speakers": "",
+   "summary": "Presenters will be with their posters from 9:00–10:00",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/posters/poster-detail/ispor-europe-2026/poster-session-5-4"
+  },
+  {
+   "id": "3699138",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall D",
+   "format": "Spotlight",
+   "tracks": [
+    "Expanded Value Measures"
+   ],
+   "topics": [
+    "Economic Evaluation",
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "Bringing Environmental Impact into Healthcare Value Assessment: An ISPOR Health Science and Policy Council Spotlight Session",
+   "speakers": "Zoltan Kalo; Joukje de Vries; Céline Fernandez; Erik van Raaij",
+   "summary": "Healthcare improves and saves lives—but it also consumes substantial resources, generates waste, and contributes to climate change. As health systems pursue sustainability goals, decision makers increasingly need evidence that…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/bringing-environmental-impact-into-healthcare-value-assessment-an-ispor-health-science-and-policy-council-spotlight-session"
+  },
+  {
+   "id": "3699050",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall L",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Epidemiology & Public Health",
+    "Health Policy & Regulatory",
+    "Health Service Delivery & Process of Care"
+   ],
+   "level": "Intermediate",
+   "title": "Can CEE Healthcare Systems Afford Innovation Without Reforming Procurement and Financing Models?",
+   "speakers": "Izabela Pieniazek; Elena Chitan; Krzysztof Landa; Joanna Lis",
+   "summary": "Issue: Healthcare systems across Central and Eastern Europe (CEE) face increasing pressure to provide access to innovative therapies while operating within constrained budgets and ageing populations. Current procurement and…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/can-cee-healthcare-systems-afford-innovation-without-reforming-procurement-and-financing-models"
+  },
+  {
+   "id": "3699045",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall F1",
+   "format": "Issue Panel",
+   "tracks": [],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Medical Technologies",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "From Framework to Practice: Piloting a Harmonized EU Approach to Early Feasibility Studies to Shape the Future Medical Device Regulatory Framework",
+   "speakers": "Giuditta Callea; Marta Bragagnolo; Alexandra Poulsson; Fanny van der Loo",
+   "summary": "ISSUE The MDR is currently being reviewed, creating a timely opportunity to address gaps in the EU regulatory framework that are preventing the uptake of EFS in Europe, which are a critical step in the clinical evidence pathway…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-framework-to-practice-piloting-a-harmonized-eu-approach-to-early-feasibility-studies-to-shape-the-future-medical-device-regulatory-framework"
+  },
+  {
+   "id": "3699053",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall E1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "From National HTA to Joint Clinical Assessment: Exploring Similarities and Differences in Comparator and Outcome Selection Across Six European Health Technology Assessment Agencies",
+   "speakers": "Anne Willemsen; Roisin Adams; Keltoum Merroune; Stephanie Said",
+   "summary": "ISSUE: The HTA Regulation (HTAR) came into effect on January 2025 and the first Joint Clinical Assessments (JCA) on medicinal products started. To understand the predictability of the PICOs (Patient Population, Intervention,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-national-hta-to-joint-clinical-assessment-exploring-similarities-and-differences-in-comparator-and-outcome-selection-across-six-european-health-technology-assessment-agencies"
+  },
+  {
+   "id": "3699105",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Theater 1, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "From PICO to Practice: Advancing Evidence Synthesis",
+   "speakers": "Jeroen Jansen",
+   "summary": "As evidence requirements become increasingly complex, innovative approaches are needed to synthesize data across multiple studies and populations. This session focuses on PICO prioritization, indirect treatment comparisons,…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/from-pico-to-practice-advancing-evidence-synthesis"
+  },
+  {
+   "id": "3699041",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall F2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "HTA as Enabler, Not Blocker: Which Redesign Should Come First to Support Procurement Decisions in Smaller European Health Systems?",
+   "speakers": "Lou Garrison; Dávid Dankó; Jorge Mestre-Ferrandiz; Olivier Wong",
+   "summary": "Issue Many smaller European countries, especially but not exclusively in Central Europe, have adopted HTA frameworks modelled on the UK cost-effectiveness paradigm, yet they operate in fundamentally different institutional…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/hta-as-enabler-not-blocker-which-redesign-should-come-first-to-support-procurement-decisions-in-smaller-european-health-systems"
+  },
+  {
+   "id": "3699030",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall K2",
+   "format": "Issue Panel",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Clinical Outcomes",
+    "Health Technology Assessment",
+    "Study Approaches"
+   ],
+   "level": "Intermediate",
+   "title": "Issues in Evaluating AI-Enabled Healthcare",
+   "speakers": "Seamus Kent; Blythe Adamson; Lena Bertozzi; Anastasia Chalkidou",
+   "summary": "ISSUE: As AI-enabled healthcare technologies pursue reimbursement, a fundamental methodological question confronts evaluators: how should the study population be defined? Should economic evaluation encompass all individuals with…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/issues-in-evaluating-ai-enabled-healthcare"
+  },
+  {
+   "id": "3699110",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Theater 2, Hall X1-X4",
+   "format": "Research Podium",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Novel Value Elements and Approaches in HTA",
+   "speakers": "Gihan Elsisi",
+   "summary": "Navigating the New Frontier of Health Technology Assessment and the complex shifts in market access requires balancing strict clinical demands with economic viability and societal equity. This intensive, 1-hour workshop breaks…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/novel-value-elements-and-approaches-in-hta"
+  },
+  {
+   "id": "3699038",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall G1",
+   "format": "Issue Panel",
+   "tracks": [
+    "Patient-Centered Evidence"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment",
+    "Patient-Centered Research"
+   ],
+   "level": "Intermediate",
+   "title": "Small Sample, Big Decisions: Patient Preference Data for Regulatory and Payer Uses in Rare Diseases",
+   "speakers": "Tommi Tervonen; Kerrie-Anne Ho; Eric Low; Francesco Pignatti",
+   "summary": "ISSUE: Development and commercialisation of therapies for rare diseases is difficult for a variety of reasons, including lack of established endpoint hierarchy or inadequate understanding of the distribution of symptoms and their…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/small-sample-big-decisions-patient-preference-data-for-regulatory-and-payer-uses-in-rare-diseases"
+  },
+  {
+   "id": "3699039",
+   "date": "2026-11-11",
+   "start": "10:00",
+   "end": "11:00",
+   "room": "Hall E2",
+   "format": "Issue Panel",
+   "tracks": [
+    "Access & Pricing"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Health Technology Assessment"
+   ],
+   "level": "Intermediate",
+   "title": "The Triple Challenge: How Do Global Pricing Dynamics, with US MFN Policy, China’s Rise, and European Policies Converge and Impact European Competitiveness?",
+   "speakers": "Casper Paardekooper; Eelko den Breejen; Neil Grubert; Ferenc Marofka",
+   "summary": "ISSUE: Three converging forces are reshaping pharmaceutical innovation — where it happens, who accesses it, and on what terms. Does Europe adequately recognise and reward innovation, and what are the consequences if not? Global…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/the-triple-challenge-how-do-global-pricing-dynamics-with-us-mfn-policy-china-rsquo-s-rise-and-european-policies-converge-and-impact-european-competitiveness"
+  },
+  {
+   "id": "3699095",
+   "date": "2026-11-11",
+   "start": "11:30",
+   "end": "13:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [],
+   "topics": [],
+   "level": "",
+   "title": "Plenary Session 3: Closing Reflections and the Scientific Future of HEOR",
+   "speakers": "Rob Abbott; Laura Pizzi; Kelly Saldana",
+   "summary": "As ISPOR Europe 2026 draws to a close, join us for final reflections and forward-looking perspectives from the Society’s leadership. ISPOR’s Chief Executive Officer will highlight key takeaways from the conference, while the…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-3-closing-reflections-and-the-scientific-future-of-heor"
+  },
+  {
+   "id": "3699096",
+   "date": "2026-11-11",
+   "start": "11:30",
+   "end": "13:00",
+   "room": "Hall A",
+   "format": "Plenary",
+   "tracks": [
+    "AI"
+   ],
+   "topics": [
+    "Health Policy & Regulatory",
+    "Methodological & Statistical Research",
+    "Real-World Data & Information Systems"
+   ],
+   "level": "Intermediate",
+   "title": "Plenary Session 3: Fit for Purpose: What HEOR Evidence Must Become",
+   "speakers": "Malina Müller; Nick Guldemond; Marie Kristiansen; Nirosha Mahendraratnam Lederer",
+   "summary": "Bringing the conference to a forward-looking conclusion, this plenary asks: If healthcare systems are asking new questions about value, what evidence will they need—and how must HEOR evolve to deliver it? As priorities expand to…",
+   "url": "https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program/session/ispor-europe-2026/plenary-session-3-fit-for-purpose-what-heor-evidence-must-become"
+  }
+ ]
+}
