@@ -56,6 +56,10 @@ h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-0.03em;fo
 .turn .uq{font-weight:600;font-size:1.05rem;margin:0}
 .turn .ans{margin:0;white-space:pre-wrap}
 .status{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.wait{display:grid;gap:8px}
+.pbar{height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--accent);border-radius:2px;transition:width .25s linear}
+.wait .status{display:flex;justify-content:space-between;gap:12px}
 .recs{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
 .recs .srow:last-child{border-bottom:0}
 .why{color:var(--accent);font-size:.88rem;margin:2px 0 0}
@@ -306,7 +310,7 @@ function renderControls() {
 function renderThread() {
   $('#thread').innerHTML = turns.map(t => `<div class="turn">
     <p class="uq">${esc(t.q)}</p>
-    ${t.pending ? '<p class="status">Reading the programme…</p>' : t.error ? `<p class="status">${esc(t.error)}</p>` : `
+    ${t.pending ? '<div class="wait" role="status"><div class="pbar"><i id="pfill"></i></div><p class="status"><span id="pstep">Reading 169 sessions</span><span id="psec">0 s</span></p></div>' : t.error ? `<p class="status">${esc(t.error)}</p>` : `
       ${t.answer ? `<p class="ans">${esc(t.answer)}</p>` : ''}
       ${t.sessions.length ? `<div class="recs">${t.sessions.map(r => row(BY.get(r.id), r.why)).join('')}</div>` : ''}`}
   </div>`).join('');
@@ -320,7 +324,7 @@ function renderBoard() {
     <div class="n">${votes.counts[s.id]}<small>vote${votes.counts[s.id] === 1 ? '' : 's'}</small></div></li>`).join('');
 }
 function render() {
-  if (st.view === 'vote') renderBoard(); else { renderList(); renderThread(); }
+  if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
 }
 
 /* actions */
@@ -357,6 +361,19 @@ function clean(r) {
   const strip = s => String(s || '').replace(/\s*\((?:\s*(?:and|or|,)?\s*\d{7})+\s*\)/g, '').replace(/\b\d{7}\b/g, m => BY.has(m) ? `“${BY.get(m).title.split(/[:?]/)[0]}”` : m);
   return { answer: strip(answer), sessions: sessions.filter(s => s && BY.has(String(s.id))).map(s => ({ id: String(s.id), why: strip(s.why) })) };
 }
+let tick;
+function progress(start, done) {
+  clearInterval(tick);
+  const f = $('#pfill');
+  if (done) { if (f) f.style.width = '100%'; return new Promise(r => setTimeout(r, 250)); }
+  tick = setInterval(() => {
+    const s = (Date.now() - start) / 1000, fill = $('#pfill'), step = $('#pstep'), sec = $('#psec');
+    if (!fill) return clearInterval(tick);
+    fill.style.width = (94 * (1 - Math.exp(-s / 6))).toFixed(1) + '%';
+    step.textContent = s < 3 ? 'Reading ' + S.length + ' sessions' : s < 8 ? 'Matching sessions to your question' : s < 20 ? 'Writing recommendations' : 'Taking longer than usual, almost there';
+    sec.textContent = Math.floor(s) + ' s · usually about 10 s';
+  }, 200);
+}
 async function ask(q) {
   q = (q || '').trim();
   if (!q) return;
@@ -364,6 +381,7 @@ async function ask(q) {
   turns = [t];
   $('#q').value = ''; $('#send').disabled = true;
   renderThread();
+  progress(Date.now());
   if (!backend || !backend.ask) { t.pending = false; t.error = 'Recommendations are not connected yet. Use the search below in the meantime.'; renderThread(); $('#send').disabled = false; return; }
   try {
     const r = await backend.ask(q);
@@ -371,6 +389,7 @@ async function ask(q) {
   } catch (e) {
     t.error = e.code === 'rate_limited' ? 'Too many questions in a minute. Wait a moment and ask again.' : 'Couldn’t get recommendations. Try again.';
   }
+  await progress(0, true);
   t.pending = false; $('#send').disabled = false; renderThread();
 }
 function go() {
