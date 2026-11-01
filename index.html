@@ -36,6 +36,12 @@ button{font:inherit;color:inherit}
 /* ask */
 .ask .inner{max-width:780px;padding-block:56px 40px;display:flex;flex-direction:column;gap:18px}
 .ask .eyebrow{text-align:center}
+.mast{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding-bottom:26px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+.mast-name{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-0.045em;line-height:.95;color:var(--accent)}
+.mast-name span{color:var(--ink);font-weight:500}
+.mast-meta{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:6px 14px;flex-wrap:wrap;justify-content:center}
+.mast-meta a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
+.ask h1{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-0.02em}
 h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-0.03em;font-weight:600;margin:0;text-align:center;text-wrap:balance}
 .lead{color:var(--muted);text-align:center;margin:0 auto;max-width:52ch}
 .askbar{display:flex;gap:8px;align-items:flex-end;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 10px 10px 14px}
@@ -132,7 +138,10 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
 <main>
   <div id="v-home">
     <section class="ask gut"><div class="inner">
-      <div class="eyebrow">Vienna · 9–11 November 2026 · CET</div>
+      <div class="mast">
+        <div class="mast-name">ISPOR Europe <span>2026</span></div>
+        <div class="mast-meta"><span>Vienna</span><span>9–11 November 2026</span><span>All times CET</span><a href="https://www.ispor.org/conferences-education/conferences/upcoming-conferences/ispor-europe-2026/program/program" target="_blank" rel="noopener">Official conference programme ↗</a></div>
+      </div>
       <h1>Which sessions should we attend?</h1>
       <p class="lead">Ask about the programme and get recommendations, or browse all sessions below. Vote for the ones you want the team to cover.</p>
       <div class="askbar">
