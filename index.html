@@ -99,6 +99,9 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .trk span{display:inline-flex;gap:6px;align-items:center}
 .det{margin-top:10px;font-size:.92rem;color:var(--muted);display:grid;gap:6px;max-width:70ch}
 .det p{margin:0}
+.det .desc{white-space:pre-line;color:var(--ink)}
+.det .spk{display:grid;gap:2px}
+.det .spk span{color:var(--muted)}
 .det b{color:var(--ink);font-weight:500}
 .det .lk{display:flex;gap:16px;font-size:.85rem}
 .vote{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer;font-family:var(--f-mono);font-size:.85rem;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -297,10 +300,29 @@ function row(s, why) {
       <button class="ttl" data-open="${s.id}" aria-expanded="${open}">${esc(s.title)}</button>
       ${why ? `<p class="why">${esc(why)}</p>` : ''}
       ${s.tracks.length ? `<div class="trk">${s.tracks.map(t => `<span><i class="sw" style="background:var(--tr${TRACKS.indexOf(t)})"></i>${esc(t)}</span>`).join('')}</div>` : ''}
-      ${open ? `<div class="det">${s.summary ? `<p>${esc(s.summary)}</p>` : ''}${s.speakers ? `<p><b>Speakers</b> ${esc(s.speakers)}</p>` : ''}<div class="lk"><a href="${esc(s.url)}" target="_blank" rel="noopener">ISPOR programme ↗</a><a href="https://events.rdmobile.com/Sessions/Details/${s.id}" target="_blank" rel="noopener">Conference app ↗</a></div></div>` : ''}
+      ${open ? `<div class="det">${detailHtml(s)}<div class="lk"><a href="${esc(s.url)}" target="_blank" rel="noopener">ISPOR programme ↗</a><a href="https://events.rdmobile.com/Sessions/Details/${s.id}" target="_blank" rel="noopener">Conference app ↗</a></div></div>` : ''}
     </div>
     ${voteBtn(s)}
   </div>`;
+}
+const FULL = new Map();
+function detailHtml(s) {
+  let f = FULL.get(s.id);
+  if (f === undefined) { loadDetail(s.id); f = FULL.get(s.id); }
+  const desc = f && f.description ? f.description : s.summary;
+  const spk = f && f.speakers && f.speakers.length
+    ? `<div class="spk"><b>Speakers</b>${f.speakers.map(p => `<div>${esc(p.name)}${p.affiliation ? `<span> · ${esc(p.affiliation)}</span>` : ''}${p.role && !/^speaker$/i.test(p.role) ? `<span> · ${esc(p.role)}</span>` : ''}</div>`).join('')}</div>`
+    : s.speakers ? `<p><b>Speakers</b> ${esc(s.speakers)}</p>` : '';
+  return `${desc ? `<p class="desc">${esc(desc)}</p>` : ''}${f === null ? '<p class="status">Loading full description…</p>' : ''}${spk}`;
+}
+async function loadDetail(id) {
+  if (!API || API.startsWith('__')) { FULL.set(id, false); return; }
+  FULL.set(id, null);
+  try {
+    const r = await fetch(API.replace(/\/$/, '') + '/details?id=' + encodeURIComponent(id));
+    FULL.set(id, r.ok ? await r.json() : false);
+  } catch (e) { FULL.set(id, false); }
+  render();
 }
 function renderList() {
   const xs = S.filter(matches);

@@ -5,6 +5,22 @@ const DATA_URL = 'https://tuohai1992.github.io/ispor-2026/data/sessions.json';
 const MODEL = 'claude-haiku-5-5';
 const MAX_Q = 600;
 const MAX_VOTES = 80;
+const ITEM_URL = 'https://ispor2026.abundanceds.com/api/items/';
+const details = new Map();
+
+async function detail(env, id) {
+  if (details.has(id)) return details.get(id);
+  const r = await fetch((env.ITEM_URL || ITEM_URL) + id, { cf: { cacheTtl: 86400, cacheEverything: true } });
+  if (!r.ok) throw new Error('upstream ' + r.status);
+  const j = await r.json();
+  const it = j.item || j;
+  const out = {
+    description: String(it.description || '').replace(/^Separate registration required\.\s*/, '').trim(),
+    speakers: (Array.isArray(it.speakers) ? it.speakers : []).map(s => ({ name: String(s.name || ''), affiliation: String(s.affiliation || ''), role: String(s.role || '') })).filter(s => s.name)
+  };
+  details.set(id, out);
+  return out;
+}
 
 let cache = { at: 0, data: null, ids: null, ctx: null };
 
@@ -136,9 +152,18 @@ export default {
     const origin = req.headers.get('Origin') || '';
     const h = cors(env, origin);
     if (req.method === 'OPTIONS') return new Response(null, { headers: h });
-    if (origin !== h['Access-Control-Allow-Origin']) return json({ error: 'Origin not allowed' }, 403, h);
-
     const url = new URL(req.url);
+
+    // full session text; public programme data, so no origin check
+    if (url.pathname === '/details' && req.method === 'GET') {
+      const id = url.searchParams.get('id') || '';
+      const { ids } = await data(env);
+      if (!ids.has(id)) return json({ error: 'Not found' }, 404, h);
+      try { return new Response(JSON.stringify(await detail(env, id)), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=3600', ...h } }); }
+      catch (e) { return json({ error: 'upstream_error' }, 502, h); }
+    }
+
+    if (origin !== h['Access-Control-Allow-Origin']) return json({ error: 'Origin not allowed' }, 403, h);
     const ip = req.headers.get('CF-Connecting-IP') || 'unknown';
     const store = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026'));
 
