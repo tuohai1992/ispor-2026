@@ -5,6 +5,7 @@ const DATA_URL = 'https://tuohai1992.github.io/ispor-2026/data/sessions.json';
 const MODEL = 'claude-haiku-5-5';
 const MAX_Q = 600;
 const MAX_VOTES = 80;
+const CODE_VERSION = '2026-11-04-live';
 const PEOPLE = ['Kun', 'Fabian', 'Jieyi'];
 const ITEM_URL = 'https://ispor2026.abundanceds.com/api/items/';
 const details = new Map();
@@ -76,6 +77,7 @@ export class VoteStore extends DurableObject {
     const s = JSON.stringify(msg);
     for (const ws of this.ctx.getWebSockets()) { try { ws.send(s); } catch (e) {} }
   }
+  version() { return CODE_VERSION; }
   planState() {
     const plan = {};
     for (const r of this.sql.exec('SELECT session, person FROM plan ORDER BY at').toArray()) (plan[r.session] = plan[r.session] || []).push(r.person);
@@ -200,6 +202,11 @@ export default {
     const withPlan = async o => ({ ...o, ...(await planStore.planState()) });
     const push = msg => ctx.waitUntil(planStore.broadcast(msg).catch(() => {}));
     const pushCounts = r => { push({ counts: r.counts }); return r; };
+
+    if (url.pathname === '/health') {
+      const v = async s => { try { return await s.version(); } catch (e) { return 'error: ' + String(e && e.message || e).slice(0, 200); } };
+      return json({ worker: CODE_VERSION, votes: await v(store), plan: await v(planStore) }, 200, h);
+    }
 
     if (url.pathname === '/live') {
       if ((req.headers.get('Upgrade') || '').toLowerCase() !== 'websocket') return json({ error: 'Expected WebSocket' }, 426, h);
