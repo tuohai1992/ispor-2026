@@ -770,9 +770,9 @@ async function askPosters(q) {
       const r = await fetch(API.replace(/\/$/, '') + '/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q, kind: 'poster', candidates: cands }) });
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw Object.assign(new Error(j.error), { code: j.error });
-      const c = clean(j);
-      t.answer = c.answer;
-      t.sessions = (Array.isArray(j.sessions) ? j.sessions : []).filter(s => po.by.has(String(s.id))).map(s => ({ id: String(s.id), why: clean({ answer: s.why }).answer }));
+      const c = clean(j, po.by);
+      t.answer = c.answer; t.sessions = c.sessions;
+      if (!t.answer && !t.sessions.length) t.error = 'Couldn’t get recommendations. Try again.';
     }
   } catch (e) { t.error = e.code === 'rate_limited' ? 'Too many questions in a minute. Wait a moment and ask again.' : 'Couldn’t get recommendations. Try again.'; }
   await progress(0, true);
@@ -1013,15 +1013,15 @@ function apply(r) {
   render();
 }
 /* tidy model replies: unwrap JSON that came back as text, drop raw session ids */
-function clean(r) {
+function clean(r, by = BY) {
   let answer = String(r.answer || ''), sessions = Array.isArray(r.sessions) ? r.sessions : [];
   if (/^\s*(```|\{)/.test(answer)) {
     const raw = answer.replace(/```(json)?/g, '');
     try { const j = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1)); answer = String(j.answer || ''); if (!sessions.length && Array.isArray(j.sessions)) sessions = j.sessions; }
-    catch (e) { const m = raw.match(/"answer"\s*:\s*"((?:[^"\\]|\\.)*)"/); answer = m ? m[1].replace(/\\"/g, '"').replace(/\\n/g, '\n') : ''; if (!sessions.length) sessions = [...raw.matchAll(/"id"\s*:\s*"?(\d{7})"?\s*,\s*"why"\s*:\s*"((?:[^"\\]|\\.)*)"/g)].map(x => ({ id: x[1], why: x[2].replace(/\\"/g, '"') })); }
+    catch (e) { const m = raw.match(/"answer"\s*:\s*"((?:[^"\\]|\\.)*)"/); answer = m ? m[1].replace(/\\"/g, '"').replace(/\\n/g, '\n') : raw.replace(/[{}\[\]"]/g, ' ').replace(/\b(answer|sessions|id|why)\s*:/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 600); if (!sessions.length) sessions = [...raw.matchAll(/"id"\s*:\s*"?(\d{7})"?\s*,\s*"why"\s*:\s*"((?:[^"\\]|\\.)*)"/g)].map(x => ({ id: x[1], why: x[2].replace(/\\"/g, '"') })); }
   }
-  const strip = s => String(s || '').replace(/\s*\((?:\s*(?:and|or|,)?\s*\d{7})+\s*\)/g, '').replace(/\b\d{7}\b/g, m => BY.has(m) ? `“${BY.get(m).title.split(/[:?]/)[0]}”` : m);
-  return { answer: strip(answer), sessions: sessions.filter(s => s && BY.has(String(s.id))).map(s => ({ id: String(s.id), why: strip(s.why) })) };
+  const strip = s => String(s || '').replace(/\s*\((?:\s*(?:and|or|,)?\s*\d{7})+\s*\)/g, '').replace(/\b\d{7}\b/g, m => by.has(m) ? `“${String(by.get(m).title || by.get(m).t).split(/[:?]/)[0]}”` : m);
+  return { answer: strip(answer), sessions: sessions.filter(s => s && by.has(String(s.id))).map(s => ({ id: String(s.id), why: strip(s.why) })) };
 }
 let tick;
 function progress(start, done) {
