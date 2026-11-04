@@ -512,7 +512,7 @@ function assignHtml(bl, editable) {
     if (!xs.length) return '';
     return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} session${b.items.length === 1 ? '' : 's'}${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
   }).join('');
-  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span><span><i style="background:#B9C3D3"></i>1 vote, nobody going</span></div>`;
+  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span></div>`;
   let day = null;
   bl.forEach(b => {
     if (b.date !== day) { day = b.date; h += `<div class="pday">${DLONG[day]}</div>`; }
