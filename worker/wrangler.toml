@@ -1,6 +1,8 @@
 name = "ispor-2026-api"
 main = "src/index.js"
 compatibility_date = "2025-09-01"
+# keep variables added in the Cloudflare dashboard on each deploy
+keep_vars = true
 
 [vars]
 ALLOWED_ORIGINS = "https://tuohai1992.github.io"
