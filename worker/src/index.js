@@ -5,6 +5,7 @@ const DATA_URL = 'https://tuohai1992.github.io/ispor-2026/data/sessions.json';
 const MODEL = 'claude-haiku-5-5';
 const MAX_Q = 600;
 const MAX_VOTES = 80;
+const PEOPLE = ['Kun', 'Fabian', 'Jieyi'];
 const ITEM_URL = 'https://ispor2026.abundanceds.com/api/items/';
 const details = new Map();
 
@@ -54,12 +55,15 @@ export class VoteStore extends DurableObject {
     super(ctx, env);
     this.sql = ctx.storage.sql;
     this.sql.exec('CREATE TABLE IF NOT EXISTS votes (voter TEXT NOT NULL, session TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (voter, session))');
+    this.sql.exec('CREATE TABLE IF NOT EXISTS plan (session TEXT NOT NULL, person TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (session, person))');
   }
   state(voter) {
     const counts = {};
     for (const r of this.sql.exec('SELECT session, COUNT(*) AS n FROM votes GROUP BY session').toArray()) counts[r.session] = r.n;
     const mine = voter ? this.sql.exec('SELECT session FROM votes WHERE voter = ?', voter).toArray().map(r => r.session) : [];
-    return { counts, mine };
+    const plan = {};
+    for (const r of this.sql.exec('SELECT session, person FROM plan ORDER BY at').toArray()) (plan[r.session] = plan[r.session] || []).push(r.person);
+    return { counts, mine, plan };
   }
   vote(voter, session, on) {
     if (on) {
@@ -76,6 +80,15 @@ export class VoteStore extends DurableObject {
   }
   clearSession(session) {
     this.sql.exec('DELETE FROM votes WHERE session = ?', session);
+    return this.state(null);
+  }
+  planChanges(changes, wipe) {
+    if (wipe) this.sql.exec('DELETE FROM plan');
+    const now = Date.now();
+    for (const c of changes) {
+      if (c.on) this.sql.exec('INSERT OR IGNORE INTO plan (session, person, at) VALUES (?, ?, ?)', c.session, c.person, now);
+      else this.sql.exec('DELETE FROM plan WHERE session = ? AND person = ?', c.session, c.person);
+    }
     return this.state(null);
   }
   reset() {
@@ -179,6 +192,21 @@ export default {
       const { ids } = await data(env);
       if (!validVoter(b.voter) || !ids.has(String(b.session))) return json({ error: 'Bad request' }, 400, h);
       return json(await store.vote(b.voter, String(b.session), !!b.on), 200, h);
+    }
+
+    // team plan: who attends which session; PLAN_KEY or ADMIN_KEY to edit
+    if (url.pathname === '/plan' && req.method === 'POST') {
+      if (env.VOTE_LIMITER && !(await env.VOTE_LIMITER.limit({ key: 'plan:' + ip })).success) return json({ error: 'rate_limited' }, 429, h);
+      let b;
+      try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
+      const keys = [env.PLAN_KEY, env.ADMIN_KEY].filter(Boolean);
+      if (!keys.length) return json({ error: 'admin_not_configured' }, 503, h);
+      if (!keys.some(k => sameKey(String(b.key || ''), k))) return json({ error: 'wrong_key' }, 403, h);
+      const { ids } = await data(env);
+      const changes = (Array.isArray(b.changes) ? b.changes : []).slice(0, 300)
+        .map(c => ({ session: String(c && c.session), person: String(c && c.person), on: !!(c && c.on) }))
+        .filter(c => ids.has(c.session) && PEOPLE.includes(c.person));
+      return json(await store.planChanges(changes, b.wipe === true), 200, h);
     }
 
     if (url.pathname === '/vote/clear' && req.method === 'POST') {

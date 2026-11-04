@@ -130,6 +130,78 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .live{display:inline-flex;gap:8px;align-items:center}
 .live i{width:7px;height:7px;border-radius:50%;background:#1F9A78;display:inline-block}
 
+.plan .inner{max-width:1040px;padding-block:32px 72px}
+.pstat{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);display:flex;gap:6px 18px;flex-wrap:wrap;margin-top:8px}
+.pstat b{color:var(--ink);font-weight:500}
+.pstat i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--pc)}
+.ptools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 14px}
+.ptools .rt{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pbtn{font-size:.85rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer;color:var(--ink)}
+.pbtn:hover{border-color:var(--accent)}
+.pbtn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pbtn.warn{color:#B4472E}
+.ptools .keyf input{font:inherit;font-family:var(--f-mono);padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);width:170px}
+.ptools .err{font-family:var(--f-mono);font-size:.75rem;color:#B4472E}
+.dstrip{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;align-items:center;margin-bottom:6px}
+.dstrip .dn{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.dstrip .bl{display:flex;gap:6px;flex-wrap:wrap}
+.bk{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:8px;padding:5px 10px;background:var(--surface);font-size:.75rem;line-height:1.3;text-align:left;color:var(--muted)}
+.bk b{display:block;font-family:var(--f-mono);font-weight:500;color:var(--ink)}
+.bk.hot{border-color:#E09A2B;background:#FDF4E4}
+.bk .ms{color:#B4472E}
+.pday{font-size:1.15rem;font-weight:600;margin:28px 0 0;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.pblock{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px 10px;margin-top:12px;scroll-margin-top:70px}
+.pblock.hot{border-color:#E09A2B}
+.pbh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;margin-bottom:4px}
+.pbh .tt{font-weight:600;font-family:var(--f-mono);font-size:.9rem}
+.pbh .mt{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.pbh .hotl{color:#A9650F}
+.prow,.paxis{display:grid;grid-template-columns:30px minmax(0,1fr) minmax(110px,30%) 190px;gap:12px;align-items:center}
+.prow{padding:8px 0;border-top:1px solid var(--line)}
+.prow .v{font-size:1.15rem;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.prow .tl{font-size:.88rem;font-weight:500;line-height:1.3;color:var(--ink);text-decoration:none}
+.prow .tl:hover{color:var(--accent)}
+.prow .sm{display:block;font-family:var(--f-mono);font-size:.64rem;color:var(--muted);font-weight:400;letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
+.trk2{position:relative;height:14px;background:var(--grid);border-radius:4px}
+.trk2 i{position:absolute;top:2px;height:10px;border-radius:3px;background:#B9C3D3}
+.trk2 i.cov{background:var(--accent)}
+.trk2 i.miss{background:#C8553D}
+.paxis .ax{position:relative;height:14px;font-family:var(--f-mono);font-size:.62rem;color:var(--muted)}
+.paxis .ax span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.paxis .ax span:first-child{transform:none}
+.paxis .ax span:last-child{transform:translateX(-100%)}
+.who{display:flex;gap:4px;justify-content:flex-end}
+.pp{font:inherit;border:1px solid var(--line);background:transparent;border-radius:999px;padding:3px 9px;font-size:.76rem;cursor:pointer;color:var(--muted)}
+.pp:hover{border-color:var(--pc);color:var(--ink)}
+.pp[aria-pressed="true"]{color:#fff;border-color:var(--pc);background:var(--pc)}
+.pp.busy{border-style:dashed}
+.mnote{font-size:.8rem;color:#B4472E;margin:8px 0 2px}
+.legend2{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:4px 0 14px}
+.legend2 span{display:inline-flex;gap:6px;align-items:center}
+.legend2 i{display:inline-block;width:18px;height:8px;border-radius:3px}
+.calwrap{overflow-x:auto}
+.calh,.calb{display:grid;grid-template-columns:44px repeat(3,minmax(110px,1fr));min-width:400px}
+.calh{border-bottom:1px solid var(--ink)}
+.calh div{padding:8px 8px 6px;font-weight:600;font-size:.92rem;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.calh div small{font-family:var(--f-mono);font-size:.68rem;font-weight:400;color:var(--muted)}
+.calh i{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--pc)}
+.calb .tm,.calb .col{position:relative;height:var(--h)}
+.calb .col{border-left:1px solid var(--line)}
+.calb .hr{position:absolute;left:0;right:0;border-top:1px solid var(--grid)}
+.calb .tm span{position:absolute;right:6px;transform:translateY(-50%);font-family:var(--f-mono);font-size:.62rem;color:var(--muted)}
+.ev{position:absolute;left:3px;right:3px;border-radius:6px;padding:3px 6px;overflow:hidden;font-size:.72rem;line-height:1.25;background:color-mix(in srgb,var(--pc) 11%,#fff);border:1px solid color-mix(in srgb,var(--pc) 50%,#fff);color:var(--ink);text-decoration:none;display:block}
+.ev:hover{border-color:var(--pc)}
+.ev .et{font-family:var(--f-mono);font-size:.62rem;color:var(--muted);display:flex;justify-content:space-between;gap:4px}
+.ev b{font-weight:500;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.ev .er{font-family:var(--f-mono);font-size:.6rem;color:var(--muted);display:block;margin-top:1px}
+.cempty{position:absolute;top:12px;left:0;right:0;text-align:center;font-size:.75rem;color:var(--muted)}
+@media (max-width:560px){.lx{display:none} .navl{gap:14px}}
+@media (max-width:760px){
+  .prow{grid-template-columns:26px minmax(0,1fr);row-gap:6px}
+  .prow .trk2{grid-column:2}
+  .prow .who{grid-column:2;justify-content:flex-start}
+  .paxis{display:none}
+}
 .note{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);text-align:center}
 footer{border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
 footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -144,10 +216,11 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
 </style>
 
 </head><body><header class="top gut"><div class="inner">
-  <a class="logo" href="#home">ISPOR–EUROPE 2026 · iPMA</a>
+  <a class="logo" href="#home">ISPOR<span class="lx">–EUROPE</span> 2026 · iPMA</a>
   <nav class="navl" aria-label="Main">
     <a href="#home" data-view="home">Programme</a>
     <a href="#vote" data-view="vote">Vote</a>
+    <a href="#plan" data-view="plan">Plan</a>
   </nav>
 </div></header>
 
@@ -188,6 +261,14 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
     <p class="sub" id="board-sub"></p>
     <ol class="rank" id="rank"></ol>
     <div class="bfoot" id="bfoot"></div>
+  </div></section>
+
+  <section class="plan gut" id="v-plan" hidden><div class="inner">
+    <div class="eyebrow">Plan · Kun · Fabian · Jieyi</div>
+    <h2>Who goes where</h2>
+    <div class="pstat" id="pstat"></div>
+    <div class="ptools" id="ptools"></div>
+    <div id="pbody"></div>
   </div></section>
 </main>
 
@@ -236,7 +317,8 @@ function apiBackend() {
     vote: (id, on) => call('/vote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter, session: id, on }) }),
     ask: q => call('/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q }) }),
     clearMine: () => call('/vote/clear', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter }) }),
-    admin: (key, action, session) => call('/admin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, action, session }) })
+    admin: (key, action, session) => call('/admin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, action, session }) }),
+    plan: (key, changes, wipe) => call('/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, changes, wipe: !!wipe }) })
   };
 }
 
@@ -276,6 +358,186 @@ ${catalogue()}
 
 QUESTION: ${q}`, { modelTier: 'default' });
   return { answer: String(r && r.answer || ''), sessions: (Array.isArray(r && r.sessions) ? r.sessions : []).filter(s => s && BY.has(String(s.id))).map(s => ({ id: String(s.id), why: String(s.why || '') })) };
+}
+
+/* plan: who attends which session */
+const PEOPLE = [['Kun', '#1F9A78'], ['Fabian', '#7A5CC9'], ['Jieyi', '#004098']];
+const PC = Object.fromEntries(PEOPLE);
+const PN = PEOPLE.map(p => p[0]);
+const mm = t => +t.slice(0, 2) * 60 + +t.slice(3, 5);
+S.forEach(s => { s.a0 = mm(s.start); s.b0 = mm(s.end); });
+const overlap = (x, y) => x.date === y.date && x.a0 < y.b0 && y.a0 < x.b0;
+const fmt = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+const DATES = ['2026-11-09', '2026-11-10', '2026-11-11'];
+const DLONG = { '2026-11-09': 'Monday 9 November', '2026-11-10': 'Tuesday 10 November', '2026-11-11': 'Wednesday 11 November' };
+const DSHORT = { '2026-11-09': 'Mon 9', '2026-11-10': 'Tue 10', '2026-11-11': 'Wed 11' };
+votes.plan = {};
+const pl = { mode: 'assign', who: store.get('ispor26-me') || 'all', day: DATES[0], key: null, open: false, err: '', typed: '', armed: null };
+try { pl.key = sessionStorage.getItem('ispor26-plan'); } catch (e) {}
+
+const who = s => votes.plan[s.id] || [];
+const vc = s => votes.counts[s.id] || 0;
+function planSessions() { return S.filter(s => vc(s) || who(s).length); }
+function blocks(list) {
+  const out = [];
+  DATES.forEach(d => {
+    const xs = list.filter(s => s.date === d).sort((a, b) => a.a0 - b.a0 || b.b0 - a.b0);
+    let cur = null;
+    xs.forEach(s => {
+      if (cur && s.a0 < cur.b) { cur.items.push(s); cur.b = Math.max(cur.b, s.b0); }
+      else { cur = { date: d, a: s.a0, b: s.b0, items: [s] }; out.push(cur); }
+    });
+  });
+  out.forEach(b => {
+    b.items.sort((x, y) => vc(y) - vc(x) || x.a0 - y.a0);
+    b.votes = b.items.reduce((n, s) => n + vc(s), 0);
+    b.covered = b.items.filter(s => who(s).length).reduce((n, s) => n + vc(s), 0);
+    b.missing = b.items.filter(s => !who(s).length && vc(s) >= 2);
+    let peak = 0;
+    b.items.forEach(s => { peak = Math.max(peak, b.items.filter(o => overlap(o, s) && o.a0 <= s.a0 && o.b0 > s.a0).length); });
+    b.hot = peak > 3;
+    b.id = 'blk-' + b.date + '-' + fmt(b.a).replace(':', '');
+  });
+  return out;
+}
+function busyWith(p, s) { return S.find(o => o.id !== s.id && overlap(o, s) && who(o).includes(p)); }
+
+function renderPlan() {
+  const list = planSessions(), bl = blocks(list);
+  const total = list.reduce((n, s) => n + vc(s), 0), cov = list.filter(s => who(s).length).reduce((n, s) => n + vc(s), 0);
+  $('#pstat').innerHTML = PEOPLE.map(([n, c]) => `<span style="--pc:${c}"><i></i>${n} <b>${S.filter(s => who(s).includes(n)).length}</b></span>`).join('') +
+    `<span>Covers <b>${cov}</b> of ${total} votes</span>`;
+  const editable = !!(pl.key && backend && backend.plan);
+  const focused = document.activeElement && document.activeElement.id === 'pkey';
+  let rt = '';
+  if (!backend || !backend.plan) rt = '<span class="err">Planning works on the GitHub site</span>';
+  else if (editable) rt = `<button class="pbtn pri" data-pact="auto">${pl.armed === 'auto' ? 'Click again to fill empty sessions' : 'Auto-plan'}</button><button class="pbtn warn" data-pact="wipe">${pl.armed === 'wipe' ? 'Click again to clear the plan' : 'Clear plan'}</button><button class="pbtn" data-pact="lock">Lock</button>`;
+  else if (pl.open) rt = `<form class="keyf" id="pkeyf"><input type="password" id="pkey" placeholder="Team key" aria-label="Team key" autocomplete="off" value="${esc(pl.typed)}"> <button class="pbtn">Unlock</button> ${pl.err ? `<span class="err">${esc(pl.err)}</span>` : ''}</form>`;
+  else rt = '<button class="pbtn" data-pact="unlock">Unlock editing</button>';
+  $('#ptools').innerHTML = `<div class="seg" role="group" aria-label="View"><button data-pmode="assign" aria-pressed="${pl.mode === 'assign'}">Assign</button><button data-pmode="cal" aria-pressed="${pl.mode === 'cal'}">Calendar</button></div><div class="rt">${rt}</div>`;
+  if (focused || (pl.open && !editable)) { const k = $('#pkey'); if (k) { k.focus(); k.setSelectionRange(k.value.length, k.value.length); } }
+  $('#pbody').innerHTML = pl.mode === 'assign' ? assignHtml(bl, editable) : calHtml();
+}
+
+function assignHtml(bl, editable) {
+  if (!bl.length) return '<p class="empty">No votes yet. Sessions appear here once colleagues vote.</p>';
+  let h = DATES.map(d => {
+    const xs = bl.filter(b => b.date === d);
+    if (!xs.length) return '';
+    return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk${b.hot ? ' hot' : ''}" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} · ${b.votes} votes${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
+  }).join('');
+  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span><span><i style="background:#B9C3D3"></i>1 vote, nobody going</span><span><i style="border:1px solid #E09A2B;background:#FDF4E4"></i>More than 3 at once</span></div>`;
+  let day = null;
+  bl.forEach(b => {
+    if (b.date !== day) { day = b.date; h += `<div class="pday">${DLONG[day]}</div>`; }
+    const span = b.b - b.a, pos = m => ((m - b.a) / span * 100).toFixed(2);
+    const ticks = []; for (let m = Math.ceil(b.a / 30) * 30; m < b.b; m += 30) if (m > b.a + 10 && m < b.b - 10) ticks.push(m);
+    h += `<div class="pblock${b.hot ? ' hot' : ''}" id="${b.id}">
+      <div class="pbh"><span class="tt">${fmt(b.a)}–${fmt(b.b)}</span><span class="mt">${b.items.length} session${b.items.length === 1 ? '' : 's'} · ${b.votes} votes · covered ${b.covered}${b.hot ? ' · <span class="hotl">more than 3 at once</span>' : ''}</span></div>
+      <div class="paxis"><span></span><span></span><div class="ax"><span style="left:0">${fmt(b.a)}</span>${ticks.map(m => `<span style="left:${pos(m)}%">${fmt(m)}</span>`).join('')}<span style="left:100%">${fmt(b.b)}</span></div><span></span></div>
+      ${b.items.map(s => {
+        const w = who(s), n = vc(s), cls = w.length ? 'cov' : n >= 2 ? 'miss' : '';
+        return `<div class="prow"><span class="v">${n}</span>
+          <div style="min-width:0"><a class="tl" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="sm">${s.start}–${s.end}${s.room ? ' · ' + esc(s.room) : ''} · ${esc(s.format)}</span></div>
+          <div class="trk2" title="${s.start}–${s.end}"><i class="${cls}" style="left:${pos(s.a0)}%;width:${(s.b0 - s.a0) / span * 100}%"></i></div>
+          <div class="who">${PEOPLE.map(([p, c]) => { const on = w.includes(p), busy = !on && busyWith(p, s); return `<button class="pp${busy ? ' busy' : ''}" style="--pc:${c}" data-assign="${s.id}" data-person="${p}" aria-pressed="${on}" title="${on ? p + ' is going' : busy ? p + ' is at ' + esc(busy.title) + ' — clicking moves ' + p + ' here' : 'Send ' + p}">${p}</button>`; }).join('')}</div>
+        </div>`;
+      }).join('')}
+      ${b.missing.length ? `<p class="mnote">Nobody going: ${b.missing.map(s => `${esc(s.title.split(/[:?]/)[0])} (${vc(s)})`).join(' · ')}</p>` : ''}
+    </div>`;
+  });
+  return h;
+}
+
+function calHtml() {
+  const k = 1.05, from = 8 * 60, to = 18 * 60, off = 10, H = (to - from) * k + off * 2;
+  const allMode = pl.who === 'all';
+  const cols = allMode ? PEOPLE.map(([p, c]) => ({ label: p, sub: '', c, items: S.filter(s => s.date === pl.day && who(s).includes(p)) }))
+    : DATES.map(d => ({ label: DSHORT[d] + ' Nov', sub: '', c: PC[pl.who], items: S.filter(s => s.date === d && who(s).includes(pl.who)) }));
+  cols.forEach(c => c.sub = c.items.length + ' session' + (c.items.length === 1 ? '' : 's'));
+  const hours = []; for (let m = from; m <= to; m += 60) hours.push(m);
+  let h = `<div class="ptools" style="margin-top:0"><div class="seg" role="group" aria-label="Person"><button data-pwho="all" aria-pressed="${allMode}">Everyone</button>${PN.map(p => `<button data-pwho="${p}" aria-pressed="${pl.who === p}">${p}</button>`).join('')}</div>
+    <div class="rt">${allMode ? `<div class="seg" role="group" aria-label="Day">${DATES.map(d => `<button data-pday="${d}" aria-pressed="${pl.day === d}">${DSHORT[d]}</button>`).join('')}</div>` : `<button class="pbtn" data-pact="ics">Add ${pl.who}'s sessions to calendar (.ics)</button>`}</div></div>`;
+  h += `<div class="calwrap"><div class="calh"><span></span>${cols.map(c => `<div style="--pc:${c.c}">${allMode ? '<i></i>' : ''}${c.label} <small>${c.sub}</small></div>`).join('')}</div>
+    <div class="calb" style="--h:${H}px"><div class="tm">${hours.map(m => `<span style="top:${(m - from) * k + off}px">${fmt(m)}</span>`).join('')}</div>
+    ${cols.map(c => `<div class="col">${hours.map(m => `<div class="hr" style="top:${(m - from) * k + off}px"></div>`).join('')}
+      ${c.items.length ? '' : '<div class="cempty">Nothing assigned</div>'}
+      ${c.items.map(s => `<a class="ev" href="${esc(s.url)}" target="_blank" rel="noopener" style="--pc:${allMode ? c.c : PC[pl.who]};top:${(s.a0 - from) * k + off}px;height:${Math.max((s.b0 - s.a0) * k - 2, 18)}px" title="${esc(s.title)}"><span class="et"><span>${s.start}–${s.end}</span><span>▲ ${vc(s)}</span></span><b>${esc(s.title)}</b><span class="er">${esc(s.room)}</span></a>`).join('')}
+    </div>`).join('')}</div></div>`;
+  return h;
+}
+
+function parm(what) { pl.armed = what; clearTimeout(parm.t); parm.t = setTimeout(() => { pl.armed = null; renderPlan(); }, 4000); renderPlan(); }
+async function sendPlan(changes, wipe) {
+  const before = JSON.stringify(votes.plan);
+  changes.forEach(c => { const a = new Set(votes.plan[c.session] || []); c.on ? a.add(c.person) : a.delete(c.person); votes.plan[c.session] = [...a]; });
+  if (wipe) votes.plan = {};
+  renderPlan();
+  try { const r = await backend.plan(pl.key, changes, wipe); if (r && r.plan) votes.plan = r.plan; render(); return true; }
+  catch (e) {
+    votes.plan = JSON.parse(before); render();
+    if (e.code === 'wrong_key') { pl.key = null; pl.open = true; pl.err = 'Wrong key'; renderPlan(); }
+    else toast('The plan wasn’t saved. Try again in a moment.');
+    return false;
+  }
+}
+function assign(id, p) {
+  if (!pl.key) { pl.open = true; renderPlan(); toast('Unlock editing first'); return; }
+  const s = BY.get(id), on = !who(s).includes(p), ch = [{ session: id, person: p, on }];
+  if (on) S.forEach(o => { if (o.id !== id && overlap(o, s) && who(o).includes(p)) ch.push({ session: o.id, person: p, on: false }); });
+  sendPlan(ch).then(ok => { if (ok && ch.length > 1) toast(`${p} moved here from ${ch.length - 1} overlapping session${ch.length > 2 ? 's' : ''}`); });
+}
+function autoPlan() {
+  const tmp = {}; S.forEach(s => tmp[s.id] = [...who(s)]);
+  const load = p => S.filter(s => tmp[s.id].includes(p)).length;
+  const free = (p, s) => !S.some(o => tmp[o.id].includes(p) && overlap(o, s));
+  const ch = [];
+  S.filter(s => vc(s) && !tmp[s.id].length).sort((a, b) => vc(b) - vc(a) || a.date.localeCompare(b.date) || a.a0 - b.a0).forEach(s => {
+    const c = PN.filter(p => free(p, s)).sort((a, b) => load(a) - load(b));
+    if (c.length) { tmp[s.id].push(c[0]); ch.push({ session: s.id, person: c[0], on: true }); }
+  });
+  if (!ch.length) { toast('Every session that can be covered already has someone'); return; }
+  sendPlan(ch).then(ok => ok && toast(`Filled ${ch.length} session${ch.length === 1 ? '' : 's'}. Adjust by clicking names.`));
+}
+function icsFor(p) {
+  const z = (d, t) => new Date(d + 'T' + t + ':00+01:00').toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+  const tx = v => String(v || '').replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\r?\n/g, '\\n');
+  const fold = l => { const o = []; while (l.length > 74) { o.push(l.slice(0, 74)); l = ' ' + l.slice(74); } o.push(l); return o.join('\r\n'); };
+  const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+  const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//iPMA//ISPOR Europe 2026//EN', 'CALSCALE:GREGORIAN', 'X-WR-CALNAME:ISPOR Europe 2026 · ' + p];
+  S.filter(s => who(s).includes(p)).forEach(s => L.push('BEGIN:VEVENT', 'UID:' + s.id + '-' + p.toLowerCase() + '@ispor-2026', 'DTSTAMP:' + now, 'DTSTART:' + z(s.date, s.start), 'DTEND:' + z(s.date, s.end),
+    'SUMMARY:' + tx(s.title), 'LOCATION:' + tx(s.room ? s.room + ', Messe Wien' : 'Messe Wien'), 'URL:' + s.url, 'DESCRIPTION:' + tx(s.format + ' · ' + vc(s) + ' team votes\n' + s.url), 'END:VEVENT'));
+  L.push('END:VCALENDAR');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([L.map(fold).join('\r\n')], { type: 'text/calendar' }));
+  a.download = 'ispor-2026-' + p.toLowerCase() + '.ics';
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+async function unlockPlan(key) {
+  if (!key) return;
+  try { const r = await backend.plan(key, []); pl.key = key; pl.open = false; pl.err = ''; pl.typed = ''; if (r && r.plan) votes.plan = r.plan; try { sessionStorage.setItem('ispor26-plan', key); } catch (e) {} }
+  catch (e) { pl.err = e.code === 'wrong_key' ? 'Wrong key' : e.code === 'admin_not_configured' ? 'No key is set up on the server yet' : 'Couldn’t check the key'; }
+  renderPlan();
+}
+function initPlan() {
+  const v = $('#v-plan');
+  v.addEventListener('click', e => {
+    const t = e.target.closest('[data-assign],[data-pact],[data-pmode],[data-pwho],[data-pday],[data-jump]');
+    if (!t) return;
+    if (t.dataset.assign) return assign(t.dataset.assign, t.dataset.person);
+    if (t.dataset.jump) { const el = document.getElementById(t.dataset.jump); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+    if (t.dataset.pmode) { pl.mode = t.dataset.pmode; return renderPlan(); }
+    if (t.dataset.pwho) { pl.who = t.dataset.pwho; store.set('ispor26-me', pl.who); return renderPlan(); }
+    if (t.dataset.pday) { pl.day = t.dataset.pday; return renderPlan(); }
+    const a = t.dataset.pact;
+    if (a === 'unlock') { pl.open = true; pl.err = ''; renderPlan(); }
+    else if (a === 'lock') { pl.key = null; try { sessionStorage.removeItem('ispor26-plan'); } catch (e) {} renderPlan(); }
+    else if (a === 'auto') { if (pl.armed !== 'auto') return parm('auto'); pl.armed = null; autoPlan(); }
+    else if (a === 'wipe') { if (pl.armed !== 'wipe') return parm('wipe'); pl.armed = null; sendPlan([], true).then(ok => ok && toast('Plan cleared')); }
+    else if (a === 'ics') icsFor(pl.who);
+  });
+  v.addEventListener('input', e => { if (e.target.id === 'pkey') pl.typed = e.target.value; });
+  v.addEventListener('submit', e => { e.preventDefault(); unlockPlan($('#pkey').value.trim()); });
 }
 
 /* rendering */
@@ -358,7 +620,7 @@ function renderBoard() {
   const isAdmin = !!(adm.key && backend && backend.admin);
   $('#board-sub').textContent = !backend || !backend.start ? 'Voting is not connected yet.' : total ? `${total} vote${total === 1 ? '' : 's'} across ${xs.length} session${xs.length === 1 ? '' : 's'}. Updates automatically.` : 'No votes yet. Vote from the programme with ▲.';
   $('#rank').innerHTML = xs.map((s, i) => `<li><span class="rk">${String(i + 1).padStart(2, '0')}</span>
-    <div style="min-width:0"><div class="meta"><span class="f">${esc(s.format)}</span><span>${DAYS[s.d][0]} Nov · ${s.start}–${s.end}</span>${s.room ? `<span>${esc(s.room)}</span>` : ''}</div><div class="t">${esc(s.title)}</div>
+    <div style="min-width:0"><div class="meta"><span class="f">${esc(s.format)}</span><span>${DAYS[s.d][0]} Nov · ${s.start}–${s.end}</span>${s.room ? `<span>${esc(s.room)}</span>` : ''}${(votes.plan[s.id] || []).length ? `<span class="f">→ ${esc(votes.plan[s.id].join(', '))}</span>` : ''}</div><div class="t">${esc(s.title)}</div>
     ${isAdmin ? `<button class="adm" data-clear="${s.id}">${adm.armed === s.id ? 'Click again to clear these votes' : 'Clear votes'}</button>` : ''}</div>
     <div class="n">${votes.counts[s.id]}<small>vote${votes.counts[s.id] === 1 ? '' : 's'}</small></div></li>`).join('');
   const n = votes.mine.size;
@@ -405,7 +667,7 @@ async function unlock(key) {
   renderBoard();
 }
 function render() {
-  if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
+  if (st.view === 'plan') renderPlan(); else if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
 }
 
 /* actions */
@@ -428,6 +690,7 @@ async function toggleVote(id) {
 function apply(r) {
   votes.counts = r.counts || {};
   votes.mine = new Set(r.mine || []);
+  if (r.plan) votes.plan = r.plan;
   votes.ready = true;
   render();
 }
@@ -474,10 +737,11 @@ async function ask(q) {
   t.pending = false; $('#send').disabled = false; renderThread();
 }
 function go() {
-  const v = location.hash === '#vote' ? 'vote' : 'home';
+  const v = location.hash === '#vote' ? 'vote' : location.hash === '#plan' ? 'plan' : 'home';
   st.view = v;
   $('#v-home').hidden = v !== 'home';
   $('#v-vote').hidden = v !== 'vote';
+  $('#v-plan').hidden = v !== 'plan';
   document.querySelectorAll('.navl a').forEach(a => a.setAttribute('aria-current', a.dataset.view === v ? 'page' : 'false'));
   render();
 }
@@ -500,6 +764,7 @@ function init() {
   $('#bfoot').addEventListener('input', e => { if (e.target.id === 'akey') adm.typed = e.target.value; });
   $('#bfoot').addEventListener('submit', e => { e.preventDefault(); unlock($('#akey').value.trim()); });
   $('#rank').addEventListener('click', e => { const b = e.target.closest('[data-clear]'); if (b) boardAction('clear', b.dataset.clear); });
+  initPlan();
   window.addEventListener('hashchange', go);
   renderControls();
   go();
