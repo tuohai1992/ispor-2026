@@ -510,16 +510,16 @@ function assignHtml(bl, editable) {
   let h = DATES.map(d => {
     const xs = bl.filter(b => b.date === d);
     if (!xs.length) return '';
-    return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk${b.hot ? ' hot' : ''}" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} · ${b.votes} votes${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
+    return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} session${b.items.length === 1 ? '' : 's'}${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
   }).join('');
-  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span><span><i style="background:#B9C3D3"></i>1 vote, nobody going</span><span><i style="border:1px solid #E09A2B;background:#FDF4E4"></i>More than 3 at once</span></div>`;
+  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span><span><i style="background:#B9C3D3"></i>1 vote, nobody going</span></div>`;
   let day = null;
   bl.forEach(b => {
     if (b.date !== day) { day = b.date; h += `<div class="pday">${DLONG[day]}</div>`; }
     const span = b.b - b.a, pos = m => ((m - b.a) / span * 100).toFixed(2);
     const ticks = []; for (let m = Math.ceil(b.a / 30) * 30; m < b.b; m += 30) if (m > b.a + 10 && m < b.b - 10) ticks.push(m);
-    h += `<div class="pblock${b.hot ? ' hot' : ''}" id="${b.id}">
-      <div class="pbh"><span class="tt">${fmt(b.a)}–${fmt(b.b)}</span><span class="mt">${b.items.length} session${b.items.length === 1 ? '' : 's'} · ${b.votes} votes · covered ${b.covered}${b.hot ? ' · <span class="hotl">more than 3 at once</span>' : ''}</span></div>
+    h += `<div class="pblock" id="${b.id}">
+      <div class="pbh"><span class="tt">${fmt(b.a)}–${fmt(b.b)}</span><span class="mt">${b.items.length} session${b.items.length === 1 ? '' : 's'} · covered ${b.covered} of ${b.votes} votes</span></div>
       <div class="paxis"><span></span><span></span><div class="ax"><span style="left:0">${fmt(b.a)}</span>${ticks.map(m => `<span style="left:${pos(m)}%">${fmt(m)}</span>`).join('')}<span style="left:100%">${fmt(b.b)}</span></div><span></span></div>
       ${b.items.map(s => {
         const w = who(s), n = vc(s), cls = w.length ? 'cov' : n >= 2 ? 'miss' : '';
