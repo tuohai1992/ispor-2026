@@ -61,9 +61,12 @@ export class VoteStore extends DurableObject {
     const counts = {};
     for (const r of this.sql.exec('SELECT session, COUNT(*) AS n FROM votes GROUP BY session').toArray()) counts[r.session] = r.n;
     const mine = voter ? this.sql.exec('SELECT session FROM votes WHERE voter = ?', voter).toArray().map(r => r.session) : [];
+    return { counts, mine };
+  }
+  planState() {
     const plan = {};
     for (const r of this.sql.exec('SELECT session, person FROM plan ORDER BY at').toArray()) (plan[r.session] = plan[r.session] || []).push(r.person);
-    return { counts, mine, plan };
+    return { plan };
   }
   vote(voter, session, on) {
     if (on) {
@@ -89,7 +92,7 @@ export class VoteStore extends DurableObject {
       if (c.on) this.sql.exec('INSERT OR IGNORE INTO plan (session, person, at) VALUES (?, ?, ?)', c.session, c.person, now);
       else this.sql.exec('DELETE FROM plan WHERE session = ? AND person = ?', c.session, c.person);
     }
-    return this.state(null);
+    return this.planState();
   }
   reset() {
     this.sql.exec('DELETE FROM votes');
@@ -179,10 +182,13 @@ export default {
     if (origin !== h['Access-Control-Allow-Origin']) return json({ error: 'Origin not allowed' }, 403, h);
     const ip = req.headers.get('CF-Connecting-IP') || 'unknown';
     const store = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026'));
+    // the plan lives in its own object so it never touches the votes
+    const planStore = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026-plan'));
+    const withPlan = async o => ({ ...o, ...(await planStore.planState()) });
 
     if (url.pathname === '/votes' && req.method === 'GET') {
       const v = url.searchParams.get('voter');
-      return json(await store.state(validVoter(v) ? v : null), 200, h);
+      return json(await withPlan(await store.state(validVoter(v) ? v : null)), 200, h);
     }
 
     if (url.pathname === '/vote' && req.method === 'POST') {
@@ -191,7 +197,7 @@ export default {
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       const { ids } = await data(env);
       if (!validVoter(b.voter) || !ids.has(String(b.session))) return json({ error: 'Bad request' }, 400, h);
-      return json(await store.vote(b.voter, String(b.session), !!b.on), 200, h);
+      return json(await withPlan(await store.vote(b.voter, String(b.session), !!b.on)), 200, h);
     }
 
     // team plan: who attends which session; PLAN_KEY or ADMIN_KEY to edit
@@ -206,14 +212,14 @@ export default {
       const changes = (Array.isArray(b.changes) ? b.changes : []).slice(0, 300)
         .map(c => ({ session: String(c && c.session), person: String(c && c.person), on: !!(c && c.on) }))
         .filter(c => ids.has(c.session) && PEOPLE.includes(c.person));
-      return json(await store.planChanges(changes, b.wipe === true), 200, h);
+      return json(await planStore.planChanges(changes, b.wipe === true), 200, h);
     }
 
     if (url.pathname === '/vote/clear' && req.method === 'POST') {
       let b;
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       if (!validVoter(b.voter)) return json({ error: 'Bad request' }, 400, h);
-      return json(await store.clearVoter(b.voter), 200, h);
+      return json(await withPlan(await store.clearVoter(b.voter)), 200, h);
     }
 
     // admin: clear one session or reset all votes, guarded by the ADMIN_KEY secret
