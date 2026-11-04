@@ -478,7 +478,7 @@ function blocks(list) {
     b.items.sort((x, y) => vc(y) - vc(x) || x.a0 - y.a0);
     b.votes = b.items.reduce((n, s) => n + vc(s), 0);
     b.covered = b.items.filter(s => who(s).length).reduce((n, s) => n + vc(s), 0);
-    b.missing = b.items.filter(s => !who(s).length && vc(s) >= 2);
+    b.missing = b.items.filter(s => !who(s).length);
     let peak = 0;
     b.items.forEach(s => { peak = Math.max(peak, b.items.filter(o => overlap(o, s) && o.a0 <= s.a0 && o.b0 > s.a0).length); });
     b.hot = peak > 3;
@@ -512,7 +512,7 @@ function assignHtml(bl, editable) {
     if (!xs.length) return '';
     return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} session${b.items.length === 1 ? '' : 's'}${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
   }).join('');
-  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>2+ votes, nobody going</span></div>`;
+  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>Nobody going</span></div>`;
   let day = null;
   bl.forEach(b => {
     if (b.date !== day) { day = b.date; h += `<div class="pday">${DLONG[day]}</div>`; }
@@ -522,7 +522,7 @@ function assignHtml(bl, editable) {
       <div class="pbh"><span class="tt">${fmt(b.a)}–${fmt(b.b)}</span><span class="mt">${b.items.length} session${b.items.length === 1 ? '' : 's'} · covered ${b.covered} of ${b.votes} votes</span></div>
       <div class="paxis"><span></span><span></span><div class="ax"><span style="left:0">${fmt(b.a)}</span>${ticks.map(m => `<span style="left:${pos(m)}%">${fmt(m)}</span>`).join('')}<span style="left:100%">${fmt(b.b)}</span></div><span></span></div>
       ${b.items.map(s => {
-        const w = who(s), n = vc(s), cls = w.length ? 'cov' : n >= 2 ? 'miss' : '';
+        const w = who(s), n = vc(s), cls = w.length ? 'cov' : 'miss';
         return `<div class="prow"><span class="v">${n}</span>
           <div style="min-width:0"><button class="tl" data-popen="${s.id}" aria-expanded="${pl.opened.has(s.id)}">${esc(s.title)}</button><span class="sm">${s.start}–${s.end}${s.room ? ' · ' + esc(s.room) : ''} · ${esc(s.format)}</span></div>
           <div class="trk2" title="${s.start}–${s.end}"><i class="${cls}" style="left:${pos(s.a0)}%;width:${(s.b0 - s.a0) / span * 100}%"></i></div>
