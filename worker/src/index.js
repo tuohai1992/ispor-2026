@@ -54,6 +54,7 @@ export class VoteStore extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.sql = ctx.storage.sql;
+    ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair('ping', 'pong'));
     this.sql.exec('CREATE TABLE IF NOT EXISTS votes (voter TEXT NOT NULL, session TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (voter, session))');
     this.sql.exec('CREATE TABLE IF NOT EXISTS plan (session TEXT NOT NULL, person TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (session, person))');
   }
@@ -62,6 +63,18 @@ export class VoteStore extends DurableObject {
     for (const r of this.sql.exec('SELECT session, COUNT(*) AS n FROM votes GROUP BY session').toArray()) counts[r.session] = r.n;
     const mine = voter ? this.sql.exec('SELECT session FROM votes WHERE voter = ?', voter).toArray().map(r => r.session) : [];
     return { counts, mine };
+  }
+  // live updates: browsers hold a hibernatable WebSocket on the plan object
+  async fetch(req) {
+    const pair = new WebSocketPair();
+    this.ctx.acceptWebSocket(pair[1]);
+    return new Response(null, { status: 101, webSocket: pair[0] });
+  }
+  webSocketMessage(ws, msg) { if (msg === 'ping') ws.send('pong'); }
+  webSocketClose(ws, code) { try { ws.close(code, 'bye'); } catch (e) {} }
+  broadcast(msg) {
+    const s = JSON.stringify(msg);
+    for (const ws of this.ctx.getWebSockets()) { try { ws.send(s); } catch (e) {} }
   }
   planState() {
     const plan = {};
@@ -164,7 +177,7 @@ async function ask(req, env, h, ip) {
 }
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const origin = req.headers.get('Origin') || '';
     const h = cors(env, origin);
     if (req.method === 'OPTIONS') return new Response(null, { headers: h });
@@ -185,6 +198,13 @@ export default {
     // the plan lives in its own object so it never touches the votes
     const planStore = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026-plan'));
     const withPlan = async o => ({ ...o, ...(await planStore.planState()) });
+    const push = msg => ctx.waitUntil(planStore.broadcast(msg).catch(() => {}));
+    const pushCounts = r => { push({ counts: r.counts }); return r; };
+
+    if (url.pathname === '/live') {
+      if ((req.headers.get('Upgrade') || '').toLowerCase() !== 'websocket') return json({ error: 'Expected WebSocket' }, 426, h);
+      return planStore.fetch(req);
+    }
 
     if (url.pathname === '/votes' && req.method === 'GET') {
       const v = url.searchParams.get('voter');
@@ -197,7 +217,7 @@ export default {
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       const { ids } = await data(env);
       if (!validVoter(b.voter) || !ids.has(String(b.session))) return json({ error: 'Bad request' }, 400, h);
-      return json(await withPlan(await store.vote(b.voter, String(b.session), !!b.on)), 200, h);
+      return json(await withPlan(pushCounts(await store.vote(b.voter, String(b.session), !!b.on))), 200, h);
     }
 
     // team plan: who attends which session; PLAN_KEY or ADMIN_KEY to edit
@@ -212,14 +232,16 @@ export default {
       const changes = (Array.isArray(b.changes) ? b.changes : []).slice(0, 300)
         .map(c => ({ session: String(c && c.session), person: String(c && c.person), on: !!(c && c.on) }))
         .filter(c => ids.has(c.session) && PEOPLE.includes(c.person));
-      return json(await planStore.planChanges(changes, b.wipe === true), 200, h);
+      const r = await planStore.planChanges(changes, b.wipe === true);
+      if (changes.length || b.wipe === true) push(r);
+      return json(r, 200, h);
     }
 
     if (url.pathname === '/vote/clear' && req.method === 'POST') {
       let b;
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       if (!validVoter(b.voter)) return json({ error: 'Bad request' }, 400, h);
-      return json(await withPlan(await store.clearVoter(b.voter)), 200, h);
+      return json(await withPlan(pushCounts(await store.clearVoter(b.voter))), 200, h);
     }
 
     // admin: clear one session or reset all votes, guarded by the ADMIN_KEY secret
@@ -230,8 +252,8 @@ export default {
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       if (!sameKey(String(b.key || ''), env.ADMIN_KEY)) return json({ error: 'wrong_key' }, 403, h);
       if (b.action === 'check') return json({ ok: true }, 200, h);
-      if (b.action === 'reset') return json(await store.reset(), 200, h);
-      if (b.action === 'clear' && /^\d{6,8}$/.test(String(b.session))) return json(await store.clearSession(String(b.session)), 200, h);
+      if (b.action === 'reset') return json(pushCounts(await store.reset()), 200, h);
+      if (b.action === 'clear' && /^\d{6,8}$/.test(String(b.session))) return json(pushCounts(await store.clearSession(String(b.session))), 200, h);
       return json({ error: 'Bad request' }, 400, h);
     }
 

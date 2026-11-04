@@ -311,8 +311,17 @@ function apiBackend() {
     async start(onChange) {
       const pull = async () => { if (document.hidden) return; try { onChange(await call('/votes?voter=' + encodeURIComponent(voter))); } catch (e) {} };
       await pull();
-      setInterval(pull, 6000);
-      document.addEventListener('visibilitychange', pull);
+      // live push; polling stays as a slower fallback
+      let ws = null, live = false, retry = 1000, last = 0;
+      const connect = () => {
+        try { ws = new WebSocket(API.replace(/^http/, 'ws').replace(/\/$/, '') + '/live'); } catch (e) { return; }
+        ws.onopen = () => { live = true; retry = 1000; pull(); };
+        ws.onmessage = e => { if (e.data === 'pong') return; try { onPush(JSON.parse(e.data)); } catch (x) {} };
+        ws.onclose = () => { live = false; ws = null; if (!document.hidden) setTimeout(connect, retry); retry = Math.min(retry * 2, 30000); };
+      };
+      connect();
+      setInterval(() => { const now = Date.now(); if (!live || now - last > 30000) { last = now; pull(); if (live && ws) try { ws.send('ping'); } catch (e) {} } }, 6000);
+      document.addEventListener('visibilitychange', () => { if (document.hidden) return; pull(); if (!ws) connect(); });
     },
     vote: (id, on) => call('/vote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter, session: id, on }) }),
     ask: q => call('/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q }) }),
@@ -686,6 +695,11 @@ async function toggleVote(id) {
     render();
     toast(e.code === 'rate_limited' ? 'Too many clicks. Wait a moment and try again.' : 'Your vote wasn’t saved. Check your connection and try again.');
   }
+}
+function onPush(m) {
+  if (m.counts) votes.counts = m.counts;
+  if (m.plan) votes.plan = m.plan;
+  render();
 }
 function apply(r) {
   votes.counts = r.counts || {};
