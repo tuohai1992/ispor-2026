@@ -61,7 +61,7 @@ h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-0.03em;fo
 .pbar i{display:block;height:100%;width:0;background:var(--accent);border-radius:2px;transition:width .25s linear}
 .wait .status{display:flex;justify-content:space-between;gap:12px}
 .recs{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
-.recs .srow:last-child{border-bottom:0}
+.recs .srow:last-child,.recs .porow:last-child{border-bottom:0}
 .why{color:var(--accent);font-size:.88rem;margin:2px 0 0}
 
 /* programme */
@@ -202,6 +202,52 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
   .prow .who{grid-column:2;justify-content:flex-start}
   .paxis{display:none}
 }
+.prow .tl{all:unset;cursor:pointer;font-size:.88rem;font-weight:500;line-height:1.3;color:var(--ink)}
+.prow .tl:hover{color:var(--accent)}
+.prow .tl:focus-visible{outline:2px solid var(--accent)}
+.prow .det{grid-column:2 / -1;margin-top:2px}
+.selcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 14px;display:grid;gap:6px}
+.selcard .hd2{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.selcard .ttl2{font-weight:600;line-height:1.35}
+.selcard .x{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
+.selcard .det{margin-top:0}
+button.ev{font:inherit;text-align:left;cursor:pointer}
+.ev.sel{outline:2px solid var(--pc)}
+.posters .inner{padding-block:8px 72px}
+.poask .inner{max-width:780px;padding-block:26px 18px;display:flex;flex-direction:column;gap:12px}
+.poask h1{font-size:clamp(1.25rem,2.4vw,1.6rem);letter-spacing:-0.02em}
+.prog .sel2{font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);max-width:100%}
+.psess{font-size:1.05rem;font-weight:600;margin:26px 0 2px;padding-bottom:8px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.psess span{font-family:var(--f-mono);font-size:.7rem;font-weight:400;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.porow{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.porow.dim{opacity:.55}
+.porow .cd{font-family:var(--f-mono);font-size:.85rem;font-variant-numeric:tabular-nums}
+.porow .cd span{display:block;color:var(--muted);font-size:.72rem}
+.porow .au{font-size:.82rem;color:var(--muted);margin-top:3px}
+.porow .ttl{font-size:.92rem}
+.pk{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.int{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:.82rem;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.int:hover{border-color:var(--accent)}
+.int[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.nope{all:unset;cursor:pointer;font-size:.78rem;color:var(--muted);padding:6px 4px;white-space:nowrap}
+.nope:hover{color:var(--ink)}
+.nope[aria-pressed="true"]{color:#B4472E}
+.nope:focus-visible{outline:2px solid var(--accent)}
+.more{display:block;margin:18px auto 0}
+.loadbar{max-width:420px;margin:30px auto;text-align:center;display:grid;gap:8px}
+.short .inner{max-width:880px;padding-block:40px 72px}
+.short .sub{color:var(--muted);margin:8px 0 6px}
+.srow2{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);align-items:center}
+.srow2 .bd{font-family:var(--f-mono);font-size:1.05rem;font-weight:500;font-variant-numeric:tabular-nums}
+.srow2 .bd small{display:block;font-size:.66rem;color:var(--muted);font-weight:400;letter-spacing:.05em;text-transform:uppercase}
+.srow2 .t{font-weight:500;line-height:1.35;font-size:.9rem}
+.srow2 .au{font-size:.8rem;color:var(--muted)}
+.srow2 .n{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);text-align:right;white-space:nowrap}
+.srow2 .n b{display:block;font-family:var(--f-sans);font-size:1.3rem;color:var(--ink);font-weight:600}
+.you{display:inline-block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin-left:6px;vertical-align:1px}
+.pwin{font-family:var(--f-mono);font-size:.72rem;color:var(--accent);margin:6px 0 4px}
+@media (max-width:640px){.logo{display:none} .top .inner{justify-content:flex-end} .navl{gap:14px}}
+@media (max-width:640px){.porow{grid-template-columns:minmax(0,1fr);gap:6px} .porow .cd{display:flex;gap:8px} .porow .cd span{display:inline} .pk{justify-content:flex-start}}
 .note{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);text-align:center}
 footer{border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
 footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -219,8 +265,10 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
   <a class="logo" href="#home">ISPOR<span class="lx">–EUROPE</span> 2026 · iPMA</a>
   <nav class="navl" aria-label="Main">
     <a href="#home" data-view="home">Programme</a>
+    <a href="#posters" data-view="posters">Posters</a>
     <a href="#vote" data-view="vote">Vote</a>
     <a href="#plan" data-view="plan">Plan</a>
+    <a href="#short" data-view="short">Shortlist</a>
   </nav>
 </div></header>
 
@@ -261,6 +309,34 @@ footer .inner{padding-block:18px;display:flex;justify-content:space-between;gap:
     <p class="sub" id="board-sub"></p>
     <ol class="rank" id="rank"></ol>
     <div class="bfoot" id="bfoot"></div>
+  </div></section>
+
+  <div id="v-posters" hidden>
+    <section class="poask gut"><div class="inner">
+      <div class="eyebrow" style="text-align:center">Posters · 5 sessions · Vienna 9–11 November 2026</div>
+      <h1>Which posters are worth a visit?</h1>
+      <p class="lead">Ask in English for recommendations, or browse all posters below. Mark the ones you want to see as interested; they go to the Shortlist.</p>
+      <div class="askbar"><textarea id="poq" rows="1" maxlength="600" aria-label="Ask about the posters" placeholder="Posters on glaucoma, myopia or other eye diseases with cost-effectiveness results"></textarea><button class="send" id="posend" aria-label="Ask">↑</button></div>
+      <div class="sugg" id="posugg"></div>
+      <div id="pothread"></div>
+    </div></section>
+    <section class="prog gut"><div class="inner">
+      <div class="head"><h2 class="h2s">All posters</h2><span class="count" id="pocount"></span></div>
+      <div class="tools">
+        <div class="seg" id="podays" role="group" aria-label="Day"></div>
+        <label class="search"><input id="pofind" type="search" placeholder="Search titles, authors, abstracts" aria-label="Search posters"></label>
+      </div>
+      <div class="tools"><select class="sel2" id="potopic" aria-label="Topic"></select><select class="sel2" id="podis" aria-label="Disease area"></select><label class="filters" style="margin:0"><input type="checkbox" id="pohide" checked> Hide not interested</label></div>
+      <div id="polist"></div>
+    </div></section>
+  </div>
+
+  <section class="short gut" id="v-short" hidden><div class="inner">
+    <div class="eyebrow live"><i></i>Live</div>
+    <h2>Poster shortlist</h2>
+    <p class="sub" id="shsub"></p>
+    <div class="ptools" id="shtools"></div>
+    <div id="shlist"></div>
   </div></section>
 
   <section class="plan gut" id="v-plan" hidden><div class="inner">
@@ -327,6 +403,7 @@ function apiBackend() {
     ask: q => call('/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q }) }),
     clearMine: () => call('/vote/clear', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter }) }),
     admin: (key, action, session) => call('/admin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, action, session }) }),
+    pick: (poster, on) => call('/pick', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voter, poster, on }) }),
     plan: (key, changes, wipe) => call('/plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, changes, wipe: !!wipe }) })
   };
 }
@@ -381,7 +458,7 @@ const DATES = ['2026-11-09', '2026-11-10', '2026-11-11'];
 const DLONG = { '2026-11-09': 'Monday 9 November', '2026-11-10': 'Tuesday 10 November', '2026-11-11': 'Wednesday 11 November' };
 const DSHORT = { '2026-11-09': 'Mon 9', '2026-11-10': 'Tue 10', '2026-11-11': 'Wed 11' };
 votes.plan = {};
-const pl = { mode: 'assign', who: store.get('ispor26-me') || 'all', day: DATES[0], key: null, open: false, err: '', typed: '', armed: null };
+const pl = { opened: new Set(), sel: null, mode: 'assign', who: store.get('ispor26-me') || 'all', day: DATES[0], key: null, open: false, err: '', typed: '', armed: null };
 try { pl.key = sessionStorage.getItem('ispor26-plan'); } catch (e) {}
 
 const who = s => votes.plan[s.id] || [];
@@ -447,9 +524,10 @@ function assignHtml(bl, editable) {
       ${b.items.map(s => {
         const w = who(s), n = vc(s), cls = w.length ? 'cov' : n >= 2 ? 'miss' : '';
         return `<div class="prow"><span class="v">${n}</span>
-          <div style="min-width:0"><a class="tl" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="sm">${s.start}–${s.end}${s.room ? ' · ' + esc(s.room) : ''} · ${esc(s.format)}</span></div>
+          <div style="min-width:0"><button class="tl" data-popen="${s.id}" aria-expanded="${pl.opened.has(s.id)}">${esc(s.title)}</button><span class="sm">${s.start}–${s.end}${s.room ? ' · ' + esc(s.room) : ''} · ${esc(s.format)}</span></div>
           <div class="trk2" title="${s.start}–${s.end}"><i class="${cls}" style="left:${pos(s.a0)}%;width:${(s.b0 - s.a0) / span * 100}%"></i></div>
           <div class="who">${PEOPLE.map(([p, c]) => { const on = w.includes(p), busy = !on && busyWith(p, s); return `<button class="pp${busy ? ' busy' : ''}" style="--pc:${c}" data-assign="${s.id}" data-person="${p}" aria-pressed="${on}" title="${on ? p + ' is going' : busy ? p + ' is at ' + esc(busy.title) + ' — clicking moves ' + p + ' here' : 'Send ' + p}">${p}</button>`; }).join('')}</div>
+          ${pl.opened.has(s.id) ? `<div class="det">${detailHtml(s)}${linksHtml(s)}</div>` : ''}
         </div>`;
       }).join('')}
       ${b.missing.length ? `<p class="mnote">Nobody going: ${b.missing.map(s => `${esc(s.title.split(/[:?]/)[0])} (${vc(s)})`).join(' · ')}</p>` : ''}
@@ -467,11 +545,12 @@ function calHtml() {
   const hours = []; for (let m = from; m <= to; m += 60) hours.push(m);
   let h = `<div class="ptools" style="margin-top:0"><div class="seg" role="group" aria-label="Person"><button data-pwho="all" aria-pressed="${allMode}">Everyone</button>${PN.map(p => `<button data-pwho="${p}" aria-pressed="${pl.who === p}">${p}</button>`).join('')}</div>
     <div class="rt">${allMode ? `<div class="seg" role="group" aria-label="Day">${DATES.map(d => `<button data-pday="${d}" aria-pressed="${pl.day === d}">${DSHORT[d]}</button>`).join('')}</div>` : `<button class="pbtn" data-pact="ics">Add ${pl.who}'s sessions to calendar (.ics)</button>`}</div></div>`;
+  h += selHtml();
   h += `<div class="calwrap"><div class="calh"><span></span>${cols.map(c => `<div style="--pc:${c.c}">${allMode ? '<i></i>' : ''}${c.label} <small>${c.sub}</small></div>`).join('')}</div>
     <div class="calb" style="--h:${H}px"><div class="tm">${hours.map(m => `<span style="top:${(m - from) * k + off}px">${fmt(m)}</span>`).join('')}</div>
     ${cols.map(c => `<div class="col">${hours.map(m => `<div class="hr" style="top:${(m - from) * k + off}px"></div>`).join('')}
       ${c.items.length ? '' : '<div class="cempty">Nothing assigned</div>'}
-      ${c.items.map(s => `<a class="ev" href="${esc(s.url)}" target="_blank" rel="noopener" style="--pc:${allMode ? c.c : PC[pl.who]};top:${(s.a0 - from) * k + off}px;height:${Math.max((s.b0 - s.a0) * k - 2, 18)}px" title="${esc(s.title)}"><span class="et"><span>${s.start}–${s.end}</span><span>▲ ${vc(s)}</span></span><b>${esc(s.title)}</b><span class="er">${esc(s.room)}</span></a>`).join('')}
+      ${c.items.map(s => `<button class="ev${pl.sel === s.id ? ' sel' : ''}" data-psel="${s.id}" style="--pc:${allMode ? c.c : PC[pl.who]};top:${(s.a0 - from) * k + off}px;height:${Math.max((s.b0 - s.a0) * k - 2, 18)}px" title="${esc(s.title)}"><span class="et"><span>${s.start}–${s.end}</span><span>▲ ${vc(s)}</span></span><b>${esc(s.title)}</b><span class="er">${esc(s.room)}</span></button>`).join('')}
     </div>`).join('')}</div></div>`;
   return h;
 }
@@ -531,8 +610,11 @@ async function unlockPlan(key) {
 function initPlan() {
   const v = $('#v-plan');
   v.addEventListener('click', e => {
-    const t = e.target.closest('[data-assign],[data-pact],[data-pmode],[data-pwho],[data-pday],[data-jump]');
+    const t = e.target.closest('[data-assign],[data-pact],[data-pmode],[data-pwho],[data-pday],[data-jump],[data-popen],[data-psel],[data-pclose]');
     if (!t) return;
+    if (t.dataset.popen) { const id = t.dataset.popen; pl.opened.has(id) ? pl.opened.delete(id) : pl.opened.add(id); return renderPlan(); }
+    if (t.dataset.psel) { pl.sel = pl.sel === t.dataset.psel ? null : t.dataset.psel; renderPlan(); const c = document.querySelector('.selcard'); if (c && pl.sel) c.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return; }
+    if (t.dataset.pclose) { pl.sel = null; return renderPlan(); }
     if (t.dataset.assign) return assign(t.dataset.assign, t.dataset.person);
     if (t.dataset.jump) { const el = document.getElementById(t.dataset.jump); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
     if (t.dataset.pmode) { pl.mode = t.dataset.pmode; return renderPlan(); }
@@ -547,6 +629,218 @@ function initPlan() {
   });
   v.addEventListener('input', e => { if (e.target.id === 'pkey') pl.typed = e.target.value; });
   v.addEventListener('submit', e => { e.preventDefault(); unlockPlan($('#pkey').value.trim()); });
+}
+
+/* posters */
+const PSESS = {};
+S.filter(s => /^Poster Session \d/.test(s.title)).forEach(s => {
+  const w = [...s.summary.matchAll(/(\d{1,2}:\d{2})\s*[–-]\s*(\d{1,2}:\d{2})/g)].pop();
+  PSESS[s.id] = { n: +s.title.match(/\d+/)[0], date: s.date, start: s.start, end: s.end, ps: w ? w[1].padStart(5, '0') : '', pe: w ? w[2].padStart(5, '0') : '' };
+});
+const psLabel = (sid, long) => { const p = PSESS[sid]; if (!p) return 'Poster session'; return `${long ? 'Poster Session ' + p.n + ' · ' : ''}${DSHORT[p.date]} Nov · ${p.start}–${p.end}`; };
+votes.pc = {}; votes.pm = new Set();
+const po = { list: [], by: new Map(), state: 'idle', got: 0, day: 'all', q: '', topic: '', dis: '', hideNo: true, limit: 60, open: new Set(), turns: [] };
+let NOPE = new Set();
+try { NOPE = new Set(JSON.parse(store.get('ispor26-nope') || '[]')); } catch (e) {}
+const saveNope = () => store.set('ispor26-nope', JSON.stringify([...NOPE]));
+const pcount = id => votes.pc[id] || 0;
+
+async function loadPosters() {
+  if (po.state !== 'idle') return;
+  if (!API || API.startsWith('__')) { po.state = 'off'; render(); return; }
+  po.state = 'loading'; po.got = 0; render();
+  const parts = [...Array(10).keys()], got = [];
+  let failed = 0;
+  const one = async k => {
+    for (let tryN = 0; tryN < 2; tryN++) {
+      try { const r = await fetch(API.replace(/\/$/, '') + '/posters?part=' + k); if (r.ok) { got.push(...await r.json()); po.got++; render(); return; } } catch (e) {}
+      await new Promise(r => setTimeout(r, 1200));
+    }
+    failed++;
+  };
+  const q = [...parts];
+  await Promise.all([0, 1, 2].map(async () => { while (q.length) await one(q.shift()); }));
+  const seen = new Set();
+  po.list = got.filter(p => !seen.has(p.i) && seen.add(p.i)).map(p => ({ ...p, hay: [p.t, p.a, p.c, p.tp.join(' '), p.ds.join(' '), p.x].join(' ').toLowerCase() }));
+  const so = p => (PSESS[p.s] ? PSESS[p.s].date + PSESS[p.s].start : 'z');
+  po.list.sort((a, b) => so(a).localeCompare(so(b)) || a.c.localeCompare(b.c, 'en', { numeric: true }));
+  po.by = new Map(po.list.map(p => [p.i, p]));
+  po.state = failed && !po.list.length ? 'error' : 'ready';
+  po.partial = failed > 0;
+  renderPosterControls();
+  render();
+}
+
+const PSYN = { ...SYN, eye: ['ophthalm', 'eye', 'ocular', 'retin', 'glaucom', 'macular', 'myopi', 'vision', 'visual', 'cornea', 'dry eye', 'uveit', 'cataract'], ophthalmology: ['ophthalm', 'eye', 'ocular', 'retin', 'glaucom', 'macular', 'myopi', 'vision'], glaucoma: ['glaucom'], myopia: ['myopi'], amd: ['macular', 'amd'], bim: ['budget impact', 'bim'], cea: ['cost-effective', 'cost effective', 'cea', 'cost-utility'], cua: ['cost-utility', 'cua'], qaly: ['qaly'], eq5d: ['eq-5d'] };
+function matchP(p, q) {
+  return q.toLowerCase().split(/\s+/).filter(Boolean).every(w => (PSYN[w] || [w]).some(a => p.hay.includes(a)));
+}
+function posterFiltered() {
+  return po.list.filter(p => {
+    if (po.day !== 'all' && (!PSESS[p.s] || PSESS[p.s].date !== po.day)) return false;
+    if (po.topic && !p.tp.includes(po.topic)) return false;
+    if (po.dis && !p.ds.includes(po.dis)) return false;
+    if (po.hideNo && NOPE.has(p.i)) return false;
+    return !po.q || matchP(p, po.q);
+  });
+}
+function posterDetail(p) {
+  let f = FULL.get(p.i);
+  if (f === undefined) { loadDetail(p.i); f = FULL.get(p.i); }
+  const desc = f && f.description ? f.description : p.x;
+  const full = f && f.authors ? String(f.authors).split('\n') : null;
+  const au = full ? full[0].replace(/(\D)\d+(?:,\d+)*(?=,\s|\.?$)/g, '$1').replace(/\.$/, '') : p.a;
+  const aff = full && full[1] ? full.slice(1).join(' ').replace(/(^|,\s|\.\s?)\d+(?=\D)/g, '$1').trim() : '';
+  const url = f && f.url;
+  return `<div class="det"><p class="desc">${esc(desc)}</p>${f === null ? '<p class="status">Loading full abstract…</p>' : ''}<p><b>Authors</b> ${esc(au)}</p>${aff ? `<p style="font-size:.82rem">${esc(aff)}</p>` : ''}
+    ${p.tp.length || p.ds.length ? `<p>${esc([...p.tp, ...p.ds].join(' · '))}</p>` : ''}
+    <div class="lk">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">ISPOR abstract ↗</a>` : ''}<a href="https://events.rdmobile.com/Lists/Details/${p.i}" target="_blank" rel="noopener">Conference app ↗</a></div></div>`;
+}
+function pickBtns(p) {
+  const on = votes.pm.has(p.i), no = NOPE.has(p.i), n = pcount(p.i), dis = backend && backend.pick ? '' : ' disabled';
+  return `<div class="pk"><button class="int" data-pick="${p.i}" aria-pressed="${on}"${dis} title="${n} colleague${n === 1 ? '' : 's'} interested">★ ${on ? 'Interested' : 'Interest'}${n ? ' · ' + n : ''}</button><button class="nope" data-nope="${p.i}" aria-pressed="${no}">${no ? 'Not interested ✕' : 'Not interested'}</button></div>`;
+}
+function posterRow(p, why) {
+  const open = po.open.has(p.i);
+  return `<div class="porow${NOPE.has(p.i) ? ' dim' : ''}" data-pid="${p.i}">
+    <div class="cd">${esc(p.c)}<span>Board ${esc(p.b || '–')}</span></div>
+    <div style="min-width:0">
+      <div class="meta">${why ? `<span class="f">${esc(psLabel(p.s))}</span>` : ''}${p.tp.slice(0, 2).map(t => `<span>${esc(t)}</span>`).join('')}${p.ds.slice(0, 1).map(d => `<span class="f">${esc(d.split(' (')[0])}</span>`).join('')}</div>
+      <button class="ttl" data-poopen="${p.i}" aria-expanded="${open}">${esc(p.t)}</button>
+      ${why ? `<p class="why">${esc(why)}</p>` : ''}
+      <div class="au">${esc(p.f || p.a.split(',')[0])}${p.a.includes(',') ? ' et al.' : ''}</div>
+      ${open ? posterDetail(p) : ''}
+    </div>
+    ${pickBtns(p)}
+  </div>`;
+}
+function renderPosterControls() {
+  const tc = {}, dc = {};
+  po.list.forEach(p => { p.tp.forEach(t => tc[t] = (tc[t] || 0) + 1); p.ds.forEach(d => dc[d] = (dc[d] || 0) + 1); });
+  $('#podays').innerHTML = [['all', 'All days'], ...DATES.map(d => [d, DSHORT[d]])].map(([k, l]) => `<button data-poday="${k}" aria-pressed="${po.day === k}">${l}</button>`).join('');
+  $('#potopic').innerHTML = '<option value="">All topics</option>' + Object.keys(tc).sort().map(t => `<option value="${esc(t)}">${esc(t)} (${tc[t]})</option>`).join('');
+  $('#podis').innerHTML = '<option value="">All disease areas</option>' + Object.keys(dc).sort((a, b) => dc[b] - dc[a]).map(d => `<option value="${esc(d)}">${esc(d.split(' (')[0])} (${dc[d]})</option>`).join('');
+  $('#potopic').value = po.topic; $('#podis').value = po.dis;
+}
+function renderPosters() {
+  if (po.state === 'idle') loadPosters();
+  if (po.state === 'loading' || po.state === 'idle') { $('#polist').innerHTML = `<div class="loadbar"><div class="pbar"><i style="width:${po.got * 10}%"></i></div><p class="status">Loading posters ${po.got * 10}%</p></div>`; $('#pocount').textContent = ''; renderPoThread(); return; }
+  if (po.state === 'off') { $('#polist').innerHTML = '<p class="empty">Posters load on the GitHub site.</p>'; return; }
+  if (po.state === 'error') { $('#polist').innerHTML = '<p class="empty">Posters couldn’t load. Reload the page to try again.</p>'; return; }
+  const xs = posterFiltered();
+  $('#pocount').textContent = `${xs.length} of ${po.list.length} posters${po.partial ? ' (some couldn’t load)' : ''}`;
+  if (!xs.length) { $('#polist').innerHTML = '<p class="empty">No posters match. Clear the search or choose another filter.</p>'; renderPoThread(); return; }
+  let h = '', ses = null;
+  xs.slice(0, po.limit).forEach(p => {
+    if (p.s !== ses) { ses = p.s; const P = PSESS[ses]; const n = xs.filter(x => x.s === ses).length; h += `<div class="psess">${P ? 'Poster Session ' + P.n + ' · ' + DSHORT[P.date] + ' Nov ' + P.start + '–' + P.end : 'Posters'}<span>${P && P.ps ? 'presenters ' + P.ps + '–' + P.pe + ' · ' : ''}${n} posters</span></div>`; }
+    h += posterRow(p);
+  });
+  if (xs.length > po.limit) h += `<button class="pbtn more" data-pomore="1">Show ${Math.min(60, xs.length - po.limit)} more of ${xs.length - po.limit}</button>`;
+  $('#polist').innerHTML = h;
+  renderPoThread();
+}
+function renderPoThread() {
+  $('#pothread').innerHTML = po.turns.map(t => `<div class="turn"><p class="uq">${esc(t.q)}</p>
+    ${t.pending ? '<div class="wait" role="status"><div class="pbar"><i id="pfill"></i></div><p class="status"><span id="pstep">Searching posters</span><span id="psec">0 s</span></p></div>' : t.error ? `<p class="status">${esc(t.error)}</p>` :
+    `${t.answer ? `<p class="ans">${esc(t.answer)}</p>` : ''}${t.sessions.length ? `<div class="recs">${t.sessions.map(r => po.by.get(r.id) ? posterRow(po.by.get(r.id), r.why) : '').join('')}</div>` : ''}`}</div>`).join('');
+}
+const STOP = new Set('the and for with which what about poster posters session sessions are any on in of to a an me show find related there is that this from by or at as be can i we our us my do does how who'.split(' '));
+function candidates(q) {
+  const terms = q.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, ' ').split(/\s+/).filter(w => w.length > 2 && !STOP.has(w));
+  if (!terms.length) return [];
+  const sc = po.list.map(p => {
+    const tt = p.t.toLowerCase(), meta = (p.tp.join(' ') + ' ' + p.ds.join(' ')).toLowerCase();
+    let s = 0;
+    terms.forEach(w => (PSYN[w] || [w]).forEach(a => { if (tt.includes(a)) s += 3; if (meta.includes(a)) s += 2; if (p.x.toLowerCase().includes(a)) s += 1; }));
+    return [s, p];
+  }).filter(x => x[0] > 0).sort((a, b) => b[0] - a[0]).slice(0, 150);
+  return sc.map(([, p]) => ({ id: p.i, code: p.c, when: psLabel(p.s), title: p.t, topics: [...p.tp, ...p.ds.map(d => d.split(' (')[0])].join(', ') }));
+}
+async function askPosters(q) {
+  q = (q || '').trim();
+  if (!q) return;
+  const t = { q, pending: true, sessions: [] };
+  po.turns = [t]; $('#poq').value = ''; $('#posend').disabled = true;
+  renderPoThread(); progress(Date.now());
+  try {
+    if (po.state !== 'ready') { await loadPosters(); }
+    const cands = candidates(q);
+    if (!cands.length) { t.answer = /[㐀-鿿]/.test(q) ? 'Poster search matches English keywords. Ask again in English, for example “glaucoma cost-effectiveness”.' : 'No posters match those words. Try a disease area, method or country.'; }
+    else {
+      const r = await fetch(API.replace(/\/$/, '') + '/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: q, kind: 'poster', candidates: cands }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw Object.assign(new Error(j.error), { code: j.error });
+      const c = clean(j);
+      t.answer = c.answer;
+      t.sessions = (Array.isArray(j.sessions) ? j.sessions : []).filter(s => po.by.has(String(s.id))).map(s => ({ id: String(s.id), why: clean({ answer: s.why }).answer }));
+    }
+  } catch (e) { t.error = e.code === 'rate_limited' ? 'Too many questions in a minute. Wait a moment and ask again.' : 'Couldn’t get recommendations. Try again.'; }
+  await progress(0, true);
+  t.pending = false; $('#posend').disabled = false; renderPoThread();
+}
+async function togglePick(id) {
+  if (!backend || !backend.pick) return;
+  const on = !votes.pm.has(id);
+  on ? votes.pm.add(id) : votes.pm.delete(id);
+  votes.pc[id] = Math.max(0, pcount(id) + (on ? 1 : -1));
+  if (on && NOPE.delete(id)) saveNope();
+  render();
+  try { const r = await backend.pick(id, on); if (r && r.pcounts) { votes.pc = r.pcounts; votes.pm = new Set(r.pmine || []); render(); } }
+  catch (e) {
+    on ? votes.pm.delete(id) : votes.pm.add(id);
+    votes.pc[id] = Math.max(0, pcount(id) + (on ? -1 : 1)); render();
+    toast(e.code === 'rate_limited' ? 'Too many clicks. Wait a moment and try again.' : 'That wasn’t saved. Try again.');
+  }
+}
+function toggleNope(id) {
+  if (NOPE.has(id)) NOPE.delete(id); else { NOPE.add(id); if (votes.pm.has(id)) togglePick(id); }
+  saveNope(); render();
+}
+const sh = { mine: false };
+function renderShort() {
+  if (po.state === 'idle') loadPosters();
+  if (po.state !== 'ready') { $('#shlist').innerHTML = po.state === 'loading' || po.state === 'idle' ? `<div class="loadbar"><div class="pbar"><i style="width:${po.got * 10}%"></i></div><p class="status">Loading posters ${po.got * 10}%</p></div>` : '<p class="empty">Posters couldn’t load. Reload the page to try again.</p>'; return; }
+  const ids = Object.keys(votes.pc).filter(i => votes.pc[i] > 0 && po.by.has(i) && (!sh.mine || votes.pm.has(i)));
+  const xs = ids.map(i => po.by.get(i));
+  const so = p => (PSESS[p.s] ? PSESS[p.s].date + PSESS[p.s].start : 'z');
+  xs.sort((a, b) => so(a).localeCompare(so(b)) || (parseInt(a.b, 10) || 1e9) - (parseInt(b.b, 10) || 1e9) || a.c.localeCompare(b.c));
+  $('#shtools').innerHTML = `<div class="seg" role="group" aria-label="Whose"><button data-shm="0" aria-pressed="${!sh.mine}">Everyone</button><button data-shm="1" aria-pressed="${sh.mine}">Only mine</button></div>`;
+  $('#shsub').textContent = xs.length ? `${xs.length} poster${xs.length === 1 ? '' : 's'} in display order. Within each session, sorted by board number so you can walk the hall in one pass.` : '';
+  if (!xs.length) { $('#shlist').innerHTML = `<p class="empty">${sh.mine ? 'You haven’t marked any posters yet.' : 'Nobody has marked posters yet.'} Mark posters with ★ on the Posters page.</p>`; return; }
+  let h = '', ses = null;
+  xs.forEach(p => {
+    if (p.s !== ses) {
+      ses = p.s; const P = PSESS[ses]; const n = xs.filter(x => x.s === ses).length;
+      h += `<div class="psess">${P ? 'Poster Session ' + P.n + ' · ' + DSHORT[P.date] + ' Nov' : 'Posters'}<span>${n} poster${n === 1 ? '' : 's'}</span></div>${P ? `<p class="pwin">On display ${P.start}–${P.end}${P.ps ? ' · presenters at their posters ' + P.ps + '–' + P.pe : ''}</p>` : ''}`;
+    }
+    const mine = votes.pm.has(p.i), open = po.open.has(p.i);
+    h += `<div class="srow2"><div class="bd">${esc(p.b || '–')}<small>Board</small></div>
+      <div style="min-width:0"><button class="ttl t" data-poopen="${p.i}" aria-expanded="${open}">${esc(p.t)}</button><div class="au">${esc(p.c)} · ${esc(p.f || p.a.split(',')[0])}${mine ? '<span class="you">You</span>' : ''}</div>${open ? posterDetail(p) : ''}</div>
+      <div class="n"><b>${pcount(p.i)}</b>interested${mine ? `<br><button class="nope" data-pick="${p.i}">Remove mine</button>` : ''}</div></div>`;
+  });
+  $('#shlist').innerHTML = h;
+}
+function initPosters() {
+  $('#posugg').innerHTML = ['Ophthalmology and eye disease', 'Glaucoma or myopia', 'MAIC and indirect comparisons', 'Utilities and EQ-5D', 'Budget impact models', 'Real-world evidence in Asia'].map(s => `<button class="pill">${esc(s)}</button>`).join('');
+  $('#posugg').addEventListener('click', e => { const b = e.target.closest('.pill'); if (b) askPosters(b.textContent); });
+  $('#posend').addEventListener('click', () => askPosters($('#poq').value));
+  $('#poq').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); askPosters($('#poq').value); } });
+  $('#podays').addEventListener('click', e => { const b = e.target.closest('[data-poday]'); if (!b) return; po.day = b.dataset.poday; po.limit = 60; renderPosterControls(); renderPosters(); });
+  $('#potopic').addEventListener('change', e => { po.topic = e.target.value; po.limit = 60; renderPosters(); });
+  $('#podis').addEventListener('change', e => { po.dis = e.target.value; po.limit = 60; renderPosters(); });
+  $('#pohide').addEventListener('change', e => { po.hideNo = e.target.checked; renderPosters(); });
+  let ft; $('#pofind').addEventListener('input', e => { clearTimeout(ft); ft = setTimeout(() => { po.q = e.target.value.trim(); po.limit = 60; renderPosters(); }, 200); });
+  const clicks = e => {
+    const t = e.target.closest('[data-pick],[data-nope],[data-poopen],[data-pomore],[data-shm]');
+    if (!t) return;
+    if (t.dataset.pick) return togglePick(t.dataset.pick);
+    if (t.dataset.nope) return toggleNope(t.dataset.nope);
+    if (t.dataset.poopen) { const id = t.dataset.poopen; po.open.has(id) ? po.open.delete(id) : po.open.add(id); return render(); }
+    if (t.dataset.pomore) { po.limit += 60; return renderPosters(); }
+    if (t.dataset.shm) { sh.mine = t.dataset.shm === '1'; return renderShort(); }
+  };
+  $('#v-posters').addEventListener('click', clicks);
+  $('#v-short').addEventListener('click', clicks);
 }
 
 /* rendering */
@@ -571,12 +865,19 @@ function row(s, why) {
       <button class="ttl" data-open="${s.id}" aria-expanded="${open}">${esc(s.title)}</button>
       ${why ? `<p class="why">${esc(why)}</p>` : ''}
       ${s.tracks.length ? `<div class="trk">${s.tracks.map(t => `<span><i class="sw" style="background:var(--tr${TRACKS.indexOf(t)})"></i>${esc(t)}</span>`).join('')}</div>` : ''}
-      ${open ? `<div class="det">${detailHtml(s)}<div class="lk"><a href="${esc(s.url)}" target="_blank" rel="noopener">ISPOR programme ↗</a><a href="https://events.rdmobile.com/Sessions/Details/${s.id}" target="_blank" rel="noopener">Conference app ↗</a></div></div>` : ''}
+      ${open ? `<div class="det">${detailHtml(s)}${linksHtml(s)}</div>` : ''}
     </div>
     ${voteBtn(s)}
   </div>`;
 }
 const FULL = new Map();
+function linksHtml(s) { return `<div class="lk"><a href="${esc(s.url)}" target="_blank" rel="noopener">ISPOR programme ↗</a><a href="https://events.rdmobile.com/Sessions/Details/${s.id}" target="_blank" rel="noopener">Conference app ↗</a></div>`; }
+function selHtml() {
+  const s = pl.sel && BY.get(pl.sel);
+  if (!s) return '';
+  const w = who(s);
+  return `<div class="selcard"><div class="hd2"><div><div class="meta"><span class="f">${esc(s.format)}</span><span>${DSHORT[s.date]} Nov · ${s.start}–${s.end}</span>${s.room ? `<span>${esc(s.room)}</span>` : ''}<span>▲ ${vc(s)} votes</span>${w.length ? `<span class="f">→ ${esc(w.join(', '))}</span>` : ''}</div><div class="ttl2">${esc(s.title)}</div></div><button class="x" data-pclose="1" aria-label="Close details">Close ✕</button></div><div class="det">${detailHtml(s)}${linksHtml(s)}</div></div>`;
+}
 function detailHtml(s) {
   let f = FULL.get(s.id);
   if (f === undefined) { loadDetail(s.id); f = FULL.get(s.id); }
@@ -676,7 +977,7 @@ async function unlock(key) {
   renderBoard();
 }
 function render() {
-  if (st.view === 'plan') renderPlan(); else if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
+  if (st.view === 'posters') renderPosters(); else if (st.view === 'short') renderShort(); else if (st.view === 'plan') renderPlan(); else if (st.view === 'vote') renderBoard(); else { renderList(); if (!turns.some(x => x.pending)) renderThread(); }
 }
 
 /* actions */
@@ -699,12 +1000,15 @@ async function toggleVote(id) {
 function onPush(m) {
   if (m.counts) votes.counts = m.counts;
   if (m.plan) votes.plan = m.plan;
+  if (m.pcounts) votes.pc = m.pcounts;
   render();
 }
 function apply(r) {
   votes.counts = r.counts || {};
   votes.mine = new Set(r.mine || []);
   if (r.plan) votes.plan = r.plan;
+  if (r.pcounts) votes.pc = r.pcounts;
+  if (r.pmine) votes.pm = new Set(r.pmine);
   votes.ready = true;
   render();
 }
@@ -728,7 +1032,8 @@ function progress(start, done) {
     const s = (Date.now() - start) / 1000, fill = $('#pfill'), step = $('#pstep'), sec = $('#psec');
     if (!fill) return clearInterval(tick);
     fill.style.width = (94 * (1 - Math.exp(-s / 6))).toFixed(1) + '%';
-    step.textContent = s < 3 ? 'Reading ' + S.length + ' sessions' : s < 8 ? 'Matching sessions to your question' : s < 20 ? 'Writing recommendations' : 'Taking longer than usual, almost there';
+    const what = st.view === 'posters' ? 'posters' : 'sessions';
+    step.textContent = s < 3 ? (what === 'posters' ? 'Searching posters' : 'Reading ' + S.length + ' sessions') : s < 8 ? 'Matching ' + what + ' to your question' : s < 20 ? 'Writing recommendations' : 'Taking longer than usual, almost there';
     sec.textContent = Math.floor(s) + ' s · usually about 10 s';
   }, 200);
 }
@@ -751,11 +1056,13 @@ async function ask(q) {
   t.pending = false; $('#send').disabled = false; renderThread();
 }
 function go() {
-  const v = location.hash === '#vote' ? 'vote' : location.hash === '#plan' ? 'plan' : 'home';
+  const hv = location.hash.slice(1), v = ['vote', 'plan', 'posters', 'short'].includes(hv) ? hv : 'home';
   st.view = v;
   $('#v-home').hidden = v !== 'home';
   $('#v-vote').hidden = v !== 'vote';
   $('#v-plan').hidden = v !== 'plan';
+  $('#v-posters').hidden = v !== 'posters';
+  $('#v-short').hidden = v !== 'short';
   document.querySelectorAll('.navl a').forEach(a => a.setAttribute('aria-current', a.dataset.view === v ? 'page' : 'false'));
   render();
 }
@@ -779,6 +1086,7 @@ function init() {
   $('#bfoot').addEventListener('submit', e => { e.preventDefault(); unlock($('#akey').value.trim()); });
   $('#rank').addEventListener('click', e => { const b = e.target.closest('[data-clear]'); if (b) boardAction('clear', b.dataset.clear); });
   initPlan();
+  initPosters();
   window.addEventListener('hashchange', go);
   renderControls();
   go();

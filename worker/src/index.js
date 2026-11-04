@@ -5,9 +5,31 @@ const DATA_URL = 'https://tuohai1992.github.io/ispor-2026/data/sessions.json';
 const MODEL = 'claude-haiku-5-5';
 const MAX_Q = 600;
 const MAX_VOTES = 80;
-const CODE_VERSION = '2026-11-04-live';
+const CODE_VERSION = '2026-11-04-posters';
 const PEOPLE = ['Kun', 'Fabian', 'Jieyi'];
 const ITEM_URL = 'https://ispor2026.abundanceds.com/api/items/';
+const SEARCH_URL = 'https://ispor2026.abundanceds.com/api/search';
+const POSTER_PARTS = 10, PAGES_PER_PART = 6, PAGE = 50;
+const MAX_PICKS = 300;
+
+const cleanAuthors = a => String(a || '').split('\n')[0].replace(/(\D)\d+(?:,\d+)*(?=,\s|\.?$)/g, '$1').replace(/\.$/, '').trim();
+
+async function buildPosterPart(env, k) {
+  const offs = [];
+  for (let i = 0; i < PAGES_PER_PART; i++) offs.push((k * PAGES_PER_PART + i) * PAGE);
+  const pages = await Promise.all(offs.map(async o => {
+    const r = await fetch(`${env.SEARCH_URL || SEARCH_URL}?q=&kind=poster&limit=${PAGE}&offset=${o}`);
+    if (!r.ok) throw new Error('upstream ' + r.status);
+    return (await r.json()).items || [];
+  }));
+  const out = [];
+  for (const p of pages.flat()) {
+    if (!p || p.kind !== 'poster') continue;
+    out.push({ i: String(p.id), c: p.code || '', b: p.board || '', s: (p.session_ids || [])[0] || '', t: p.title || '', f: p.first_author || '',
+      a: cleanAuthors(p.authors), tp: p.topics || [], ds: (p.diseases || []).filter(d => !/^No Additional/.test(d)), x: String(p.description || '').slice(0, 320) });
+  }
+  return JSON.stringify(out);
+}
 const details = new Map();
 
 async function detail(env, id) {
@@ -18,7 +40,9 @@ async function detail(env, id) {
   const it = j.item || j;
   const out = {
     description: String(it.description || '').replace(/^Separate registration required\.\s*/, '').trim(),
-    speakers: (Array.isArray(it.speakers) ? it.speakers : []).map(s => ({ name: String(s.name || ''), affiliation: String(s.affiliation || ''), role: String(s.role || '') })).filter(s => s.name)
+    speakers: (Array.isArray(it.speakers) ? it.speakers : []).map(s => ({ name: String(s.name || ''), affiliation: String(s.affiliation || ''), role: String(s.role || '') })).filter(s => s.name),
+    authors: it.kind === 'poster' ? String(it.authors || '') : '',
+    url: String(it.url || '')
   };
   details.set(id, out);
   return out;
@@ -58,6 +82,8 @@ export class VoteStore extends DurableObject {
     ctx.setWebSocketAutoResponse(new WebSocketRequestResponsePair('ping', 'pong'));
     this.sql.exec('CREATE TABLE IF NOT EXISTS votes (voter TEXT NOT NULL, session TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (voter, session))');
     this.sql.exec('CREATE TABLE IF NOT EXISTS plan (session TEXT NOT NULL, person TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (session, person))');
+    this.sql.exec('CREATE TABLE IF NOT EXISTS picks (voter TEXT NOT NULL, poster TEXT NOT NULL, at INTEGER NOT NULL, PRIMARY KEY (voter, poster))');
+    this.sql.exec('CREATE TABLE IF NOT EXISTS blobs (k TEXT PRIMARY KEY, v TEXT NOT NULL, at INTEGER NOT NULL)');
   }
   state(voter) {
     const counts = {};
@@ -78,6 +104,21 @@ export class VoteStore extends DurableObject {
     for (const ws of this.ctx.getWebSockets()) { try { ws.send(s); } catch (e) {} }
   }
   version() { return CODE_VERSION; }
+  getBlob(k) { const r = this.sql.exec('SELECT v, at FROM blobs WHERE k = ?', k).toArray()[0]; return r ? { v: r.v, at: r.at } : null; }
+  putBlob(k, v) { this.sql.exec('INSERT OR REPLACE INTO blobs (k, v, at) VALUES (?, ?, ?)', k, v, Date.now()); }
+  pickState(voter) {
+    const pcounts = {};
+    for (const r of this.sql.exec('SELECT poster, COUNT(*) AS n FROM picks GROUP BY poster').toArray()) pcounts[r.poster] = r.n;
+    const pmine = voter ? this.sql.exec('SELECT poster FROM picks WHERE voter = ?', voter).toArray().map(r => r.poster) : [];
+    return { pcounts, pmine };
+  }
+  pick(voter, poster, on) {
+    if (on) {
+      const n = this.sql.exec('SELECT COUNT(*) AS n FROM picks WHERE voter = ?', voter).one().n;
+      if (n < MAX_PICKS) this.sql.exec('INSERT OR IGNORE INTO picks (voter, poster, at) VALUES (?, ?, ?)', voter, poster, Date.now());
+    } else this.sql.exec('DELETE FROM picks WHERE voter = ? AND poster = ?', voter, poster);
+    return this.pickState(voter);
+  }
   planState() {
     const plan = {};
     for (const r of this.sql.exec('SELECT session, person FROM plan ORDER BY at').toArray()) (plan[r.session] = plan[r.session] || []).push(r.person);
@@ -155,7 +196,29 @@ async function ask(req, env, h, ip) {
   try { body = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
   const q = String(body.question || '').trim();
   if (!q || q.length > MAX_Q) return json({ error: 'Question must be 1–600 characters' }, 400, h);
-  const { ctx, ids } = await data(env);
+  let { ctx, ids } = await data(env);
+  let max = 8;
+
+  // posters: the page sends its best keyword matches; Claude picks from those only
+  if (body.kind === 'poster') {
+    const cands = (Array.isArray(body.candidates) ? body.candidates : []).slice(0, 150)
+      .filter(c => c && /^\d{7}$/.test(String(c.id)))
+      .map(c => ({ id: String(c.id), code: String(c.code || '').slice(0, 12), when: String(c.when || '').slice(0, 40), title: String(c.title || '').slice(0, 300), topics: String(c.topics || '').slice(0, 200) }));
+    if (!cands.length) return json({ answer: 'No posters match those words. Try other terms, such as a disease area or method.', sessions: [] }, 200, h);
+    ids = new Set(cands.map(c => c.id));
+    max = 10;
+    ctx = `You help a pharmaceutical international Pricing & Market Access (iPMA) team, working on ophthalmology medicines across Europe and Asia, choose research posters at ISPOR Europe 2026 (Vienna, 9-11 November 2026, all times CET).
+The list below holds keyword matches for the question, not the whole poster programme.
+Rules:
+- Use ONLY the posters below. Never invent posters or ids, and never write ids in the text.
+- "answer": 2-4 sentences, in the same language as the question, no headings.
+- "sessions": at most 10 posters, most relevant first, each with one short reason.
+- If none fit, say so in one sentence and return no posters.
+Reply with only JSON: {"answer": string, "sessions": [{"id": "3701538", "why": string}]}
+
+POSTERS (id | code | display time | topics | title)
+${cands.map(c => `${c.id} | ${c.code} | ${c.when} | ${c.topics} | ${c.title}`).join('\n')}`;
+  }
 
   const r = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -173,7 +236,7 @@ async function ask(req, env, h, ip) {
   const p = parseJSON(text);
   const sessions = (Array.isArray(p.sessions) ? p.sessions : [])
     .filter(s => s && ids.has(String(s.id)))
-    .slice(0, 8)
+    .slice(0, max)
     .map(s => ({ id: String(s.id), why: String(s.why || '') }));
   return json({ answer: String(p.answer || ''), sessions }, 200, h);
 }
@@ -189,9 +252,28 @@ export default {
     if (url.pathname === '/details' && req.method === 'GET') {
       const id = url.searchParams.get('id') || '';
       const { ids } = await data(env);
-      if (!ids.has(id)) return json({ error: 'Not found' }, 404, h);
+      if (!ids.has(id) && !/^\d{7}$/.test(id)) return json({ error: 'Not found' }, 404, h);
       try { return new Response(JSON.stringify(await detail(env, id)), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=3600', ...h } }); }
       catch (e) { return json({ error: 'upstream_error' }, 502, h); }
+    }
+
+    // all posters, built from the programme site in parts and kept in storage
+    if (url.pathname === '/posters' && req.method === 'GET') {
+      const k = Number(url.searchParams.get('part'));
+      if (!Number.isInteger(k) || k < 0 || k >= POSTER_PARTS) return json({ error: 'Bad request' }, 400, h);
+      const ps = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026-posters'));
+      const hdr = { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=1800', ...h };
+      let hit = null;
+      try { hit = await ps.getBlob('p' + k); } catch (e) {}
+      if (hit && Date.now() - hit.at < 86400e3) return new Response(hit.v, { headers: hdr });
+      try {
+        const v = await buildPosterPart(env, k);
+        ctx.waitUntil(ps.putBlob('p' + k, v).catch(() => {}));
+        return new Response(v, { headers: hdr });
+      } catch (e) {
+        if (hit) return new Response(hit.v, { headers: hdr });
+        return json({ error: 'upstream_error' }, 502, h);
+      }
     }
 
     if (origin !== h['Access-Control-Allow-Origin']) return json({ error: 'Origin not allowed' }, 403, h);
@@ -199,7 +281,8 @@ export default {
     const store = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026'));
     // the plan lives in its own object so it never touches the votes
     const planStore = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026-plan'));
-    const withPlan = async o => ({ ...o, ...(await planStore.planState()) });
+    const picks = env.VOTES.get(env.VOTES.idFromName('ispor-europe-2026-picks'));
+    const withPlan = async (o, voter) => ({ ...o, ...(await planStore.planState()), ...(await picks.pickState(validVoter(voter) ? voter : null).catch(() => ({}))) });
     const push = msg => ctx.waitUntil(planStore.broadcast(msg).catch(() => {}));
     const pushCounts = r => { push({ counts: r.counts }); return r; };
 
@@ -215,7 +298,7 @@ export default {
 
     if (url.pathname === '/votes' && req.method === 'GET') {
       const v = url.searchParams.get('voter');
-      return json(await withPlan(await store.state(validVoter(v) ? v : null)), 200, h);
+      return json(await withPlan(await store.state(validVoter(v) ? v : null), v), 200, h);
     }
 
     if (url.pathname === '/vote' && req.method === 'POST') {
@@ -224,7 +307,7 @@ export default {
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       const { ids } = await data(env);
       if (!validVoter(b.voter) || !ids.has(String(b.session))) return json({ error: 'Bad request' }, 400, h);
-      return json(await withPlan(pushCounts(await store.vote(b.voter, String(b.session), !!b.on))), 200, h);
+      return json(await withPlan(pushCounts(await store.vote(b.voter, String(b.session), !!b.on)), b.voter), 200, h);
     }
 
     // team plan: who attends which session; PLAN_KEY or ADMIN_KEY to edit
@@ -244,11 +327,21 @@ export default {
       return json(r, 200, h);
     }
 
+    if (url.pathname === '/pick' && req.method === 'POST') {
+      if (env.VOTE_LIMITER && !(await env.VOTE_LIMITER.limit({ key: ip })).success) return json({ error: 'rate_limited' }, 429, h);
+      let b;
+      try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
+      if (!validVoter(b.voter) || !/^\d{7}$/.test(String(b.poster))) return json({ error: 'Bad request' }, 400, h);
+      const r = await picks.pick(b.voter, String(b.poster), !!b.on);
+      push({ pcounts: r.pcounts });
+      return json(r, 200, h);
+    }
+
     if (url.pathname === '/vote/clear' && req.method === 'POST') {
       let b;
       try { b = await req.json(); } catch (e) { return json({ error: 'Bad request' }, 400, h); }
       if (!validVoter(b.voter)) return json({ error: 'Bad request' }, 400, h);
-      return json(await withPlan(pushCounts(await store.clearVoter(b.voter))), 200, h);
+      return json(await withPlan(pushCounts(await store.clearVoter(b.voter)), b.voter), 200, h);
     }
 
     // admin: clear one session or reset all votes, guarded by the ADMIN_KEY secret
