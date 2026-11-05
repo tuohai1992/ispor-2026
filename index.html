@@ -189,10 +189,12 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .calb .col{border-left:1px solid var(--line)}
 .calb .hr{position:absolute;left:0;right:0;border-top:1px solid var(--grid)}
 .calb .tm span{position:absolute;right:6px;transform:translateY(-50%);font-family:var(--f-mono);font-size:.62rem;color:var(--muted)}
-.ev{position:absolute;left:3px;right:3px;border-radius:6px;padding:3px 6px;overflow:hidden;font-size:.72rem;line-height:1.25;background:color-mix(in srgb,var(--pc) 11%,#fff);border:1px solid color-mix(in srgb,var(--pc) 50%,#fff);color:var(--ink);text-decoration:none;display:block}
+.ev{position:absolute;left:3px;right:3px;border-radius:6px;padding:3px 6px;overflow:hidden;font-size:.7rem;line-height:1.25;background:color-mix(in srgb,var(--pc) 11%,#fff);border:1px solid color-mix(in srgb,var(--pc) 50%,#fff);color:var(--ink);text-decoration:none;display:block}
 .ev:hover{border-color:var(--pc)}
-.ev .et{font-family:var(--f-mono);font-size:.62rem;color:var(--muted);display:flex;justify-content:space-between;gap:4px}
-.ev b{font-weight:500;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.ev .et{font-family:var(--f-mono);font-size:.6rem;color:var(--muted);display:flex;justify-content:space-between;gap:4px;white-space:nowrap}
+.ev .et span:first-child{overflow:hidden;text-overflow:ellipsis}
+.ev .et b{font-weight:500;color:var(--ink);display:inline}
+.ev .ti{font-weight:500;display:-webkit-box;-webkit-line-clamp:var(--lines,2);-webkit-box-orient:vertical;overflow:hidden;margin-top:1px}
 .ev .er{font-family:var(--f-mono);font-size:.6rem;color:var(--muted);display:block;margin-top:1px}
 .cempty{position:absolute;top:12px;left:0;right:0;text-align:center;font-size:.75rem;color:var(--muted)}
 @media (max-width:560px){.lx{display:none} .navl{gap:14px}}
@@ -211,7 +213,7 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .selcard .ttl2{font-weight:600;line-height:1.35}
 .selcard .x{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
 .selcard .det{margin-top:0}
-button.ev{font:inherit;text-align:left;cursor:pointer}
+button.ev{font-family:var(--f-sans);text-align:left;cursor:pointer}
 .ev.sel{outline:2px solid var(--pc)}
 .posters .inner{padding-block:8px 72px}
 .poask .inner{max-width:780px;padding-block:26px 18px;display:flex;flex-direction:column;gap:12px}
@@ -537,7 +539,7 @@ function assignHtml(bl, editable) {
 }
 
 function calHtml() {
-  const k = 1.05, from = 8 * 60, to = 18 * 60, off = 10, H = (to - from) * k + off * 2;
+  const k = 1.3, from = 8 * 60, to = 18 * 60, off = 10, H = (to - from) * k + off * 2;
   const allMode = pl.who === 'all';
   const cols = allMode ? PEOPLE.map(([p, c]) => ({ label: p, sub: '', c, items: S.filter(s => s.date === pl.day && who(s).includes(p)) }))
     : DATES.map(d => ({ label: DSHORT[d] + ' Nov', sub: '', c: PC[pl.who], items: S.filter(s => s.date === d && who(s).includes(pl.who)) }));
@@ -550,7 +552,7 @@ function calHtml() {
     <div class="calb" style="--h:${H}px"><div class="tm">${hours.map(m => `<span style="top:${(m - from) * k + off}px">${fmt(m)}</span>`).join('')}</div>
     ${cols.map(c => `<div class="col">${hours.map(m => `<div class="hr" style="top:${(m - from) * k + off}px"></div>`).join('')}
       ${c.items.length ? '' : '<div class="cempty">Nothing assigned</div>'}
-      ${c.items.map(s => `<button class="ev${pl.sel === s.id ? ' sel' : ''}" data-psel="${s.id}" style="--pc:${allMode ? c.c : PC[pl.who]};top:${(s.a0 - from) * k + off}px;height:${Math.max((s.b0 - s.a0) * k - 2, 18)}px" title="${esc(s.title)}"><span class="et"><span>${s.start}–${s.end}</span><span>▲ ${vc(s)}</span></span><b>${esc(s.title)}</b><span class="er">${esc(s.room)}</span></button>`).join('')}
+      ${c.items.map(s => `<button class="ev${pl.sel === s.id ? ' sel' : ''}" data-psel="${s.id}" style="--pc:${allMode ? c.c : PC[pl.who]};top:${(s.a0 - from) * k + off}px;height:${Math.max((s.b0 - s.a0) * k - 2, 18)}px" title="${esc(s.title + (s.room ? ' · ' + s.room : ''))}"><span class="et"><span>${s.start}–${s.end}${s.room ? ' · <b>' + esc(s.room.split(',')[0]) + '</b>' : ''}</span><span>▲ ${vc(s)}</span></span><span class="ti" style="--lines:${Math.max(1, Math.floor(((s.b0 - s.a0) * k - 22) / 11.5))}">${esc(s.title)}</span></button>`).join('')}
     </div>`).join('')}</div></div>`;
   return h;
 }
