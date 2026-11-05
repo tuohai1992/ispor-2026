@@ -165,7 +165,7 @@ h2{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;letter-spacing:-0.02em;fo
 .trk2{position:relative;height:14px;background:var(--grid);border-radius:4px}
 .trk2 i{position:absolute;top:2px;height:10px;border-radius:3px;background:#B9C3D3}
 .trk2 i.cov{background:var(--accent)}
-.trk2 i.miss{background:#C8553D}
+.trk2 i.miss{background:#D03B3B}
 .paxis .ax{position:relative;height:14px;font-family:var(--f-mono);font-size:.62rem;color:var(--muted)}
 .paxis .ax span{position:absolute;transform:translateX(-50%);white-space:nowrap}
 .paxis .ax span:first-child{transform:none}
@@ -449,7 +449,7 @@ QUESTION: ${q}`, { modelTier: 'default' });
 }
 
 /* plan: who attends which session */
-const PEOPLE = [['Kun', '#1F9A78'], ['Fabian', '#7A5CC9'], ['Jieyi', '#004098']];
+const PEOPLE = [['Kun', '#D9730D'], ['Fabian', '#7A5CC9'], ['Jieyi', '#004098']];
 const PC = Object.fromEntries(PEOPLE);
 const PN = PEOPLE.map(p => p[0]);
 const mm = t => +t.slice(0, 2) * 60 + +t.slice(3, 5);
@@ -514,7 +514,7 @@ function assignHtml(bl, editable) {
     if (!xs.length) return '';
     return `<div class="dstrip"><span class="dn">${DSHORT[d]}</span><div class="bl">${xs.map(b => `<button class="bk" data-jump="${b.id}"><b>${fmt(b.a)}</b>${b.items.length} session${b.items.length === 1 ? '' : 's'}${b.missing.length ? ` · <span class="ms">${b.missing.length} open</span>` : ''}</button>`).join('')}</div></div>`;
   }).join('');
-  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#C8553D"></i>Nobody going</span></div>`;
+  h += `<div class="legend2"><span><i style="background:var(--accent)"></i>Someone going</span><span><i style="background:#D03B3B"></i>Nobody going</span></div>`;
   let day = null;
   bl.forEach(b => {
     if (b.date !== day) { day = b.date; h += `<div class="pday">${DLONG[day]}</div>`; }
